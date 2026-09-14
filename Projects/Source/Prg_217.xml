@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="14081.00"/>
+    <WithIsn val="Y"/>
+    <_InternalTask val="N"/>
+    <IsRoot val="N"/>
+    <InIndex val="N"/>
+    <UniqueISNConvState val="12"/>
+  </Header>
+
+  <ProgramsRepository>
+    <Programs>
+      <Task MainProgram="N">
+        <Header Description="×天気気温　　　　　　　　取得" ISN_2="1" LastIsn="1" id="217">
+          <ExecutionRight comp="-1"/>
+          <Resident val="N"/>
+          <SQL val="N"/>
+          <ReturnValue>
+            <ReturnValueAttr/>
+            <TSK_PARAMS val="3"/>
+            <ParametersAttributes>
+              <Attr MgAttr="N"/>
+              <Attr MgAttr="A"/>
+              <Attr MgAttr="N"/>
+            </ParametersAttributes>
+          </ReturnValue>
+          <SqlWhereExist val="N"/>
+          <TaskType val="B"/>
+          <External val="N"/>
+          <Offline val="N"/>
+          <FormType val="N"/>
+          <DotNetObjectExists val="Y"/>
+          <LastModified _date="739579" _time="75555" date="2025/11/24" time="20:59:15"/>
+        </Header>
+        <ItemIsn val="4"/>
+        <Resource>
+          <Columns>
+            <Column id="1" name="V_ReturnString">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_ALPHA" id="1"/>
+                <Picture id="157" valUnicode="1000"/>
+                <StoredAs id="173" val="1"/>
+                <Size id="174" val="1000"/>
+                <_Flip id="194"/>
+              </PropertyList>
+            </Column>
+            <Column id="2" name="V_天気ID">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="3"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="3"/>
+                <_Negative id="192"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="3" name="V_天気">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_ALPHA" id="1"/>
+                <Picture id="157" valUnicode="20"/>
+                <StoredAs id="173" val="1"/>
+                <Size id="174" val="20"/>
+                <_Flip id="194"/>
+              </PropertyList>
+            </Column>
+            <Column id="4" name="V_気温">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="3.2"/>
+                <_Dec id="181" val="2"/>
+                <_Whole id="182" val="3"/>
+                <_Negative id="192"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+          </Columns>
+        </Resource>
+        <Information>
+          <Key>
+            <Mode val="N"/>
+          </Key>
+          <DB comp="-1"/>
+          <Sort>
+            <CLS val="A"/>
+          </Sort>
+          <ForceRecordDelete DEL="N"/>
+          <EndTaskCondition val="Y"/>
+          <EvaluateEndCondition val="A"/>
+          <InitialMode val="M"/>
+          <Locate Direction="A"/>
+          <Range Direction="A"/>
+          <VarRange/>
+          <TaskProperties>
+            <SelectionTable val="N"/>
+            <ConfirmUpdate CNFU="N"/>
+            <ConfirmCancel val="N"/>
+            <ErrorStrategy val="A"/>
+            <LockingStrategy val="I"/>
+            <CacheStrategy val="T"/>
+            <ForceRecordSuffix val="N"/>
+            <TransactionMode val="P"/>
+            <TransactionBegin val="N"/>
+            <PreloadView val="N"/>
+            <AllowEmptyDataview val="N"/>
+            <KeepCreatedContext val="N"/>
+          </TaskProperties>
+          <SIDE_WIN>
+            <AllowOptions val="N"/>
+            <AllowQuery val="Y"/>
+            <AllowModify val="Y"/>
+            <AllowCreate val="Y"/>
+            <AllowDelete val="Y"/>
+            <AllowLocate val="Y"/>
+            <AllowRange val="Y"/>
+            <AllowIndexChange val="Y"/>
+            <AllowSorting val="Y"/>
+            <AllowIOFiles val="Y"/>
+            <RecordCycle val="N"/>
+            <AllowEvents val="N"/>
+            <AllowIndexOptimization val="Y"/>
+            <AllowLocationInQuery val="Y"/>
+            <AllowPrintingData val="N"/>
+          </SIDE_WIN>
+          <WIN>
+            <OpenTaskWindow val="Y"/>
+            <CloseTaskWindow val="Y"/>
+            <ForegroundWindow val="Y"/>
+            <FlipFld val="N"/>
+            <RefreshTaskWindow ReturnValue="N"/>
+          </WIN>
+          <BOX>
+            <Direction val="V"/>
+          </BOX>
+        </Information>
+        <TaskLogic>
+          <LogicUnit id="2" propagate="78">
+            <Level val="R"/>
+            <Type val="M"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+            </Event>
+            <LogicLines>
+              <LogicLine>
+                <DATAVIEW_SRC FlowIsn="2" Type="M">
+                  <Condition val="N"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </DATAVIEW_SRC>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="1" FlowIsn="3" id="1">
+                  <Column val="1"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="2" FlowIsn="4" id="2">
+                  <Column val="2"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="Y"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="3" FlowIsn="5" id="3">
+                  <Column val="3"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="Y"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="4" FlowIsn="6" id="4">
+                  <Column val="4"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="Y"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+          <LogicUnit id="3" propagate="78">
+            <Level val="R"/>
+            <Type val="S"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+            </Event>
+            <LogicLines>
+              <LogicLine>
+                <Invoke FlowIsn="7">
+                  <OperationType val="."/>
+                  <Event>
+                    <EventType val="N"/>
+                  </Event>
+                  <TaskID comp="-1"/>
+                  <Lock val="N"/>
+                  <Arguments>
+                    <Argument>
+                      <Variable val="1"/>
+                      <Skip val="N"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                  </Arguments>
+                  <Wait val="Y"/>
+                  <SyncData val="N"/>
+                  <ReturnValVee val="1"/>
+                  <ReturnValue val="1"/>
+                  <FunctionName val="WeatherGet"/>
+                  <SnippetCode val="using System;&#xA;using System.Net;&#xA;using System.Text;&#xA;using System.Text.RegularExpressions;&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static System.String WeatherGet()&#xA;    {&#xA;        string apiKey = &quot;59216a1bdfeef46a6518db61779c85a9&quot;;&#xA;        string city = &quot;Kumamoto,jp&quot;;&#xA;        string url = &quot;https://api.openweathermap.org/data/2.5/weather?q=&quot; + city + &quot;&amp;appid=&quot; + apiKey + &quot;&amp;units=metric&amp;lang=ja&quot;;&#xA;&#xA;        try&#xA;        {&#xA;            using (WebClient client = new WebClient())&#xA;            {&#xA;                client.Encoding = Encoding.UTF8;&#xA;                string utf8Json = client.DownloadString(url);&#xA;&#xA;                var idMatch = Regex.Match(utf8Json, @&quot;&quot;&quot;id&quot;&quot;:(\d+)&quot;);&#xA;                var tempMatch = Regex.Match(utf8Json, @&quot;&quot;&quot;temp&quot;&quot;:([\d\.]+)&quot;);&#xA;&#xA;                string idStr = idMatch.Success ? idMatch.Groups[1].Value : &quot;不明&quot;;&#xA;                string temp = tempMatch.Success ? tempMatch.Groups[1].Value : &quot;不明&quot;;&#xA;&#xA;                int id = 0;&#xA;                if (!int.TryParse(idStr, out id))&#xA;                {&#xA;                    id = 0; // パース失敗時は0にする&#xA;                }&#xA;&#xA;                string category = GetWeatherCategory(id);&#xA;&#xA;                string result = string.Format(&quot;天気ID: {0}, 天気: {1}, 気温: {2}℃&quot;, idStr, category, temp);&#xA;&#xA;                byte[] shiftJisBytes = Encoding.GetEncoding(&quot;shift_jis&quot;).GetBytes(result);&#xA;                string shiftJisString = Encoding.GetEncoding(&quot;shift_jis&quot;).GetString(shiftJisBytes);&#xA;&#xA;                return shiftJisString;&#xA;            }&#xA;        }&#xA;        catch (Exception ex)&#xA;        {&#xA;            string err = &quot;取得失敗: &quot; + ex.Message;&#xA;            byte[] shiftJisBytes = Encoding.GetEncoding(&quot;shift_jis&quot;).GetBytes(err);&#xA;            return Encoding.GetEncoding(&quot;shift_jis&quot;).GetString(shiftJisBytes);&#xA;        }&#xA;    }&#xA;&#xA;    private static string GetWeatherCategory(int id)&#xA;    {&#xA;        if (id >= 800 &amp;&amp; id &lt;= 803)&#xA;            return &quot;晴れ&quot;;&#xA;        else if (id == 804)&#xA;            return &quot;曇り&quot;;&#xA;        else if ((id >= 500 &amp;&amp; id &lt;= 531) || (id >= 300 &amp;&amp; id &lt;= 321))&#xA;            return &quot;雨&quot;;&#xA;        else if (id >= 200 &amp;&amp; id &lt;= 232)&#xA;            return &quot;雷雨&quot;;&#xA;        else if (id >= 600 &amp;&amp; id &lt;= 622)&#xA;            return &quot;雪&quot;;&#xA;        else&#xA;            return &quot;その他&quot;;&#xA;    }&#xA;}"/>
+                  <CompiledCode val="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ZQBuAGEAbQBlAAAAaQB5AGUAeQBuAHgAawBnAC4AZABsAGwAAAAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADAALgAwAC4AMAAuADAAAAA4AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMAAuADAALgAwAC4AMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAMAAAAQDkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+                  <SnippetLanguage val="C"/>
+                  <ForCompactFramework val="N"/>
+                  <isGuiThreadExecution val="N"/>
+                  <CompileTime HighDateTime="31199300" LowDateTime="3920511704"/>
+                  <RetainFocus val="N"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Invoke>
+              </LogicLine>
+              <LogicLine>
+                <Invoke FlowIsn="8">
+                  <OperationType val="."/>
+                  <Event>
+                    <EventType val="N"/>
+                  </Event>
+                  <TaskID comp="-1"/>
+                  <Lock val="Y"/>
+                  <Arguments>
+                    <Argument>
+                      <Variable val="1"/>
+                      <Skip val="N"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                  </Arguments>
+                  <Wait val="Y"/>
+                  <SyncData val="N"/>
+                  <ReturnValVee val="1"/>
+                  <ReturnValue val="1"/>
+                  <FunctionName val="GetWeather"/>
+                  <SnippetCode val="using System;&#xA;using System.Net;&#xA;using System.Text;&#xA;using System.Text.RegularExpressions;&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static System.String GetWeather()&#xA;   {&#xA;        string apiKey = &quot;59216a1bdfeef46a6518db61779c85a9&quot;;&#xA;        string city = &quot;Kumamoto,jp&quot;;&#xA;&#xA;        string weatherUrl = &quot;https://api.open-meteo.com/v1/forecast?latitude=32.79004&amp;longitude=130.71618&amp;daily=weathercode&amp;timezone=Asia%2FTokyo&quot;;&#xA;        int weatherCode = -1;&#xA;        string weatherCategory = &quot;不明&quot;;&#xA;        int weatherId = 0;&#xA;&#xA;        try&#xA;        {&#xA;            using (WebClient client = new WebClient())&#xA;            {&#xA;                client.Encoding = Encoding.UTF8;&#xA;                string json = client.DownloadString(weatherUrl);&#xA;                Match codeMatch = Regex.Match(json, @&quot;&quot;&quot;weathercode&quot;&quot;:\[(\d+)&quot;);&#xA;                if (codeMatch.Success)&#xA;                {&#xA;                    weatherCode = int.Parse(codeMatch.Groups[1].Value);&#xA;                    weatherCategory = GetWeatherCategory(weatherCode, out weatherId);&#xA;                }&#xA;            }&#xA;        }&#xA;        catch&#xA;        {&#xA;            return ToShiftJis(&quot;天気コードの取得に失敗しました&quot;);&#xA;        }&#xA;&#xA;        string temp = &quot;未取得&quot;;&#xA;        string tempUrl = &quot;https://api.openweathermap.org/data/2.5/weather?q=&quot; + city + &quot;&amp;appid=&quot; + apiKey + &quot;&amp;units=metric&amp;lang=ja&quot;;&#xA;&#xA;        try&#xA;        {&#xA;            using (WebClient client = new WebClient())&#xA;            {&#xA;                client.Encoding = Encoding.UTF8;&#xA;                string json = client.DownloadString(tempUrl);&#xA;                Match tempMatch = Regex.Match(json, @&quot;&quot;&quot;temp&quot;&quot;:([-]?\d+(\.\d+)?)&quot;);&#xA;                if (tempMatch.Success)&#xA;                {&#xA;                    temp = tempMatch.Groups[1].Value + &quot;℃&quot;;&#xA;                }&#xA;            }&#xA;        }&#xA;        catch&#xA;        {&#xA;            temp = &quot;気温取得失敗&quot;;&#xA;        }&#xA;&#xA;        string result = string.Format(&quot;天気ID: {0}, 天気: {1}, 気温: {2}&quot;, weatherId, weatherCategory, temp);&#xA;        return ToShiftJis(result);&#xA;    }&#xA;&#xA;    private static string GetWeatherCategory(int code, out int id)&#xA;    {&#xA;        if (code == 0) { id = 1; return &quot;晴れ&quot;; }&#xA;        else if (code &lt;= 3) { id = 2; return &quot;曇り&quot;; }&#xA;        else if (code >= 45 &amp;&amp; code &lt;= 48) { id = 3; return &quot;霧&quot;; }&#xA;        else if (code >= 51 &amp;&amp; code &lt;= 67) { id = 4; return &quot;霧雨&quot;; }&#xA;        else if (code >= 71 &amp;&amp; code &lt;= 77) { id = 5; return &quot;雪&quot;; }&#xA;        else if (code >= 80 &amp;&amp; code &lt;= 82) { id = 6; return &quot;雨&quot;; }&#xA;        else if (code >= 95 &amp;&amp; code &lt;= 99) { id = 7; return &quot;雷雨&quot;; }&#xA;        else { id = 0; return &quot;不明&quot;; }&#xA;    }&#xA;&#xA;    private static string ToShiftJis(string text)&#xA;    {&#xA;        byte[] bytes = Encoding.GetEncoding(&quot;shift_jis&quot;).GetBytes(text);&#xA;        return Encoding.GetEncoding(&quot;shift_jis&quot;).GetString(bytes);&#xA;    }&#xA;}"/>
+                  <CompiledCode val="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U3lzdGVtAE9iamVjdABHZXRXZWF0aGVyAEdldFdlYXRoZXJDYXRlZ29yeQBUb1NoaWZ0SmlzAGNvZGUAaWQAU3lzdGVtLlJ1bnRpbWUuSW50ZXJvcFNlcnZpY2VzAE91dEF0dHJpYnV0ZQAuY3RvcgB0ZXh0AFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBoMXJ1a3I0cQBTeXN0ZW0uTmV0AFdlYkNsaWVudABTeXN0ZW0uVGV4dABFbmNvZGluZwBnZXRfVVRGOABzZXRfRW5jb2RpbmcARG93bmxvYWRTdHJpbmcAU3lzdGVtLlRleHQuUmVndWxhckV4cHJlc3Npb25zAFJlZ2V4AE1hdGNoAEdyb3VwAGdldF9TdWNjZXNzAEdyb3VwQ29sbGVjdGlvbgBnZXRfR3JvdXBzAGdldF9JdGVtAENhcHR1cmUAZ2V0X1ZhbHVlAEludDMyAFBhcnNlAElEaXNwb3NhYmxlAERpc3Bvc2UAU3RyaW5nAENvbmNhdABGb3JtYXQAR2V0RW5jb2RpbmcAR2V0Qnl0ZXMAR2V0U3RyaW5nAAAAQTUAOQAyADEANgBhADEAYgBkAGYAZQBlAGYANAA2AGEANgA1ADEAOABkAGIANgAxADcANwA5AGMAOAA1AGEAOQAAF0sAdQBtAGEAbQBvAHQAbwAsAGoAcAAAgOloAHQAdABwAHMAOgAvAC8AYQBwAGkALgBvAHAAZQBuAC0AbQBlAHQAZQBvAC4AYwBvAG0ALwB2ADEALwBmAG8AcgBlAGMAYQBzAHQAPwBsAGEAdABpAHQAdQBkAGUAPQAzADIALgA3ADkAMAAwADQAJgBsAG8AbgBnAGkAdAB1AGQAZQA9ADEAMwAwAC4ANwAxADYAMQA4ACYAZABhAGkAbAB5AD0AdwBlAGEAdABoAGUAcgBjAG8AZABlACYAdABpAG0AZQB6AG8AbgBlAD0AQQBzAGkAYQAlADIARgBUAG8AawB5AG8AAQUNTg5mASsiAHcAZQBhAHQAaABlAHIAYwBvAGQAZQAiADoAXABbACgAXABkACsAKQAAHylZF2yzMPwwyTBuMNZTl19rMDFZV2VXMH4wVzBfMAEHKmfWU5dfAWVoAHQAdABwAHMAOgAvAC8AYQBwAGkALgBvAHAAZQBuAHcAZQBhAHQAaABlAHIAbQBhAHAALgBvAHIAZwAvAGQAYQB0AGEALwAyAC4ANQAvAHcAZQBhAHQAaABlAHIAPwBxAD0AAA8mAGEAcABwAGkAZAA9AAArJgB1AG4AaQB0AHMAPQBtAGUAdAByAGkAYwAmAGwAYQBuAGcAPQBqAGEAADEiAHQAZQBtAHAAIgA6ACgAWwAtAF0APwBcAGQAKwAoAFwALgBcAGQAKwApAD8AKQABAwMhAQ0XbClu1lOXXzFZV2UBNylZF2xJAEQAOgAgAHsAMAB9ACwAIAApWRdsOgAgAHsAMQB9ACwAIAAXbCluOgAgAHsAMgB9AAEFdGaMMAEFx2aKMAEDJ5cBBSeX6JYBA+qWAQPolgEF95bolgETcwBoAGkAZgB0AF8AagBpAHMAAAAABu3twSdxf0ish3VK+YGGBQAIt3pcVhk04IkDAAAOBgACDggQCAQAAQ4OAyAAAQQgAQEIBAAAEhkFIAEBEhkEIAEODgYAAhIhDg4DIAACBCAAEikFIAESJQgDIAAOBAABCA4FAAEOHQ4FAAIODg4HAAQODhwcHBgHEQ4ODggOCBIVDhIhDg4SFQ4SIQ4OHQ4FAAESGQ4FIAEdBQ4FIAEOHQUEBwEdBQgBAAgAAAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEAAOwqAAAAAAAAAAAAAA4rAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKwAAAAAAAAAAAAAAAAAAAAAAAAAAX0NvckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgAAABYQAAATAIAAAAAAAAAAAAATAI0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAAAL0E7/4AAAEAAAAAAAAAAAAAAAAAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAAAQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAAAAAAAACwBKwBAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAAIgBAAABADAAMAAwADAAMAA0AGIAMAAAACwAAgABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAAAgAAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAwAC4AMAAuADAALgAwAAAAPAANAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABoADEAcgB1AGsAcgA0AHEALgBkAGwAbAAAAAAAKAACAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAIAAAAEQADQABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABoADEAcgB1AGsAcgA0AHEALgBkAGwAbAAAAAAANAAIAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMAAuADAALgAwAC4AMAAAADgACAABAEEAcwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4AAAAwAC4AMAAuADAALgAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAwAAAAgOwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="/>
+                  <SnippetLanguage val="C"/>
+                  <ForCompactFramework val="N"/>
+                  <isGuiThreadExecution val="N"/>
+                  <CompileTime HighDateTime="31199300" LowDateTime="3923589279"/>
+                  <RetainFocus val="Y"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Invoke>
+              </LogicLine>
+              <LogicLine>
+                <Invoke FlowIsn="9">
+                  <OperationType val="."/>
+                  <Event>
+                    <EventType val="N"/>
+                  </Event>
+                  <TaskID comp="-1"/>
+                  <Lock val="Y"/>
+                  <Arguments>
+                    <Argument>
+                      <Variable val="1"/>
+                      <Skip val="N"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                  </Arguments>
+                  <Wait val="Y"/>
+                  <SyncData val="N"/>
+                  <ReturnValVee val="1"/>
+                  <ReturnValue val="1"/>
+                  <FunctionName val="GetWeather"/>
+                  <SnippetCode val="using System;&#xA;using System.Net;&#xA;using System.Text;&#xA;using System.Text.RegularExpressions;&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static System.String GetWeather()&#xA;    {&#xA;        string apiKey = &quot;59216a1bdfeef46a6518db61779c85a9&quot;;&#xA;        string city = &quot;Kumamoto,jp&quot;;&#xA;&#xA;        string weatherUrl = &quot;https://api.open-meteo.com/v1/forecast?latitude=32.79004&amp;longitude=130.71618&amp;daily=weathercode&amp;timezone=Asia%2FTokyo&quot;;&#xA;        int weatherCode = -1;&#xA;        int weatherId = 0;&#xA;&#xA;        try&#xA;        {&#xA;            using (WebClient client = new WebClient())&#xA;            {&#xA;                client.Encoding = Encoding.UTF8;&#xA;                string json = client.DownloadString(weatherUrl);&#xA;                Match codeMatch = Regex.Match(json, @&quot;&quot;&quot;weathercode&quot;&quot;:\[(\d+)&quot;);&#xA;                if (codeMatch.Success)&#xA;                {&#xA;                    weatherCode = int.Parse(codeMatch.Groups[1].Value);&#xA;                    weatherId = GetWeatherIdFromCode(weatherCode);&#xA;                }&#xA;            }&#xA;        }&#xA;        catch&#xA;        {&#xA;            return ToShiftJis(&quot;天気コードの取得に失敗しました&quot;);&#xA;        }&#xA;&#xA;        string temp = &quot;未取得&quot;;&#xA;        string tempUrl = &quot;https://api.openweathermap.org/data/2.5/weather?q=&quot; + city + &quot;&amp;appid=&quot; + apiKey + &quot;&amp;units=metric&amp;lang=ja&quot;;&#xA;&#xA;        try&#xA;        {&#xA;            using (WebClient client = new WebClient())&#xA;            {&#xA;                client.Encoding = Encoding.UTF8;&#xA;                string json = client.DownloadString(tempUrl);&#xA;                Match tempMatch = Regex.Match(json, @&quot;&quot;&quot;temp&quot;&quot;:([-]?\d+(\.\d+)?)&quot;);&#xA;                if (tempMatch.Success)&#xA;                {&#xA;                    temp = tempMatch.Groups[1].Value + &quot;℃&quot;;&#xA;                }&#xA;            }&#xA;        }&#xA;        catch&#xA;        {&#xA;            temp = &quot;気温取得失敗&quot;;&#xA;        }&#xA;&#xA;        string weatherName = GetWeatherNameFromId(weatherId);&#xA;        string result = string.Format(&quot;天気ID: {0}, 天気: {1}, 気温: {2}&quot;, weatherId, weatherName, temp);&#xA;        return ToShiftJis(result);&#xA;    }&#xA;&#xA;    private static int GetWeatherIdFromCode(int code)&#xA;    {&#xA;        if (code == 0) return code;                    // 晴れ&#xA;        else if (code &lt;= 3) return code;               // 曇り&#xA;        else if (code >= 45 &amp;&amp; code &lt;= 48) return code; // 霧&#xA;        else if (code >= 51 &amp;&amp; code &lt;= 67) return code; // 霧雨&#xA;        else if (code >= 71 &amp;&amp; code &lt;= 77) return code; // 雪&#xA;        else if (code >= 80 &amp;&amp; code &lt;= 82) return code; // 雨&#xA;        else if (code >= 95 &amp;&amp; code &lt;= 99) return code; // 雷雨&#xA;        else return 0;                              // 不明&#xA;    }&#xA;&#xA;    private static string GetWeatherNameFromId(int id)&#xA;    {&#xA;        switch (id)&#xA;        {&#xA;            case 1: return &quot;晴れ&quot;;&#xA;            case 2: return &quot;曇り&quot;;&#xA;            case 3: return &quot;霧&quot;;&#xA;            case 4: return &quot;霧雨&quot;;&#xA;            case 5: return &quot;雪&quot;;&#xA;            case 6: return &quot;雨&quot;;&#xA;            case 7: return &quot;雷雨&quot;;&#xA;            default: return &quot;不明&quot;;&#xA;        }&#xA;    }&#xA;&#xA;    private static string ToShiftJis(string text)&#xA;    {&#xA;        byte[] bytes = Encoding.GetEncoding(&quot;shift_jis&quot;).GetBytes(text);&#xA;        return Encoding.GetEncoding(&quot;shift_jis&quot;).GetString(bytes);&#xA;    }&#xA;}"/>
+                  <CompiledCode val="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AAAAAAAAAAAAPE1vZHVsZT4Admd6bXVpNWguZGxsAFNuaXBwZXQAbXNjb3JsaWIAU3lzdGVtAE9iamVjdABHZXRXZWF0aGVyAEdldFdlYXRoZXJJZEZyb21Db2RlAEdldFdlYXRoZXJOYW1lRnJvbUlkAFRvU2hpZnRKaXMAY29kZQBpZAB0ZXh0AFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQAuY3RvcgBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQB2Z3ptdWk1aABTeXN0ZW0uTmV0AFdlYkNsaWVudABTeXN0ZW0uVGV4dABFbmNvZGluZwBnZXRfVVRGOABzZXRfRW5jb2RpbmcARG93bmxvYWRTdHJpbmcAU3lzdGVtLlRleHQuUmVndWxhckV4cHJlc3Npb25zAFJlZ2V4AE1hdGNoAEdyb3VwAGdldF9TdWNjZXNzAEdyb3VwQ29sbGVjdGlvbgBnZXRfR3JvdXBzAGdldF9JdGVtAENhcHR1cmUAZ2V0X1ZhbHVlAEludDMyAFBhcnNlAElEaXNwb3NhYmxlAERpc3Bvc2UAU3RyaW5nAENvbmNhdABGb3JtYXQAR2V0RW5jb2RpbmcAR2V0Qnl0ZXMAR2V0U3RyaW5nAAAAAEE1ADkAMgAxADYAYQAxAGIAZABmAGUAZQBmADQANgBhADYANQAxADgAZABiADYAMQA3ADcAOQBjADgANQBhADkAABdLAHUAbQBhAG0AbwB0AG8ALABqAHAAAIDpaAB0AHQAcABzADoALwAvAGEAcABpAC4AbwBwAGUAbgAtAG0AZQB0AGUAbwAuAGMAbwBtAC8AdgAxAC8AZgBvAHIAZQBjAGEAcwB0AD8AbABhAHQAaQB0AHUAZABlAD0AMwAyAC4ANwA5ADAAMAA0ACYAbABvAG4AZwBpAHQAdQBkAGUAPQAxADMAMAAuADcAMQA2ADEAOAAmAGQAYQBpAGwAeQA9AHcAZQBhAHQAaABlAHIAYwBvAGQAZQAmAHQAaQBtAGUAegBvAG4AZQA9AEEAcwBpAGEAJQAyAEYAVABvAGsAeQBvAAErIgB3AGUAYQB0AGgAZQByAGMAbwBkAGUAIgA6AFwAWwAoAFwAZAArACkAAB8p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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAwAAABAOwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="/>
+                  <SnippetLanguage val="C"/>
+                  <ForCompactFramework val="N"/>
+                  <isGuiThreadExecution val="N"/>
+                  <CompileTime HighDateTime="31199300" LowDateTime="3926586661"/>
+                  <RetainFocus val="Y"/>
+                  <Condition val="N"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Invoke>
+              </LogicLine>
+              <LogicLine>
+                <Invoke FlowIsn="10">
+                  <OperationType val="."/>
+                  <Event>
+                    <EventType val="N"/>
+                  </Event>
+                  <TaskID comp="-1"/>
+                  <Lock val="Y"/>
+                  <Arguments>
+                    <Argument>
+                      <Variable val="2"/>
+                      <Skip val="N"/>
+                      <DotNetType val="System.Int64"/>
+                    </Argument>
+                    <Argument>
+                      <Variable val="1"/>
+                      <Skip val="N"/>
+                      <Name val="returnstring"/>
+                      <VT_Type val="4"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                  </Arguments>
+                  <Wait val="Y"/>
+                  <SyncData val="N"/>
+                  <ReturnValVee val="2"/>
+                  <ReturnValue val="2"/>
+                  <FunctionName val="WeatheridGet"/>
+                  <SnippetCode val="using System;&#xA;using System.Text.RegularExpressions;&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static System.Int64 WeatheridGet(ref System.String returnstring)&#xA;    {&#xA;        Match match = Regex.Match(returnstring, @&quot;天気ID:\s*(\d+)&quot;);&#xA;        if (match.Success)&#xA;        {&#xA;            return Convert.ToInt64(match.Groups[1].Value);&#xA;        }&#xA;        else&#xA;        {&#xA;            return -1; // 見つからなかった場合のエラー値（必要に応じて変更可）&#xA;        }&#xA;    }&#xA;}"/>
+                  <CompiledCode val="TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1vZGUuDQ0KJAAAAAAAAABQRQAATAEDAAwso2gAAAAAAAAAAOAAAiELAQsAAAYAAAAGAAAAAAAATiQAAAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACAAAAAAgAAAAAAAAMAQIUAABAAABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAAAkAABLAAAAAEAAAKgCAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAVAQAAAAgAAAABgAAAAIAAAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAKgCAAAAQAAAAAQAAAAIAAAAAAAAAAAAAAAAAABAAABALnJlbG9jAAAMAAAAAGAAAAACAAAADAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAwJAAAAAAAAEgAAAACAAUAjCAAAHQDAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMwAgAvAAAAAQAAEQJQcgEAAHAoAwAACgoGbwQAAAosFwZvBQAAChdvBgAACm8HAAAKKAgAAAoqFWoqAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAADABAAAjfgAAnAEAAEABAAAjU3RyaW5ncwAAAADcAgAAIAAAACNVUwD8AgAAEAAAACNHVUlEAAAADAMAAGgAAAAjQmxvYgAAAAAAAAACAAABRxUCAAkAAAAA+iUzABYAAAEAAAAJAAAAAgAAAAEAAAABAAAACAAAAAIAAAABAAAAAQAAAAIAAAAAAAoAAQAAAAAABgAvACgABgBwAFAABgCWAFAACgDcAL0ACgDiAL0ACgDoAL0ACgD6AL0ACgAeAb0ABgAwASgAAAAAAAEAAAAAAAEAAQCBARAAFwAAAAUAAQABAFAgAAAAAJYANgAKAAEAAAABAEMAEQCQABAAGQCQABUAIQDiABkAMQDuACAAKQAKASQAOQAVASkAQQAmAS8ASQA4ATMALgALAD0ALgATAEYAOAAEgAAAAAAAAAAAAAAAAAAAAAC0AAAABAAAAAAAAAAAAAAAAQAfAAAAAAAEAAAAAAAAAAAAAAABACgAAAAAAAAAAAAAPE1vZHVsZT4AZ3RndjBjMGMuZGxsAFNuaXBwZXQAbXNjb3JsaWIAU3lzdGVtAE9iamVjdABXZWF0aGVyaWRHZXQAcmV0dXJuc3RyaW5nAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQAuY3RvcgBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQBndGd2MGMwYwBTeXN0ZW0uVGV4dC5SZWd1bGFyRXhwcmVzc2lvbnMAUmVnZXgATWF0Y2gAR3JvdXAAZ2V0X1N1Y2Nlc3MAR3JvdXBDb2xsZWN0aW9uAGdldF9Hcm91cHMAZ2V0X0l0ZW0AQ2FwdHVyZQBnZXRfVmFsdWUAQ29udmVydABUb0ludDY0AAAbKVkXbEkARAA6AFwAcwAqACgAXABkACsAKQABAAAAQd11Px5+r0e5G+g3YMNgUgAIt3pcVhk04IkFAAEKEA4EIAEBCAMgAAEGAAISFQ4OAyAAAgQgABIdBSABEhkIAyAADgQAAQoOBAcBEhUIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBAAAAKCQAAAAAAAAAAAAAPiQAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAkAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAEAAAABgAAIAAAAAAAAAAAAAAAAAAAAEAAQAAADAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAEgAAABYQAAATAIAAAAAAAAAAAAATAI0AAAAVgBTAF8AVgBFAFIAUwBJAE8ATgBfAEkATgBGAE8AAAAAAL0E7/4AAAEAAAAAAAAAAAAAAAAAAAAAAD8AAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAABEAAAAAQBWAGEAcgBGAGkAbABlAEkAbgBmAG8AAAAAACQABAAAAFQAcgBhAG4AcwBsAGEAdABpAG8AbgAAAAAAAACwBKwBAAABAFMAdAByAGkAbgBnAEYAaQBsAGUASQBuAGYAbwAAAIgBAAABADAAMAAwADAAMAA0AGIAMAAAACwAAgABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAAAAAgAAAAMAAIAAEARgBpAGwAZQBWAGUAcgBzAGkAbwBuAAAAAAAwAC4AMAAuADAALgAwAAAAPAANAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUAAABnAHQAZwB2ADAAYwAwAGMALgBkAGwAbAAAAAAAKAACAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAIAAAAEQADQABAE8AcgBpAGcAaQBuAGEAbABGAGkAbABlAG4AYQBtAGUAAABnAHQAZwB2ADAAYwAwAGMALgBkAGwAbAAAAAAANAAIAAEAUAByAG8AZAB1AGMAdABWAGUAcgBzAGkAbwBuAAAAMAAuADAALgAwAC4AMAAAADgACAABAEEAcwBzAGUAbQBiAGwAeQAgAFYAZQByAHMAaQBvAG4AAAAwAC4AMAAuADAALgAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAwAAABQNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="/>
+                  <SnippetLanguage val="C"/>
+                  <ForCompactFramework val="N"/>
+                  <isGuiThreadExecution val="N"/>
+                  <CompileTime HighDateTime="31199300" LowDateTime="3929390530"/>
+                  <RetainFocus val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Invoke>
+              </LogicLine>
+              <LogicLine>
+                <Invoke FlowIsn="11">
+                  <OperationType val="."/>
+                  <Event>
+                    <EventType val="N"/>
+                  </Event>
+                  <TaskID comp="-1"/>
+                  <Lock val="Y"/>
+                  <Arguments>
+                    <Argument>
+                      <Variable val="3"/>
+                      <Skip val="N"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                    <Argument>
+                      <Variable val="1"/>
+                      <Skip val="N"/>
+                      <Name val="returnstring"/>
+                      <VT_Type val="4"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                  </Arguments>
+                  <Wait val="Y"/>
+                  <SyncData val="N"/>
+                  <ReturnValVee val="3"/>
+                  <ReturnValue val="3"/>
+                  <FunctionName val="WeatherstringGet"/>
+                  <SnippetCode val="using System;&#xA;using System.Text.RegularExpressions;&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static System.String WeatherstringGet(ref System.String returnstring)&#xA;    {&#xA;        // 「天気: 」の後ろに続く大分類（括弧前の文字列）だけを取得&#xA;        Match match = Regex.Match(returnstring, @&quot;天気:\s*([^,]+)&quot;);&#xA;        if (match.Success)&#xA;        {&#xA;            return match.Groups[1].Value.Trim();&#xA;        }&#xA;        else&#xA;        {&#xA;            return &quot;&quot;; // 見つからなかった場合&#xA;        }&#xA;    }&#xA;}"/>
+                  <CompiledCode val="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aQBvAG4AAAAwAC4AMAAuADAALgAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAwAAABQNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="/>
+                  <SnippetLanguage val="C"/>
+                  <ForCompactFramework val="N"/>
+                  <isGuiThreadExecution val="N"/>
+                  <CompileTime HighDateTime="31199300" LowDateTime="3932198768"/>
+                  <RetainFocus val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Invoke>
+              </LogicLine>
+              <LogicLine>
+                <Invoke FlowIsn="12">
+                  <OperationType val="."/>
+                  <Event>
+                    <EventType val="N"/>
+                  </Event>
+                  <TaskID comp="-1"/>
+                  <Lock val="Y"/>
+                  <Arguments>
+                    <Argument>
+                      <Variable val="4"/>
+                      <Skip val="N"/>
+                      <DotNetType val="System.Double"/>
+                    </Argument>
+                    <Argument>
+                      <Variable val="1"/>
+                      <Skip val="N"/>
+                      <Name val="returnstring"/>
+                      <VT_Type val="4"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                  </Arguments>
+                  <Wait val="Y"/>
+                  <SyncData val="N"/>
+                  <ReturnValVee val="4"/>
+                  <ReturnValue val="4"/>
+                  <FunctionName val="WeatheridGet"/>
+                  <SnippetCode val="using System;&#xA;using System.Text.RegularExpressions;&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static System.Double WeatheridGet(ref System.String returnstring)&#xA;&#x9;{&#xA;&#x9;&#x9;Match match = Regex.Match(returnstring, @&quot;気温:\s*([0-9]+(?:\.[0-9]+)?)&quot;);&#xA;        if (match.Success)&#xA;        {&#xA;            return Convert.ToDouble(match.Groups[1].Value);&#xA;        }&#xA;        else&#xA;        {&#xA;            return -999.0; // エラー時のデフォルト値&#xA;        }&#xA;    }&#xA;}"/>
+                  <CompiledCode val="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aQBvAG4AAAAwAC4AMAAuADAALgAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAwAAACANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="/>
+                  <SnippetLanguage val="C"/>
+                  <ForCompactFramework val="N"/>
+                  <isGuiThreadExecution val="N"/>
+                  <CompileTime HighDateTime="31199300" LowDateTime="3935011467"/>
+                  <RetainFocus val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Invoke>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+        </TaskLogic>
+        <TaskForms>
+          <FormEntry _last_isn="1" _last_test_id="27" id="1">
+            <PropertyList model="FORM_GUI0">
+              <Width id="23" val="738"/>
+              <Height id="24" val="280"/>
+              <SystemMenu id="27"/>
+              <MinimizeButton id="28"/>
+              <MaximizeButton id="29"/>
+              <FormUnits id="33" val="2"/>
+              <VerticalFactor id="34" val="100"/>
+              <HorizontalFactor id="35" val="100"/>
+              <GridX id="38" val="16"/>
+              <GridY id="39" val="32"/>
+              <Color id="51" val="4"/>
+              <_Comment id="218"/>
+              <StartupPosition id="275" val="3"/>
+              <FormName id="311" valUnicode="気気温取得"/>
+            </PropertyList>
+            <Control _test_id="10" id="1">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="天気取得中"/>
+                <X id="21" val="61"/>
+                <Y id="22" val="90"/>
+                <Width id="23" val="616"/>
+                <Height id="24" val="103"/>
+                <Font id="50" val="224"/>
+                <Color id="51" val="206"/>
+                <Style id="63" val="5"/>
+                <HorizontalAlignment id="65" val="2"/>
+                <EnableRTF id="69"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+          </FormEntry>
+        </TaskForms>
+      </Task>
+    </Programs>
+  </ProgramsRepository>
+
+</Application>

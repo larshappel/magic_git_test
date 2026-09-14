@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="14081.00"/>
+    <WithIsn val="Y"/>
+    <Exe comp="-1"/>
+    <LastIsn val="278"/>
+    <LastIsnFolder val="0"/>
+  </Header>
+
+  <DataRepositoryProperties>
+    <Relationships relationshipLastIsn="1">
+      <Relationship id="1" name="SupplierID" type="1">
+        <SourceTable comp="-1" obj="250"/>
+        <ReferencesTable comp="-1" obj="24"/>
+        <RelationshipFields relationshipFieldLastIsn="1">
+          <RelationshipField id="1">
+            <Source criteria="1" field="1"/>
+            <References criteria="1" field="3"/>
+          </RelationshipField>
+        </RelationshipFields>
+      </Relationship>
+    </Relationships>
+  </DataRepositoryProperties>
+
+  <DataSourceRepository>
+    <DataObjects>
+      <DataObject PhysicalName="system_company" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="1" length="13034" name="M_会社概要_ﾏｽﾀ" offset="715"/>
+      <DataObject PhysicalName="company_holiday" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="2" length="4136" name="M_休日_ﾏｽﾀ" offset="13750"/>
+      <DataObject PhysicalName="sales_management" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="3" length="13748" name="M_販売管理_ﾏｽﾀ" offset="17887"/>
+      <DataObject PhysicalName="system_type" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="4" length="2163" name="M_ｼｽﾃﾑﾀｲﾌﾟ_ﾏｽﾀ" offset="31636"/>
+      <DataObject PhysicalName="terminal" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="5" length="7031" name="M_端末_ﾏｽﾀ" offset="33800"/>
+      <DataObject PhysicalName="menu" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="6" length="4178" name="M_ﾒﾆｭｰ_ﾏｽﾀ" offset="40832"/>
+      <DataObject PhysicalName="report" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="7" length="5110" name="M_帳票_ﾏｽﾀ" offset="45011"/>
+      <DataObject PhysicalName="paper" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="8" length="5255" name="M_用紙_ﾏｽﾀ" offset="50122"/>
+      <DataObject PhysicalName="printer" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="9" length="2194" name="M_ﾌﾟﾘﾝﾀ_ﾏｽﾀ" offset="55378"/>
+      <DataObject PhysicalName="slip_type" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="10" length="2760" name="M_伝票種類_ﾏｽﾀ" offset="57573"/>
+      <DataObject PhysicalName="sliptitlemaster" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="11" length="3289" name="M_伝票ﾀｲﾄﾙ_ﾏｽﾀ" offset="60334"/>
+      <DataObject PhysicalName="MASNOKR" Public="MASNOKR" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="12" length="7966" name="M_NO管理_ﾏｽﾀ" offset="63624"/>
+      <DataObject PhysicalName="post_code" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="13" length="6014" name="M_郵便番号_ﾏｽﾀ" offset="71591"/>
+      <DataObject PhysicalName="slip_type" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="14" length="2670" name="M_伝票区分_ﾏｽﾀ" offset="77606"/>
+      <DataObject PhysicalName="user" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="15" length="4295" name="M_ﾕｰｻﾞｰ_ﾏｽﾀ" offset="80277"/>
+      <DataObject PhysicalName="categorymaster" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="16" length="2847" name="M_ｶﾃｺﾞﾘｰ_ﾏｽﾀ" offset="84573"/>
+      <DataObject PhysicalName="staff" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="17" length="9703" name="M_担当者_ﾏｽﾀ" offset="87421"/>
+      <DataObject PhysicalName="group" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="18" length="6715" name="M_単価ｸﾞﾙｰﾌﾟ_ﾏｽﾀ" offset="97125"/>
+      <DataObject PhysicalName="supplier" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="19" length="27077" name="M_仕入先_ﾏｽﾀ" offset="103841"/>
+      <DataObject PhysicalName="customer" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="20" length="37663" name="M_得意先_ﾏｽﾀ" offset="130919"/>
+      <DataObject PhysicalName="department_link" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="21" length="3403" name="M_部門ﾘﾝｸ_ﾏｽﾀ" offset="168583"/>
+      <DataObject PhysicalName="large_category" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="22" length="2097" name="M_大分類_ﾏｽﾀ" offset="171987"/>
+      <DataObject PhysicalName="medium_category" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="23" length="3159" name="M_中分類_ﾏｽﾀ" offset="174085"/>
+      <DataObject PhysicalName="small_category" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="24" length="3495" name="M_小分類_ﾏｽﾀ" offset="177245"/>
+      <DataObject PhysicalName="product" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="25" length="31127" name="M_商品_ﾏｽﾀ" offset="180741"/>
+      <DataObject PhysicalName="product_group" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="26" length="2891" name="M_商品ｸﾞﾙｰﾌﾟ_ﾏｽﾀ" offset="211869"/>
+      <DataObject PhysicalName="grade" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="27" length="2063" name="M_等級_ﾏｽﾀ" offset="214761"/>
+      <DataObject PhysicalName="class" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="28" length="2063" name="M_階級_ﾏｽﾀ" offset="216825"/>
+      <DataObject PhysicalName="origin" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="29" length="4070" name="M_産地_ﾏｽﾀ" offset="218889"/>
+      <DataObject PhysicalName="packing_type" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="30" length="2079" name="M_荷姿_ﾏｽﾀ" offset="222960"/>
+      <DataObject PhysicalName="unit" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="31" length="2725" name="M_単位_ﾏｽﾀ" offset="225040"/>
+      <DataObject PhysicalName="processingmaster" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="32" length="2819" name="M_加工_ﾏｽﾀ" offset="227766"/>
+      <DataObject PhysicalName="unit_price" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="33" length="13802" name="M_単価_ﾏｽﾀ" offset="230586"/>
+      <DataObject PhysicalName="import_mapping" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="34" length="3775" name="M_取込変換_ﾏｽﾀ" offset="244389"/>
+      <DataObject PhysicalName="-------_ﾌｧｲﾙ_-------" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="35" length="398" name="------- ﾌｧｲﾙ -------" offset="248165"/>
+      <DataObject PhysicalName="weather_file" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="36" length="3337" name="F_天気_ﾌｧｲﾙ" offset="248564"/>
+      <DataObject PhysicalName="stock_management" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="37" length="7628" name="F_残管理_ﾌｧｲﾙ" offset="251902"/>
+      <DataObject PhysicalName="estimate" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="38" length="22165" name="F_見積表紙_ﾌｧｲﾙ" offset="259531"/>
+      <DataObject PhysicalName="estimate_detail" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="39" length="23029" name="F_見積明細_ﾌｧｲﾙ" offset="281697"/>
+      <DataObject PhysicalName="purchase" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="40" length="17912" name="F_発注表紙_ﾌｧｲﾙ" offset="304727"/>
+      <DataObject PhysicalName="purchase_detail" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="41" length="26703" name="F_発注明細_ﾌｧｲﾙ" offset="322640"/>
+      <DataObject PhysicalName="shippingpatterns" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="42" length="21132" name="M_出荷ﾊﾟﾀｰﾝ_ﾏｽﾀ" offset="349344"/>
+      <DataObject PhysicalName="incoming_delivery" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="43" length="30872" name="F_仕入表紙_ﾌｧｲﾙ" offset="370477"/>
+      <DataObject PhysicalName="incoming_delivery_detail" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="44" length="20202" name="F_仕入明細_ﾌｧｲﾙ" offset="401350"/>
+      <DataObject PhysicalName="disbursement" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="45" length="14030" name="F_支払伝票_ﾌｧｲﾙ" offset="421553"/>
+      <DataObject PhysicalName="order" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="46" length="17029" name="F_受注表紙_ﾌｧｲﾙ" offset="435584"/>
+      <DataObject PhysicalName="order_detail" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="47" length="26627" name="F_受注明細_ﾌｧｲﾙ" offset="452614"/>
+      <DataObject PhysicalName="sale" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="48" length="33903" name="F_売上表紙_ﾌｧｲﾙ" offset="479242"/>
+      <DataObject PhysicalName="sale_detail" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="49" length="35202" name="F_売上明細_ﾌｧｲﾙ" offset="513146"/>
+      <DataObject PhysicalName="processing_detail" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="50" length="29914" name="F_加工明細_ﾌｧｲﾙ" offset="548349"/>
+      <DataObject PhysicalName="receipt" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="51" length="14079" name="F_入金伝票_ﾌｧｲﾙ" offset="578264"/>
+      <DataObject PhysicalName="payables_file" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="52" length="13113" name="F_仕入月間_ﾌｧｲﾙ" offset="592344"/>
+      <DataObject PhysicalName="receivables_file" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="53" length="17992" name="F_売上月間_ﾌｧｲﾙ" offset="605458"/>
+      <DataObject PhysicalName="inventorytransaction" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="54" length="8705" name="F_入出庫_ﾌｧｲﾙ" offset="623451"/>
+      <DataObject PhysicalName="product_file" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="55" length="21600" name="F_商品月間_ﾌｧｲﾙ" offset="632157"/>
+      <DataObject PhysicalName="disbursement_closing_file" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="56" length="16130" name="F_支払管理_ﾌｧｲﾙ" offset="653758"/>
+      <DataObject PhysicalName="invoice" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="57" length="18297" name="F_請求管理_ﾌｧｲﾙ" offset="669889"/>
+      <DataObject PhysicalName="invoicesendlog" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="58" length="4937" name="F_請求書送信_LOG" offset="688187"/>
+      <DataObject PhysicalName="moveslips" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="59" length="13158" name="F_移動表紙_ﾌｧｲﾙ" offset="693125"/>
+      <DataObject PhysicalName="movedetails" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="60" length="15664" name="F_移動明細_ﾌｧｲﾙ" offset="706284"/>
+      <DataObject PhysicalName="stock_file" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="61" length="6731" name="F_在庫管理_ﾌｧｲﾙ" offset="721949"/>
+      <DataObject PhysicalName="todo_list" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="62" length="4563" name="F_ToDoﾘｽﾄ" offset="728681"/>
+      <DataObject PhysicalName="purchase_stock_file" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="63" length="34175" name="F_仕入在庫_ﾌｧｲﾙ" offset="733245"/>
+      <DataObject PhysicalName="product_cost_schedule" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="64" length="5251" name="F_仕入原価変更_ﾌｧｲﾙ" offset="767421"/>
+      <DataObject PhysicalName="-------_WORK_-------" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="65" length="382" name="-------_WORK_-------" offset="772673"/>
+      <DataObject PhysicalName="WRKTHOH" Resident="N" UniqueISNConvState="12" data_source="Memory" id="66" length="4051" name="W_帳票_WORK" offset="773056"/>
+      <DataObject PhysicalName="WRKJCHK" Resident="N" UniqueISNConvState="12" data_source="Memory" id="67" length="20517" name="W_受注表紙_WORK" offset="777108"/>
+      <DataObject PhysicalName="WRKJCMS" Resident="N" UniqueISNConvState="12" data_source="Memory" id="68" length="30895" name="W_受注明細_WORK" offset="797626"/>
+      <DataObject PhysicalName="WRKURFL" Resident="N" UniqueISNConvState="12" data_source="Memory" id="69" length="30722" name="W_売上表紙_WORK" offset="828522"/>
+      <DataObject PhysicalName="WRKURML" Resident="N" UniqueISNConvState="12" data_source="Memory" id="70" length="39411" name="W_売上明細_WORK" offset="859245"/>
+      <DataObject PhysicalName="WRKKAKM" Resident="N" UniqueISNConvState="12" data_source="Memory" id="71" length="30456" name="W_加工明細_WORK" offset="898657"/>
+      <DataObject PhysicalName="WRKURRK" Resident="N" UniqueISNConvState="12" data_source="Memory" id="72" length="4369" name="W_売上履歴_WORK" offset="929114"/>
+      <DataObject PhysicalName="WRKKRRK" Resident="N" UniqueISNConvState="12" data_source="Memory" id="73" length="4073" name="W_加工履歴_WORK" offset="933484"/>
+      <DataObject PhysicalName="WRKSYKF" Resident="N" UniqueISNConvState="12" data_source="Memory" id="74" length="19231" name="W_請求支払管理_WORK" offset="937558"/>
+      <DataObject PhysicalName="WRKSKMI" Resident="N" UniqueISNConvState="12" data_source="Memory" id="75" length="13272" name="W_請求支払明細_WORK" offset="956790"/>
+      <DataObject PhysicalName="WKMOTCY" Resident="N" UniqueISNConvState="12" data_source="Memory" id="76" length="20827" name="W_得意先元帳_WORK" offset="970063"/>
+      <DataObject PhysicalName="WKURISU" Resident="N" UniqueISNConvState="12" data_source="Memory" id="77" length="5656" name="W_取引集計_WORK" offset="990891"/>
+      <DataObject PhysicalName="WKSYOHK" Resident="N" UniqueISNConvState="12" data_source="Memory" id="78" length="19966" name="W_商品検索_WORK" offset="996548"/>
+      <DataObject PhysicalName="WKHOLDY" Resident="N" UniqueISNConvState="12" data_source="Memory" id="79" length="2509" name="W_holiday_WORK" offset="1016515"/>
+      <DataObject PhysicalName="WKTIAWS" Resident="N" UniqueISNConvState="12" data_source="Memory" id="80" length="9493" name="W_売上問合_WORK" offset="1019025"/>
+      <DataObject PhysicalName="WKHCUMI" Resident="N" UniqueISNConvState="12" data_source="Memory" id="81" length="26470" name="W_発注明細_WORK" offset="1028519"/>
+      <DataObject PhysicalName="WKSIRMI" Resident="N" UniqueISNConvState="12" data_source="Memory" id="82" length="32528" name="W_仕入明細_WORK" offset="1054990"/>
+      <DataObject PhysicalName="WKNYSYK" Resident="N" UniqueISNConvState="12" data_source="Memory" id="83" length="8812" name="W_入出庫_WORK" offset="1087519"/>
+      <DataObject PhysicalName="WKTODOL" Resident="N" UniqueISNConvState="12" data_source="Memory" id="84" length="4716" name="W_ToDoﾘｽﾄ_WORK" offset="1096332"/>
+      <DataObject PhysicalName="WKBIKNW" Resident="N" UniqueISNConvState="12" data_source="Memory" id="85" length="32445" name="W_売価入力WORK" offset="1101049"/>
+      <DataObject PhysicalName="WKDIPDF" Resident="N" UniqueISNConvState="12" data_source="Memory" id="86" length="13863" name="W_大同青果PDF_WORK" offset="1133495"/>
+      <DataObject PhysicalName="WKZAIKW" Resident="N" UniqueISNConvState="12" data_source="Memory" id="87" length="32996" name="W_在庫一覧_WORK" offset="1147359"/>
+      <DataObject PhysicalName="WKNEDNH" Resident="N" UniqueISNConvState="12" data_source="Memory" id="88" length="4351" name="W_値段表_WORK" offset="1180356"/>
+      <DataObject PhysicalName="WKSGHKO" Resident="N" UniqueISNConvState="12" data_source="Memory" id="89" length="4868" name="W_仕入原価変更_WORK" offset="1184708"/>
+      <DataObject PhysicalName="WKSBUNW" Resident="N" UniqueISNConvState="12" data_source="Memory" id="90" length="1950" name="W_小分類_WORK" offset="1189577"/>
+      <DataObject PhysicalName="WKNEFDH" Resident="N" UniqueISNConvState="12" data_source="Memory" id="91" length="30588" name="W_値札発行_WORK" offset="1191528"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="92" length="318" offset="1222117"/>
+      <DataObject PhysicalName="------_取込_-------" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="93" length="384" name="------_取込_-------" offset="1222436"/>
+      <DataObject PhysicalName="WKTOKUI" Resident="N" UniqueISNConvState="12" data_source="Default Work" id="94" length="19199" name="得意先ﾏｽﾀ" offset="1222821"/>
+      <DataObject PhysicalName="WKSHHIN" Resident="N" UniqueISNConvState="12" data_source="Default Work" id="95" length="20958" name="商品ﾏｽﾀ" offset="1242021"/>
+      <DataObject PhysicalName="WKSBTBS" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="96" length="11304" name="商品得意先別集計" offset="1262980"/>
+      <DataObject PhysicalName="WKUAMHY" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="97" length="34662" name="売上明細表" offset="1274285"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="98" length="318" offset="1308948"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="99" length="318" offset="1309267"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="100" length="319" offset="1309586"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="101" length="319" offset="1309906"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="102" length="319" offset="1310226"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="103" length="319" offset="1310546"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="104" length="319" offset="1310866"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="105" length="319" offset="1311186"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="106" length="319" offset="1311506"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="107" length="319" offset="1311826"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="108" length="319" offset="1312146"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="109" length="319" offset="1312466"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="110" length="319" offset="1312786"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="111" length="319" offset="1313106"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="112" length="319" offset="1313426"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="113" length="319" offset="1313746"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="114" length="319" offset="1314066"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="115" length="319" offset="1314386"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="116" length="319" offset="1314706"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="117" length="319" offset="1315026"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="118" length="319" offset="1315346"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="119" length="319" offset="1315666"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="120" length="319" offset="1315986"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="121" length="319" offset="1316306"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="122" length="319" offset="1316626"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="123" length="319" offset="1316946"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="124" length="319" offset="1317266"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="125" length="319" offset="1317586"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="126" length="319" offset="1317906"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="127" length="319" offset="1318226"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="128" length="319" offset="1318546"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="129" length="319" offset="1318866"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="130" length="319" offset="1319186"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="131" length="319" offset="1319506"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="132" length="319" offset="1319826"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="133" length="319" offset="1320146"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="134" length="319" offset="1320466"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="135" length="319" offset="1320786"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="136" length="319" offset="1321106"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="137" length="319" offset="1321426"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="138" length="319" offset="1321746"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="139" length="319" offset="1322066"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="140" length="319" offset="1322386"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="141" length="319" offset="1322706"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="142" length="319" offset="1323026"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="143" length="319" offset="1323346"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="144" length="319" offset="1323666"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="145" length="319" offset="1323986"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="146" length="319" offset="1324306"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="147" length="319" offset="1324626"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="148" length="319" offset="1324946"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="149" length="319" offset="1325266"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="150" length="319" offset="1325586"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="151" length="319" offset="1325906"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="152" length="319" offset="1326226"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="153" length="319" offset="1326546"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="154" length="319" offset="1326866"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="155" length="319" offset="1327186"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="156" length="319" offset="1327506"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="157" length="319" offset="1327826"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="158" length="319" offset="1328146"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="159" length="319" offset="1328466"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="160" length="319" offset="1328786"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="161" length="319" offset="1329106"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="162" length="319" offset="1329426"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="163" length="319" offset="1329746"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="164" length="319" offset="1330066"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="165" length="319" offset="1330386"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="166" length="319" offset="1330706"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="167" length="319" offset="1331026"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="168" length="319" offset="1331346"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="169" length="319" offset="1331666"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="170" length="319" offset="1331986"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="171" length="319" offset="1332306"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="172" length="319" offset="1332626"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="173" length="319" offset="1332946"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="174" length="319" offset="1333266"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="175" length="319" offset="1333586"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="176" length="319" offset="1333906"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="177" length="319" offset="1334226"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="178" length="319" offset="1334546"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="179" length="319" offset="1334866"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="180" length="319" offset="1335186"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="181" length="319" offset="1335506"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="182" length="319" offset="1335826"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="183" length="319" offset="1336146"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="184" length="319" offset="1336466"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="185" length="319" offset="1336786"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="186" length="319" offset="1337106"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="187" length="319" offset="1337426"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="188" length="319" offset="1337746"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="189" length="319" offset="1338066"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="190" length="319" offset="1338386"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="191" length="319" offset="1338706"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="192" length="319" offset="1339026"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="193" length="319" offset="1339346"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="194" length="319" offset="1339666"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="195" length="319" offset="1339986"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="196" length="319" offset="1340306"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="197" length="319" offset="1340626"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="198" length="319" offset="1340946"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="199" length="319" offset="1341266"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="200" length="319" offset="1341586"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="201" length="319" offset="1341906"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="202" length="319" offset="1342226"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="203" length="319" offset="1342546"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="204" length="319" offset="1342866"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="205" length="319" offset="1343186"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="206" length="319" offset="1343506"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="207" length="319" offset="1343826"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="208" length="319" offset="1344146"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="209" length="319" offset="1344466"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="210" length="319" offset="1344786"/>
+      <DataObject PhysicalName="TBKUSK.WRK" Resident="N" UniqueISNConvState="12" data_source="Memory" id="211" length="12329" name="W_組合請求書WORK" offset="1345106"/>
+      <DataObject PhysicalName="ZENKTI.DAT" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="212" length="5658" name="M_全国統一品名ﾏｽﾀ" offset="1357436"/>
+      <DataObject PhysicalName="SRSHIN.DAT" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="213" length="17584" name="M_商品_ﾏｽﾀ" offset="1363095"/>
+      <DataObject PhysicalName="SRSHOKON" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="214" length="39323" name="M_商魂商品_ﾏｽﾀ" offset="1380680"/>
+      <DataObject PhysicalName="SRSHOKON2" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="215" length="40731" name="M_商魂商品_ﾏｽﾀ(ﾚｼﾞ)" offset="1420004"/>
+      <DataObject PhysicalName="SRDBUN2.DAT" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="216" length="2067" name="M_大分類(取込用)_ﾏｽﾀ" offset="1460736"/>
+      <DataObject PhysicalName="SRCBUN2.DAT" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="217" length="2067" name="M_中分類(取込用)_ﾏｽﾀ" offset="1462804"/>
+      <DataObject PhysicalName="SRSBUN2.DAT" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="218" length="2067" name="M_小分類(取込用)_ﾏｽﾀ" offset="1464872"/>
+      <DataObject PhysicalName="SRSHIN2.DAT" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="219" length="6419" name="M_商品(取込用)_ﾏｽﾀ" offset="1466940"/>
+      <DataObject PhysicalName="SRSUNT2.DAT" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="220" length="2052" name="M_都道府県_ﾏｽﾀ" offset="1473360"/>
+      <DataObject PhysicalName="SRSCTS2.DAT" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="221" length="3854" name="M_市区町村(取込用)_ﾏｽﾀ" offset="1475413"/>
+      <DataObject PhysicalName="SRSCTS.DAT" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="222" length="4817" name="M_市区町村_ﾏｽﾀ" offset="1479268"/>
+      <DataObject PhysicalName="closing_calculation" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="223" length="4225" name="M_締日_ﾏｽﾀ" offset="1484086"/>
+      <DataObject PhysicalName="bank_account" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="224" length="4233" name="M_振込口座_ﾏｽﾀ" offset="1488312"/>
+      <DataObject PhysicalName="tax_rate_change" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="225" length="3159" name="M_消費税率_ﾏｽﾀ" offset="1492546"/>
+      <DataObject PhysicalName="weather" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="226" length="2670" name="M_天気_ﾏｽﾀ" offset="1495706"/>
+      <DataObject PhysicalName="product_with_categories_view" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="227" length="22692" name="V_商品ｶﾃｺﾞﾘ_ﾋﾞｭｰ" offset="1498377"/>
+      <DataObject PhysicalName="producer_group" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="228" length="2772" name="M_ｸﾞﾙｰﾌﾟ_ﾏｽﾀ" offset="1521070"/>
+      <DataObject PhysicalName="sender" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="229" length="9097" name="M_送り主_ﾏｽﾀ" offset="1523843"/>
+      <DataObject PhysicalName="recipient" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="230" length="9566" name="M_宛名_ﾏｽﾀ" offset="1532941"/>
+      <DataObject PhysicalName="WKTHKEN" Resident="N" UniqueISNConvState="12" data_source="Memory" id="231" length="11165" name="W_履歴検索_WORK" offset="1542508"/>
+      <DataObject PhysicalName="WKRKSEN" Resident="N" UniqueISNConvState="12" data_source="Memory" id="232" length="9332" name="W_履歴選択_WORK" offset="1553674"/>
+      <DataObject PhysicalName="bank" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="233" length="4739" name="M_銀行_ﾏｽﾀ" offset="1563007"/>
+      <DataObject PhysicalName="partner_product" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="234" length="3269" name="M_取引先商品_ﾏｽﾀ" offset="1567747"/>
+      <DataObject PhysicalName="HIBTUSYU" Resident="N" UniqueISNConvState="12" data_source="Memory" id="235" length="3826" name="W_日別集計_WORK" offset="1571017"/>
+      <DataObject PhysicalName="URAGJHYO" Resident="N" UniqueISNConvState="12" data_source="Memory" id="236" length="5510" name="W_売上順位_WORK" offset="1574844"/>
+      <DataObject PhysicalName="URIZANHYO" Resident="N" UniqueISNConvState="12" data_source="Memory" id="237" length="9668" name="W_売掛残高_WORK" offset="1580355"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="238" length="319" offset="1590024"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="239" length="319" offset="1590344"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="240" length="319" offset="1590664"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="241" length="319" offset="1590984"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="242" length="319" offset="1591304"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="243" length="319" offset="1591624"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="244" length="319" offset="1591944"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="245" length="319" offset="1592264"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="246" length="319" offset="1592584"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="247" length="319" offset="1592904"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="248" length="319" offset="1593224"/>
+      <DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="249" length="319" offset="1593544"/>
+      <DataObject PhysicalName="supplier" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="250" length="29041" name="M_仕入先_ﾏｽﾀ(白木)" offset="1593864"/>
+      <DataObject PhysicalName="unit" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="251" length="2948" name="M_単位_ﾏｽﾀ(白木)" offset="1622906"/>
+      <DataObject PhysicalName="origin" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="252" length="4394" name="M_産地_ﾏｽﾀ(白木)" offset="1625855"/>
+      <DataObject PhysicalName="grade" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="253" length="2214" name="M_等級_ﾏｽﾀ" offset="1630250"/>
+      <DataObject PhysicalName="class" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="254" length="2214" name="M_階級_ﾏｽﾀ" offset="1632465"/>
+      <DataObject PhysicalName="packing_type" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="255" length="2215" name="M_荷姿_ﾏｽﾀ" offset="1634680"/>
+      <DataObject PhysicalName="purchase_stock_file" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="256" length="37561" name="M_商品仕入ﾃﾞｰﾀ_ﾌｧｲﾙ" offset="1636896"/>
+      <DataObject PhysicalName="weather_file" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="257" length="3458" name="F_天気_ﾌｧｲﾙ" offset="1674458"/>
+      <DataObject PhysicalName="weather" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="258" length="2759" name="M_天気_ﾏｽﾀ" offset="1677917"/>
+      <DataObject PhysicalName="import_mapping" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="259" length="3485" name="M_取込変換_ﾏｽﾀ" offset="1680677"/>
+      <DataObject PhysicalName="small_category" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="260" length="3952" name="M_小分類_ﾏｽﾀ" offset="1684163"/>
+      <DataObject PhysicalName="product" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="261" length="31882" name="M_商品_ﾏｽﾀ" offset="1688116"/>
+      <DataObject PhysicalName="producer_group" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="262" length="3103" name="M_ｸﾞﾙｰﾌﾟ_ﾏｽﾀ" offset="1719999"/>
+      <DataObject PhysicalName="large_category" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="263" length="2250" name="M_大分類_ﾏｽﾀ" offset="1723103"/>
+      <DataObject PhysicalName="medium_category" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="264" length="3089" name="M_中分類_ﾏｽﾀ" offset="1725354"/>
+      <DataObject PhysicalName="product_cost_schedule" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="265" length="5604" name="F_仕入原価変更_ﾌｧｲﾙ" offset="1728444"/>
+      <DataObject PhysicalName="SRZIRT" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="266" length="9546" name="M_税率_ﾏｽﾀ" offset="1734049"/>
+      <DataObject PhysicalName="SKBIKN.DAT" Resident="N" UniqueISNConvState="12" data_source="Memory" id="267" length="32688" name="W_売価入力WORK" offset="1743596"/>
+      <DataObject PhysicalName="SRDASE.DAT" Resident="N" UniqueISNConvState="12" data_source="Memory" id="268" length="15455" name="W_大同青果PDF_WORK" offset="1776285"/>
+      <DataObject PhysicalName="SRZAIK.WRK" Resident="N" UniqueISNConvState="12" data_source="Memory" id="269" length="33342" name="W_在庫一覧_WORK" offset="1791741"/>
+      <DataObject PhysicalName="SRNEDN.WRK" Resident="N" UniqueISNConvState="12" data_source="Memory" id="270" length="4481" name="W_値段表_WORK" offset="1825084"/>
+      <DataObject PhysicalName="SRSGHK.WRK" Resident="N" UniqueISNConvState="12" data_source="Memory" id="271" length="5332" name="W_仕入原価変更_WORK" offset="1829566"/>
+      <DataObject PhysicalName="SRCBUN.WRK" Resident="N" UniqueISNConvState="12" data_source="Memory" id="272" length="1974" name="W_小分類_WORK" offset="1834899"/>
+      <DataObject PhysicalName="SRNEFD.WRK" Resident="N" UniqueISNConvState="12" data_source="Memory" id="273" length="30903" name="W_値札発行_WORK" offset="1836874"/>
+      <DataObject PhysicalName="WKMOTCY" Resident="N" UniqueISNConvState="12" data_source="Memory" id="274" length="19718" name="W_得意先元帳_WORK" offset="1867778"/>
+      <DataObject PhysicalName="customer_forimport" Resident="N" UniqueISNConvState="12" data_source="Default Database" id="275" length="40968" name="M_得意先_ﾏｽﾀ(取込用)" offset="1887497"/>
+      <DataObject PhysicalName="sort_order" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="276" length="3268" name="F_並び順_ﾌｧｲﾙ" offset="1928466"/>
+      <DataObject PhysicalName="WKNBJUN" Resident="N" UniqueISNConvState="12" data_source="Memory" id="277" length="12456" name="W_並び順_WORK" offset="1931735"/>
+    </DataObjects>
+  </DataSourceRepository>
+
+  <LastModified val="31265792-165850572"/>
+
+</Application>

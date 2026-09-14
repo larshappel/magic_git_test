@@ -1,0 +1,1369 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="14081.00"/>
+    <WithIsn val="Y"/>
+    <LastIsn val="142"/>
+    <LastIsnFolder val="0"/>
+  </Header>
+
+  <ModelsRepository>
+    <Models>
+      <Object Public="日付(YYYY/MM/DDZ)" id="1" name="日付(YYYY/MM/DDZ)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_DATE" id="1"/>
+          <Picture id="157" valUnicode="YYYY/MM/DDZ"/>
+          <NullAllowed id="166" val="Y"/>
+          <NullDefault id="169" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="日付(YY/MM/DDZ)" id="2" name="日付(YY/MM/DDZ)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_DATE" id="1"/>
+          <Picture id="157" valUnicode="YY/MM/DDZ"/>
+          <NullAllowed id="166" val="Y"/>
+          <NullDefault id="169" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="日付(YY/MMZ)" id="3" name="日付(YY/MMZ)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_DATE" id="1"/>
+          <Picture id="157" valUnicode="YY/MMZ"/>
+          <NullAllowed id="166" val="Y"/>
+          <NullDefault id="169" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="時間(HH:MM:SSZ)" id="4" name="時間(HH:MM:SSZ)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_TIME" id="1"/>
+          <Picture id="157" valUnicode="HH:MM:SSZ"/>
+          <NullAllowed id="166" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="時間(HH時MM分Z)" id="5" name="時間(HH時MM分Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_TIME" id="1"/>
+          <NullAllowed id="166" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="年(4Z)" id="6" name="年(4Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="4Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="4"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="月(2Z)" id="7" name="月(2Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="2Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="2"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="日(2Z)" id="8" name="日(2Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="2Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="2"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="部門CD(2P0Z)" id="9" name="部門CD(2P0Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="2P0Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="2"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="部門ｶﾅ(A10)" id="10" name="部門ｶﾅ(A10)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="10"/>
+          <Size id="174" val="10"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="部門名(A20)" id="11" name="部門名(A20)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="20"/>
+          <Size id="174" val="20"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="担当者CD(2P0Z)" id="12" name="担当者CD(2P0Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="2P0Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="2"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="担当者ｶﾅ(A10)" id="13" name="担当者ｶﾅ(A10)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="10"/>
+          <Size id="174" val="10"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="担当者名(A20)" id="14" name="担当者名(A20)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="20"/>
+          <Size id="174" val="20"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="端末NO(2P0)" id="15" name="端末NO(2P0)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="2P0Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="2"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="端末名(A20)" id="16" name="端末名(A20)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="20"/>
+          <Size id="174" val="20"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="ﾕｰｻﾞｰID(N3)" id="17" name="ﾕｰｻﾞｰID(N3)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="3"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="3"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="ﾕｰｻﾞｰ名(A40)" id="18" name="ﾕｰｻﾞｰ名(A40)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="40"/>
+          <Size id="174" val="40"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="ﾊﾟｽﾜｰﾄﾞ(A10)" id="19" name="ﾊﾟｽﾜｰﾄﾞ(A10)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="10"/>
+          <Size id="174" val="10"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="ｲﾝﾎﾞｲｽ登録番号(A14)" id="20" name="ｲﾝﾎﾞｲｽ登録番号">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="14"/>
+          <Size id="174" val="14"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="役職名(A20)" id="21" name="役職名(A20)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="20"/>
+          <Size id="174" val="20"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="代表者名(A20)" id="22" name="代表者名(A20)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="20"/>
+          <Size id="174" val="20"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="郵便番号(A8)" id="23" name="郵便番号(A8)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="8"/>
+          <Size id="174" val="8"/>
+          <_Flip id="194"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="都道府県(A10)" id="24" name="都道府県(A10)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="10"/>
+          <Size id="174" val="10"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="市区町村(A20)" id="25" name="市区町村(A20)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="20"/>
+          <Size id="174" val="20"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="番地･建物(A40)" id="26" name="番地･建物(A40)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="40"/>
+          <Size id="174" val="40"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="TEL(A13)" id="27" name="TEL(A13)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="13"/>
+          <Size id="174" val="13"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="FAX(A13)" id="28" name="FAX(A13)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="13"/>
+          <Size id="174" val="13"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="ﾒｰﾙｱﾄﾞﾚｽ(A50)" id="29" name="ﾒｰﾙｱﾄﾞﾚｽ(A50)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="50"/>
+          <Size id="174" val="50"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="URL(A50)" id="30" name="URL(A100)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="100"/>
+          <Size id="174" val="100"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="確認(Y/N)" id="31" name="確認(Y/N)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_LOGICAL" id="1"/>
+          <Range id="98" valUnicode="Yes,No"/>
+          <Picture id="157" valUnicode="XA"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="ｼｽﾃﾑ識別(2)" id="32" name="ｼｽﾃﾑ識別(2)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="2"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="2"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="ﾚｺｰﾄﾞ区分(N1)" id="33" name="ﾚｺｰﾄﾞ区分(N1)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="1"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="1"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="ﾚｺｰﾄﾞ区分(N3)" id="34" name="ﾚｺｰﾄﾞ区分(N3)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="3"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="3"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="数値(1Z)" id="35" name="数値(1Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="1Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="1"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="数値(2Z)" id="36" name="数値(2Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="2Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="2"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="数値(3Z)" id="37" name="数値(3Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="3Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="3"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="数値(4Z)" id="38" name="数値(4Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="4Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="4"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="数値(5Z)" id="39" name="数値(5Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="5Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="5"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="数値(6Z)" id="40" name="数値(6Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="6Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="6"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A1)" id="41" name="文字(A1)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="1"/>
+          <Size id="174" val="1"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A2)" id="42" name="文字(A2)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="2"/>
+          <Size id="174" val="2"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A3)" id="43" name="文字(A3)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="3"/>
+          <Size id="174" val="3"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A4)" id="44" name="文字(A4)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="4"/>
+          <Size id="174" val="4"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A5)" id="45" name="文字(A5)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="5"/>
+          <Size id="174" val="5"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A6)" id="46" name="文字(A6)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="6"/>
+          <Size id="174" val="6"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A7)" id="47" name="文字(A7)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="7"/>
+          <Size id="174" val="7"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A8)" id="48" name="文字(A8)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="8"/>
+          <Size id="174" val="8"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A9)" id="49" name="文字(A9)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="9"/>
+          <Size id="174" val="9"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A10)" id="50" name="文字(A10)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="10"/>
+          <Size id="174" val="10"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A20)" id="51" name="文字(A20)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="20"/>
+          <Size id="174" val="20"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A30)" id="52" name="文字(A30)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="30"/>
+          <Size id="174" val="30"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A40)" id="53" name="文字(A40)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="40"/>
+          <Size id="174" val="40"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A50)" id="54" name="文字(A50)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="50"/>
+          <Size id="174" val="50"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A60)" id="55" name="文字(A60)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="60"/>
+          <Size id="174" val="60"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A70)" id="56" name="文字(A70)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="70"/>
+          <Size id="174" val="70"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A80)" id="57" name="文字(A80)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="80"/>
+          <Size id="174" val="80"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A90)" id="58" name="文字(A90)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="90"/>
+          <Size id="174" val="90"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A100)" id="59" name="文字(A100)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="100"/>
+          <Size id="174" val="100"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A200)" id="60" name="文字(A200)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="200"/>
+          <Size id="174" val="200"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A300)" id="61" name="文字(A300)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="300"/>
+          <Size id="174" val="300"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="文字(A500)" id="62" name="文字(A500)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="500"/>
+          <Size id="174" val="500"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="論理区分(N1)" id="63" name="論理区分(N1)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Range id="98" valUnicode="0:FALSE,1:TRUE"/>
+          <Picture id="157" valUnicode="1"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="1"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object id="64" name="------- 販売管理 -------">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Size id="174"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="明細ID(8Z)" id="65" name="明細ID(8Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="8Z"/>
+          <NullAllowed id="166"/>
+          <NullDefault id="169"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="8"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="伝票NO(8Z)" id="66" name="伝票NO(8Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="8Z"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="8"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="伝票NO行(N3)" id="67" name="伝票NO行(N3)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="3Z"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="3"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="伝票区分(1Z)" id="68" name="伝票区分(1Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Range id="98" valUnicode="1:掛売,2:現金"/>
+          <Picture id="157" valUnicode="1Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <DefaultValue id="170" val="0"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="1"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="仕入区分(1Z)" id="69" name="仕入区分(1Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Range id="98" valUnicode="1:仕入,2:返品,3:値引"/>
+          <Picture id="157" valUnicode="1Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="1"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="売上区分(1Z)" id="70" name="売上区分(1Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Range id="98" valUnicode="1:売上,2:返品,3:値引"/>
+          <Picture id="157" valUnicode="1Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="1"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="単価管理(N1)" id="71" name="単価管理(N1)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Range id="98" valUnicode="1:個別単価,2:ｸﾞﾙｰﾌﾟ単価"/>
+          <Picture id="157" valUnicode="1"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="1"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="単価ｸﾞﾙｰﾌﾟ(N7)" id="72" name="単価ｸﾞﾙｰﾌﾟ(N7)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="7"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="7"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="課税区分(1Z)" id="73" name="課税区分(1Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Range id="98" valUnicode="1:外税,2:内税,3:非課税,4:無処理"/>
+          <Picture id="157" valUnicode="1"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="1"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="税率区分(1Z)" id="74" name="税率区分(1Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Range id="98" valUnicode="1:標準,2:軽減"/>
+          <Picture id="157" valUnicode="1"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="1"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="消費税率(1.2Z)" id="75" name="消費税率(2.1Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="2.1Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181" val="1"/>
+          <_Whole id="182" val="2"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="税区分(1Z)" id="76" name="消費税区分(1Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Range id="98" valUnicode="1:締時一括,2:伝票単位,3:明細単位,4:無処理,5:税修正"/>
+          <Picture id="157" valUnicode="1Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="1"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="税端数(1Z)" id="77" name="消費税端数(1Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Range id="98" valUnicode="1:四捨五入,2:切り捨て,3:切り上げ"/>
+          <Picture id="157" valUnicode="1Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="1"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="在庫単価評価法(1Z)" id="78" name="在庫単価評価法(1Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Range id="98" valUnicode="1:標準原価法,2:最終仕入単価法,3:月別平均単価法"/>
+          <Picture id="157" valUnicode="1Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="1"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="掛率(N3.2Z)" id="79" name="掛率(N3.2Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N3.2Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181" val="2"/>
+          <_Whole id="182" val="3"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="ｶﾃｺﾞﾘｰCD(3Z)" id="80" name="ｶﾃｺﾞﾘｰCD(3Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="3Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="3"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="ｶﾃｺﾞﾘｰ名(A20)" id="81" name="ｶﾃｺﾞﾘｰ名(A20)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="20"/>
+          <Size id="174" val="20"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="仕入先CD(6Z)" id="82" name="仕入先CD(6Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="6Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="6"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="仕入先ｶﾅ(A15)" id="83" name="仕入先ｶﾅ(A15)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="15"/>
+          <Size id="174" val="15"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="仕入先ｶﾅ(A40)" id="84" name="仕入先名(A40)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="40"/>
+          <Size id="174" val="40"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="仕入先名(略)(A20)" id="85" name="仕入先名(略)(A20)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="20"/>
+          <Size id="174" val="20"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="得意先CD(6Z)" id="86" name="得意先CD(6Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="6Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="6"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="得意先名ｶﾅ(A15)" id="87" name="得意先名ｶﾅ(A15)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="15"/>
+          <Size id="174" val="15"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="得意先名(A40)" id="88" name="得意先名(A40)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="40"/>
+          <Size id="174" val="40"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="得意先名(略)(A20)" id="89" name="得意先名(略)(A20)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="20"/>
+          <Size id="174" val="20"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="商品CD(6P0Z)" id="90" name="商品CD(6P0Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="6P0Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="6"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="商品名ｶﾅ(A20)" id="91" name="商品名ｶﾅ(A20)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="20"/>
+          <Size id="174" val="20"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="商品名(A36)" id="92" name="商品名(A36)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="36"/>
+          <Size id="174" val="36"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="商品名(略)(A20)" id="93" name="商品名(略)(A20)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="20"/>
+          <Size id="174" val="20"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="商品規格(A20)" id="94" name="商品規格(A20)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="20"/>
+          <Size id="174" val="20"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="JANｺｰﾄﾞ(N13)" id="95" name="JANｺｰﾄﾞ(N13)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="13"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="13"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="大分類CD(2Z)" id="96" name="大分類CD(2Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="2Z"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="2"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="中分類CD(3Z)" id="97" name="中分類CD(3Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="3Z"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="3"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="小分類CD(4Z)" id="98" name="小分類CD(4Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="4Z"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="4"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="分類名(A30)" id="99" name="分類名(A30)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="30"/>
+          <Size id="174" val="30"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="単位CD(2Z)" id="100" name="単位CD(2Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="2Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="2"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="単位名(A10)" id="101" name="単位名(A10)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="10"/>
+          <Size id="174" val="10"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="入数(4Z)" id="102" name="入数(4Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="4Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="4"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="箱数(4Z)" id="103" name="箱数(4Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="4Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="4"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="数量(N6.1CZ)" id="104" name="数量(N6.1CZ)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N6.1CZ"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181" val="1"/>
+          <_Whole id="182" val="6"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="数量(N6.2CZ)" id="105" name="数量(N6.2CZ)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N6.2CZ"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181" val="2"/>
+          <_Whole id="182" val="6"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="単価(N8.2CZ)" id="106" name="単価(N8.2CZ)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="8.2CZ"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181" val="2"/>
+          <_Whole id="182" val="8"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="売価(N8.2CZ)" id="107" name="売価(N8.2CZ)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="8.2CZ"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181" val="2"/>
+          <_Whole id="182" val="8"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="金額(N7)" id="108" name="金額(N7)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N7Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="7"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="金額(N7CZ)" id="109" name="金額(N7CZ)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N7CZ"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="7"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="金額(N8)" id="110" name="金額(N8)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N8Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="8"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="金額(N8CZ)" id="111" name="金額(N8CZ)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N8CZ"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="8"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="金額(N9)" id="112" name="金額(N9)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N9"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="9"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="金額(N9CZ)" id="113" name="金額(N9CZ)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N9CZ"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="9"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="金額(N10)" id="114" name="金額(N10)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N10"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="10"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="金額(N10CZ)" id="115" name="金額(N10CZ)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N10CZ"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="10"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="金額(N11)" id="116" name="金額(N11)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N11"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="11"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="金額(N11CZ)" id="117" name="金額(N11CZ)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N11CZ"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="11"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="備考(A30)" id="118" name="備考(A30)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="30"/>
+          <Size id="174" val="30"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="備考(A40)" id="119" name="備考(A40)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="40"/>
+          <Size id="174" val="40"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object id="120" name="------- 財務管理 -------">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Size id="174"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="銀行CD(4P0Z)" id="121" name="銀行CD(4P0Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="4P0Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="4"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="支店CD(3P0Z)" id="122" name="支店CD(3P0Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="3P0Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="3"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="預金科目CD(2Z)" id="123" name="預金科目CD(2Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="2Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="2"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="預金科目(A12)" id="124" name="預金科目(A12)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="12"/>
+          <Size id="174" val="12"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="口座番号(7P0Z)" id="125" name="口座番号(7P0Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="7P0Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="7"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="金融機関ｶﾅ(A15)" id="126" name="金融機関ｶﾅ(A15)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="15"/>
+          <Size id="174" val="15"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="金融機関名（A30）" id="127" name="金融機関名（A30）">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="30"/>
+          <Size id="174" val="30"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="金種(A1)" id="128" name="金種(A1)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Range id="98" valUnicode="1:現金,2:小切手,3:振込,4:相殺,5:その他"/>
+          <Picture id="157" valUnicode="1A"/>
+          <Size id="174" val="1"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="取引銀行(A44)" id="129" name="取引銀行(A44)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Picture id="157" valUnicode="44"/>
+          <Size id="174" val="44"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object id="130" name="------- 農業資材 -------">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Size id="174"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="加工CD(N2)" id="131" name="加工CD(N2Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="2Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="2"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="厚さ(N1.3)" id="132" name="厚さ(N1.3)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="1.3Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181" val="3"/>
+          <_Whole id="182" val="1"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="幅(N3)" id="133" name="幅(N3)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="3Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="3"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="長さ(N4.1)" id="134" name="長さ(N4.1)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="4.1Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181" val="1"/>
+          <_Whole id="182" val="4"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="枚数(N5)" id="135" name="枚数(N5)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="N5Z"/>
+          <NullAllowed id="166" val="Y"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="5"/>
+          <_Negative id="192" val="Y"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object id="136" name="------- 共通管理 -------">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_ALPHA" id="1"/>
+          <Size id="174"/>
+          <_Flip id="194"/>
+        </PropertyList>
+      </Object>
+      <Object Public="数値(1Z)" id="137" name="数値(1Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="1Z"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="1"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="数値(2Z)" id="138" name="数値(2Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="2Z"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="2"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="数値(3Z)" id="139" name="数値(3Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="3Z"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="3"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="数値(4Z)" id="140" name="数値(4Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="4Z"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="4"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="数値(5Z)" id="141" name="数値(5Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="5Z"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="5"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+      <Object Public="数値(7Z)" id="142" name="数値(7Z)">
+        <PropertyList model="FIELD">
+          <Model attr_obj="FIELD_NUMERIC" id="1"/>
+          <Picture id="157" valUnicode="7Z"/>
+          <_Dec id="181"/>
+          <_Whole id="182" val="7"/>
+          <_Negative id="192"/>
+          <_FieldStyle id="276" val="1"/>
+        </PropertyList>
+      </Object>
+    </Models>
+  </ModelsRepository>
+
+</Application>

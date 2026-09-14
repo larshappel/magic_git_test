@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="14081.00"/>
+    <WithIsn val="Y"/>
+    <_InternalTask val="N"/>
+    <IsRoot val="N"/>
+    <InIndex val="N"/>
+    <UniqueISNConvState val="12"/>
+  </Header>
+
+  <ProgramsRepository>
+    <Programs>
+      <Task MainProgram="N">
+        <Header Description="売掛対象伝票(本支店)　　　計算" ISN_2="1" LastIsn="1" id="376">
+          <Public val="売掛残高計算(本支店)"/>
+          <ExecutionRight comp="-1"/>
+          <Resident val="N"/>
+          <SQL val="Y"/>
+          <ReturnValue>
+            <ReturnValueAttr/>
+            <TSK_PARAMS val="4"/>
+            <ParametersAttributes>
+              <Attr MgAttr="D"/>
+              <Attr MgAttr="D"/>
+              <Attr MgAttr="N"/>
+              <Attr MgAttr="N"/>
+            </ParametersAttributes>
+          </ReturnValue>
+          <SqlWhereExist val="N"/>
+          <TaskType val="B"/>
+          <External val="N"/>
+          <Offline val="N"/>
+          <FormType val="N"/>
+          <DotNetObjectExists val="N"/>
+          <LastModified _date="739685" _time="63035" date="2026/03/10" time="17:30:35"/>
+        </Header>
+        <ItemIsn val="32"/>
+        <Resource>
+          <DB id="1">
+            <DataObject comp="-1" obj="237"/>
+            <Access val="W"/>
+            <Share val="W"/>
+            <Open val="N"/>
+            <Cache val="Y"/>
+            <IdentifyRowModifications val="84"/>
+          </DB>
+          <Columns>
+            <Column id="1" name="P_売掛年月(FR)">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_DATE" comp="-1" id="1" obj="1"/>
+                <StoredAs id="173" val="19"/>
+                <Size id="174" val="8"/>
+                <Definition id="175" val="2"/>
+              </PropertyList>
+            </Column>
+            <Column id="2" name="P_売掛年月(TO)">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_DATE" comp="-1" id="1" obj="1"/>
+                <StoredAs id="173" val="19"/>
+                <Size id="174" val="8"/>
+                <Definition id="175" val="2"/>
+              </PropertyList>
+            </Column>
+            <Column id="3" name="P_得意先CD(FR)">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" comp="-1" id="1" obj="86"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+              </PropertyList>
+            </Column>
+            <Column id="4" name="P_得意先CD(TO)">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" comp="-1" id="1" obj="86"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+              </PropertyList>
+            </Column>
+            <Column id="5" name="customer_id">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="6Z"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="6"/>
+                <_Negative id="192"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="6" name="customer_name">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_ALPHA" id="1"/>
+                <Picture id="157" valUnicode="40"/>
+                <StoredAs id="173" val="3"/>
+                <Size id="174" val="40"/>
+                <Definition id="175" val="2"/>
+                <_Flip id="194"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="7" name="year_month">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_DATE" comp="-1" id="1" obj="1"/>
+                <StoredAs id="173" val="19"/>
+                <Size id="174" val="8"/>
+                <Definition id="175" val="2"/>
+              </PropertyList>
+            </Column>
+            <Column id="8" name="previous_balance">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="9" name="standard_sales_amount">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="10" name="standard_return_amount">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="11" name="standard_discount_amount">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="12" name="standard_tax">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="13" name="reduced_sales_amount">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="14" name="reduced_return_amount">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="15" name="reduced_discount_amount">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="16" name="reduced_tax">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="17" name="payment_amount">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="18" name="current_balance">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+          </Columns>
+        </Resource>
+        <Information>
+          <Key>
+            <Mode val="N"/>
+          </Key>
+          <DB comp="-1"/>
+          <Sort>
+            <CLS val="A"/>
+          </Sort>
+          <ForceRecordDelete DEL="N"/>
+          <EndTaskCondition val="N"/>
+          <EvaluateEndCondition val="B"/>
+          <InitialMode val="M"/>
+          <Locate Direction="A"/>
+          <Range Direction="A"/>
+          <VarRange/>
+          <TaskProperties>
+            <SelectionTable val="N"/>
+            <ConfirmUpdate CNFU="N"/>
+            <ConfirmCancel val="N"/>
+            <ErrorStrategy val="A"/>
+            <LockingStrategy val="I"/>
+            <CacheStrategy val="T"/>
+            <ForceRecordSuffix val="N"/>
+            <TransactionMode val="P"/>
+            <TransactionBegin val="L"/>
+            <PreloadView val="N"/>
+            <AllowEmptyDataview val="N"/>
+            <KeepCreatedContext val="N"/>
+          </TaskProperties>
+          <SIDE_WIN>
+            <AllowOptions val="N"/>
+            <AllowQuery val="Y"/>
+            <AllowModify val="Y"/>
+            <AllowCreate val="N"/>
+            <AllowDelete val="N"/>
+            <AllowLocate val="Y"/>
+            <AllowRange val="Y"/>
+            <AllowIndexChange val="N"/>
+            <AllowSorting val="Y"/>
+            <AllowIOFiles val="Y"/>
+            <RecordCycle val="Y"/>
+            <AllowEvents val="N"/>
+            <AllowIndexOptimization val="Y"/>
+            <AllowLocationInQuery val="Y"/>
+            <AllowPrintingData val="N"/>
+          </SIDE_WIN>
+          <WIN>
+            <OpenTaskWindow val="N"/>
+            <CloseTaskWindow val="Y"/>
+            <ForegroundWindow val="Y"/>
+            <FlipFld val="N"/>
+            <RefreshTaskWindow ReturnValue="N"/>
+          </WIN>
+          <BOX>
+            <Direction val="V"/>
+          </BOX>
+        </Information>
+        <SQL_FORM DB="MySQL Database" RESTAB="Memory">
+          <SQL_STMT_U val="WITH RECURSIVE months AS (&#xA;  SELECT LAST_DAY(':1') AS ym&#xA;  UNION ALL&#xA;  SELECT LAST_DAY(DATE_ADD(ym, INTERVAL 1 MONTH))&#xA;  FROM months&#xA;  WHERE ym &lt; LAST_DAY(':2')&#xA;)&#xA;SELECT&#xA;  t.customer_id,&#xA;  t.customer_name,&#xA;  t.year_month,&#xA;  t.previous_balance,&#xA;  t.standard_sales_amount,&#xA;  t.standard_return_amount,&#xA;  t.standard_discount_amount,&#xA;  t.standard_tax_amount,&#xA;  t.reduced_sales_amount,&#xA;  t.reduced_return_amount,&#xA;  t.reduced_discount_amount,&#xA;  t.reduced_tax_amount,&#xA;  t.payment_amount,&#xA;  t.current_balance&#xA;FROM (&#xA;  SELECT&#xA;    c.id AS customer_id,&#xA;    c.name AS customer_name,&#xA;    m.ym AS `year_month`,&#xA;    c.branch_type AS branch_type,&#xA;    c.tax_category AS tax_category,&#xA;    c.tax_type AS tax_type,&#xA;&#xA;    CASE&#xA;      WHEN IFNULL(c.branch_type, 0) &lt;> 2 THEN IFNULL(rf.previous_balance, 0)&#xA;      ELSE IFNULL(pb.previous_balance, 0)&#xA;    END AS previous_balance,&#xA;&#xA;    CASE&#xA;      WHEN IFNULL(c.branch_type, 0) = 1 THEN 0&#xA;      WHEN IFNULL(c.branch_type, 0) &lt;> 2 THEN IFNULL(rf.standard_sales_amount, 0)&#xA;      ELSE IFNULL(sm.standard_sales_amount, 0)&#xA;    END AS standard_sales_amount,&#xA;&#xA;    CASE&#xA;      WHEN IFNULL(c.branch_type, 0) = 1 THEN 0&#xA;      WHEN IFNULL(c.branch_type, 0) &lt;> 2 THEN IFNULL(rf.standard_return_amount, 0)&#xA;      ELSE IFNULL(sm.standard_return_amount, 0)&#xA;    END AS standard_return_amount,&#xA;&#xA;    CASE&#xA;      WHEN IFNULL(c.branch_type, 0) = 1 THEN 0&#xA;      WHEN IFNULL(c.branch_type, 0) &lt;> 2 THEN IFNULL(rf.standard_discount_amount, 0)&#xA;      ELSE IFNULL(sm.standard_discount_amount, 0)&#xA;    END AS standard_discount_amount,&#xA;&#xA;    CASE&#xA;      WHEN IFNULL(c.branch_type, 0) = 1 THEN 0&#xA;      WHEN IFNULL(c.branch_type, 0) &lt;> 2 THEN IFNULL(rf.standard_tax_amount, 0)&#xA;      ELSE IFNULL(sm.standard_tax_amount, 0)&#xA;    END AS standard_tax_amount,&#xA;&#xA;    CASE&#xA;      WHEN IFNULL(c.branch_type, 0) = 1 THEN 0&#xA;      WHEN IFNULL(c.branch_type, 0) &lt;> 2 THEN IFNULL(rf.reduced_sales_amount, 0)&#xA;      ELSE IFNULL(sm.reduced_sales_amount, 0)&#xA;    END AS reduced_sales_amount,&#xA;&#xA;    CASE&#xA;      WHEN IFNULL(c.branch_type, 0) = 1 THEN 0&#xA;      WHEN IFNULL(c.branch_type, 0) &lt;> 2 THEN IFNULL(rf.reduced_return_amount, 0)&#xA;      ELSE IFNULL(sm.reduced_return_amount, 0)&#xA;    END AS reduced_return_amount,&#xA;&#xA;    CASE&#xA;      WHEN IFNULL(c.branch_type, 0) = 1 THEN 0&#xA;      WHEN IFNULL(c.branch_type, 0) &lt;> 2 THEN IFNULL(rf.reduced_discount_amount, 0)&#xA;      ELSE IFNULL(sm.reduced_discount_amount, 0)&#xA;    END AS reduced_discount_amount,&#xA;&#xA;    CASE&#xA;      WHEN IFNULL(c.branch_type, 0) = 1 THEN 0&#xA;      WHEN IFNULL(c.branch_type, 0) &lt;> 2 THEN IFNULL(rf.reduced_tax_amount, 0)&#xA;      ELSE IFNULL(sm.reduced_tax_amount, 0)&#xA;    END AS reduced_tax_amount,&#xA;&#xA;    CASE&#xA;      WHEN IFNULL(c.branch_type, 0) &lt;> 2 THEN IFNULL(rf.payment_amount, 0)&#xA;      ELSE IFNULL(rm.payment_amount, 0)&#xA;    END AS payment_amount,&#xA;&#xA;    CASE&#xA;      WHEN IFNULL(c.branch_type, 0) = 1 THEN&#xA;        ( IFNULL(&#xA;            CASE&#xA;              WHEN IFNULL(c.branch_type, 0) &lt;> 2 THEN IFNULL(rf.previous_balance, 0)&#xA;              ELSE IFNULL(pb.previous_balance, 0)&#xA;            END, 0)&#xA;        - IFNULL(&#xA;            CASE&#xA;              WHEN IFNULL(c.branch_type, 0) &lt;> 2 THEN IFNULL(rf.payment_amount, 0)&#xA;              ELSE IFNULL(rm.payment_amount, 0)&#xA;            END, 0)&#xA;        )&#xA;      WHEN IFNULL(c.branch_type, 0) &lt;> 2 THEN IFNULL(rf.current_balance, 0)&#xA;      ELSE&#xA;        ( IFNULL(pb.previous_balance, 0)&#xA;        + ( IFNULL(sm.standard_sales_amount, 0)&#xA;          - IFNULL(sm.standard_return_amount, 0)&#xA;          - IFNULL(sm.standard_discount_amount, 0)&#xA;          + IF(&#xA;              IFNULL(c.tax_category,0)=2 AND IFNULL(c.tax_type,0)=2,&#xA;              0,&#xA;              IFNULL(sm.standard_tax_amount,0)&#xA;            )&#xA;          + IFNULL(sm.reduced_sales_amount, 0)&#xA;          - IFNULL(sm.reduced_return_amount, 0)&#xA;          - IFNULL(sm.reduced_discount_amount, 0)&#xA;          + IF(&#xA;              IFNULL(c.tax_category,0)=2 AND IFNULL(c.tax_type,0)=2,&#xA;              0,&#xA;              IFNULL(sm.reduced_tax_amount,0)&#xA;            )&#xA;          )&#xA;        - IFNULL(rm.payment_amount, 0)&#xA;        )&#xA;    END AS current_balance&#xA;&#xA;  FROM customer c&#xA;  CROSS JOIN months m&#xA;&#xA;  LEFT JOIN receivables_file rf&#xA;    ON rf.customer_id = c.id&#xA;   AND rf.year_month = m.ym&#xA;&#xA;  LEFT JOIN (&#xA;    SELECT&#xA;      CASE&#xA;        WHEN s.customer_id IS NOT NULL&#xA;         AND s.billing_customer_id IS NOT NULL&#xA;         AND s.customer_id &lt;> s.billing_customer_id&#xA;        THEN s.customer_id&#xA;        ELSE s.billing_customer_id&#xA;      END AS customer_id,&#xA;      LAST_DAY(s.sales_date) AS ym,&#xA;      SUM(IFNULL(s.standard_sales_amount, 0))    AS standard_sales_amount,&#xA;      SUM(IFNULL(s.standard_return_amount, 0))   AS standard_return_amount,&#xA;      SUM(IFNULL(s.standard_discount_amount, 0)) AS standard_discount_amount,&#xA;      SUM(IFNULL(s.standard_tax, 0))             AS standard_tax_amount,&#xA;      SUM(IFNULL(s.reduced_sales_amount, 0))     AS reduced_sales_amount,&#xA;      SUM(IFNULL(s.reduced_return_amount, 0))    AS reduced_return_amount,&#xA;      SUM(IFNULL(s.reduced_discount_amount, 0))  AS reduced_discount_amount,&#xA;      SUM(IFNULL(s.reduced_tax, 0))              AS reduced_tax_amount&#xA;    FROM sale s&#xA;    WHERE s.sales_date >= DATE_FORMAT(':1', '%Y-%m-01')&#xA;      AND s.sales_date &lt;= LAST_DAY(':2')&#xA;      AND IFNULL(s.delete_flag, 0) = 0&#xA;    GROUP BY&#xA;      CASE&#xA;        WHEN s.customer_id IS NOT NULL&#xA;         AND s.billing_customer_id IS NOT NULL&#xA;         AND s.customer_id &lt;> s.billing_customer_id&#xA;        THEN s.customer_id&#xA;        ELSE s.billing_customer_id&#xA;      END,&#xA;      LAST_DAY(s.sales_date)&#xA;  ) sm&#xA;    ON sm.customer_id = c.id&#xA;   AND sm.ym = m.ym&#xA;&#xA;  LEFT JOIN (&#xA;    SELECT&#xA;      r.billing_customer_id AS customer_id,&#xA;      LAST_DAY(r.receipt_date) AS ym,&#xA;      SUM(IFNULL(r.amount, 0)) AS payment_amount&#xA;    FROM receipt r&#xA;    WHERE r.receipt_date >= DATE_FORMAT(':1', '%Y-%m-01')&#xA;      AND r.receipt_date &lt;= LAST_DAY(':2')&#xA;      AND IFNULL(r.delete_flag, 0) = 0&#xA;    GROUP BY r.billing_customer_id, LAST_DAY(r.receipt_date)&#xA;  ) rm&#xA;    ON rm.customer_id = c.id&#xA;   AND rm.ym = m.ym&#xA;&#xA;  LEFT JOIN (&#xA;    SELECT&#xA;      x.customer_id,&#xA;      x.ym,&#xA;      SUM(x.sales_net) - SUM(x.payment_amount) AS previous_balance&#xA;    FROM (&#xA;      SELECT&#xA;        CASE&#xA;          WHEN s.customer_id IS NOT NULL&#xA;           AND s.billing_customer_id IS NOT NULL&#xA;           AND s.customer_id &lt;> s.billing_customer_id&#xA;          THEN s.customer_id&#xA;          ELSE s.billing_customer_id&#xA;        END AS customer_id,&#xA;        LAST_DAY(DATE_SUB(s.sales_date, INTERVAL 1 DAY)) AS ym,&#xA;        ( IFNULL(s.standard_sales_amount, 0)&#xA;        - IFNULL(s.standard_return_amount, 0)&#xA;        - IFNULL(s.standard_discount_amount, 0)&#xA;        + IFNULL(s.standard_tax, 0)&#xA;        + IFNULL(s.reduced_sales_amount, 0)&#xA;        - IFNULL(s.reduced_return_amount, 0)&#xA;        - IFNULL(s.reduced_discount_amount, 0)&#xA;        + IFNULL(s.reduced_tax, 0)&#xA;        ) AS sales_net,&#xA;        0 AS payment_amount&#xA;      FROM sale s&#xA;      WHERE s.sales_date &lt; DATE_FORMAT(':1', '%Y-%m-01')&#xA;        AND IFNULL(s.delete_flag, 0) = 0&#xA;&#xA;      UNION ALL&#xA;&#xA;      SELECT&#xA;        r.billing_customer_id AS customer_id,&#xA;        LAST_DAY(DATE_SUB(r.receipt_date, INTERVAL 1 DAY)) AS ym,&#xA;        0 AS sales_net,&#xA;        IFNULL(r.amount, 0) AS payment_amount&#xA;      FROM receipt r&#xA;      WHERE r.receipt_date &lt; DATE_FORMAT(':1', '%Y-%m-01')&#xA;        AND IFNULL(r.delete_flag, 0) = 0&#xA;    ) x&#xA;    GROUP BY x.customer_id, x.ym&#xA;  ) pb&#xA;    ON pb.customer_id = c.id&#xA;   AND pb.ym = m.ym&#xA;&#xA;  WHERE c.id BETWEEN :3 AND :4&#xA;    AND m.ym BETWEEN LAST_DAY(':1') AND LAST_DAY(':2')&#xA;) t&#xA;WHERE&#xA;  (&#xA;    t.branch_type = 1&#xA;    AND (&#xA;      EXISTS (&#xA;        SELECT 1&#xA;        FROM sale s2&#xA;        WHERE s2.billing_customer_id = t.customer_id&#xA;          AND s2.sales_date >= DATE_FORMAT(':1', '%Y-%m-01')&#xA;          AND s2.sales_date &lt;= LAST_DAY(':2')&#xA;          AND IFNULL(s2.delete_flag, 0) = 0&#xA;      )&#xA;      OR EXISTS (&#xA;        SELECT 1&#xA;        FROM receipt r2&#xA;        WHERE r2.billing_customer_id = t.customer_id&#xA;          AND r2.receipt_date >= DATE_FORMAT(':1', '%Y-%m-01')&#xA;          AND r2.receipt_date &lt;= LAST_DAY(':2')&#xA;          AND IFNULL(r2.delete_flag, 0) = 0&#xA;      )&#xA;    )&#xA;  )&#xA;  OR t.previous_balance        &lt;> 0&#xA;  OR t.standard_sales_amount   &lt;> 0&#xA;  OR t.standard_return_amount  &lt;> 0&#xA;  OR t.standard_discount_amount&lt;> 0&#xA;  OR t.standard_tax_amount     &lt;> 0&#xA;  OR t.reduced_sales_amount    &lt;> 0&#xA;  OR t.reduced_return_amount   &lt;> 0&#xA;  OR t.reduced_discount_amount &lt;> 0&#xA;  OR t.reduced_tax_amount      &lt;> 0&#xA;  OR t.payment_amount          &lt;> 0&#xA;  OR t.current_balance         &lt;> 0&#xA;ORDER BY t.customer_id, t.year_month;"/>
+          <INARG>
+            <Arguments>
+              <Argument>
+                <Exp val="1"/>
+              </Argument>
+              <Argument>
+                <Exp val="2"/>
+              </Argument>
+              <Argument Variable="3"/>
+              <Argument Variable="4"/>
+            </Arguments>
+          </INARG>
+          <OUTARG>
+            <Arguments>
+              <Argument Variable="5"/>
+              <Argument Variable="6"/>
+              <Argument Variable="7"/>
+              <Argument Variable="8"/>
+              <Argument Variable="9"/>
+              <Argument Variable="10"/>
+              <Argument Variable="11"/>
+              <Argument Variable="12"/>
+              <Argument Variable="13"/>
+              <Argument Variable="14"/>
+              <Argument Variable="15"/>
+              <Argument Variable="16"/>
+              <Argument Variable="17"/>
+              <Argument Variable="18"/>
+            </Arguments>
+          </OUTARG>
+        </SQL_FORM>
+        <TaskLogic>
+          <LogicUnit id="2" propagate="78">
+            <Level val="R"/>
+            <Type val="M"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+            </Event>
+            <LogicLines>
+              <LogicLine>
+                <DATAVIEW_SRC FlowIsn="2" Type="Q">
+                  <Condition val="N"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </DATAVIEW_SRC>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="1" FlowIsn="3" id="1">
+                  <Column val="1"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="Y"/>
+                  <DIFF_UPDATE val="T"/>
+                  <PartOfDataview val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="2" FlowIsn="4" id="2">
+                  <Column val="2"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="Y"/>
+                  <DIFF_UPDATE val="T"/>
+                  <PartOfDataview val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="3" FlowIsn="5" id="3">
+                  <Column val="3"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="Y"/>
+                  <DIFF_UPDATE val="T"/>
+                  <PartOfDataview val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="4" FlowIsn="6" id="4">
+                  <Column val="4"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="Y"/>
+                  <DIFF_UPDATE val="T"/>
+                  <PartOfDataview val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="7">
+                  <Type val="0"/>
+                  <Text val=" "/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="5" FlowIsn="8" id="5">
+                  <Column val="5"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <INT_RCMP_INFO>
+                    <v>23</v>
+                    <v>24</v>
+                  </INT_RCMP_INFO>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="6" FlowIsn="9" id="6">
+                  <Column val="6"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <PartOfDataview val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="7" FlowIsn="10" id="7">
+                  <Column val="7"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <INT_RCMP_INFO>
+                    <v>23</v>
+                    <v>25</v>
+                  </INT_RCMP_INFO>
+                  <DIFF_UPDATE val="T"/>
+                  <PartOfDataview val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="8" FlowIsn="11" id="8">
+                  <Column val="8"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="9" FlowIsn="12" id="9">
+                  <Column val="9"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="10" FlowIsn="13" id="10">
+                  <Column val="10"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="11" FlowIsn="14" id="11">
+                  <Column val="11"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="12" FlowIsn="15" id="12">
+                  <Column val="12"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="13" FlowIsn="16" id="13">
+                  <Column val="13"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="14" FlowIsn="17" id="14">
+                  <Column val="14"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="15" FlowIsn="18" id="15">
+                  <Column val="15"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="16" FlowIsn="19" id="16">
+                  <Column val="16"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="17" FlowIsn="20" id="17">
+                  <Column val="17"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="18" FlowIsn="21" id="18">
+                  <Column val="18"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <PartOfDataview val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="22">
+                  <Type val="0"/>
+                  <Text val=" "/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <LNK Direction="A" EVL_CND="R" FlowIsn="23" Key="1" Mode="W" SortType="38" VIEW="19" VIEWS="14">
+                  <DB comp="-1" obj="237"/>
+                  <Condition val="Y"/>
+                </LNK>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="19" FlowIsn="24" id="19">
+                  <ASS val="3"/>
+                  <Column val="1"/>
+                  <Type val="R"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <Locate MAX="3" MIN="3"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="20" FlowIsn="25" id="20">
+                  <ASS val="5"/>
+                  <Column val="9"/>
+                  <Type val="R"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <Locate MAX="5" MIN="5"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="21" FlowIsn="26" id="21">
+                  <Column val="2"/>
+                  <Type val="R"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="22" FlowIsn="27" id="22">
+                  <Column val="3"/>
+                  <Type val="R"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="23" FlowIsn="28" id="23">
+                  <Column val="10"/>
+                  <Type val="R"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="24" FlowIsn="29" id="24">
+                  <Column val="11"/>
+                  <Type val="R"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="25" FlowIsn="30" id="25">
+                  <Column val="12"/>
+                  <Type val="R"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="26" FlowIsn="31" id="26">
+                  <Column val="13"/>
+                  <Type val="R"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="27" FlowIsn="32" id="27">
+                  <Column val="5"/>
+                  <Type val="R"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="28" FlowIsn="33" id="28">
+                  <Column val="15"/>
+                  <Type val="R"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="29" FlowIsn="34" id="29">
+                  <Column val="16"/>
+                  <Type val="R"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="30" FlowIsn="35" id="30">
+                  <Column val="6"/>
+                  <Type val="R"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="31" FlowIsn="36" id="31">
+                  <Column val="4"/>
+                  <Type val="R"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="32" FlowIsn="37" id="32">
+                  <Column val="8"/>
+                  <Type val="R"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <END_LINK FlowIsn="38"/>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+          <LogicUnit id="3" propagate="78">
+            <Level val="T"/>
+            <Type val="P"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+            </Event>
+            <LogicLines>
+              <LogicLine>
+                <CallTask FlowIsn="39">
+                  <OperationType val="P"/>
+                  <Event>
+                    <EventType val="N"/>
+                  </Event>
+                  <TaskID comp="-1" obj="378"/>
+                  <Lock val="N"/>
+                  <Wait val="Y"/>
+                  <SyncData val="N"/>
+                  <RetainFocus val="N"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </CallTask>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+          <LogicUnit id="4" propagate="78">
+            <Level val="R"/>
+            <Type val="S"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+            </Event>
+            <LogicLines>
+              <LogicLine>
+                <Update FlowIsn="40">
+                  <FieldID val="21"/>
+                  <WithValue val="4"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="41">
+                  <FieldID val="22"/>
+                  <WithValue val="6"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="42">
+                  <FieldID val="23"/>
+                  <WithValue val="7"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="43">
+                  <FieldID val="24"/>
+                  <WithValue val="8"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="44">
+                  <FieldID val="25"/>
+                  <WithValue val="9"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="45">
+                  <FieldID val="26"/>
+                  <WithValue val="10"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="46">
+                  <FieldID val="27"/>
+                  <WithValue val="11"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="47">
+                  <FieldID val="28"/>
+                  <WithValue val="12"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="48">
+                  <FieldID val="29"/>
+                  <WithValue val="13"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="49">
+                  <FieldID val="30"/>
+                  <WithValue val="14"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="50">
+                  <FieldID val="31"/>
+                  <WithValue val="15"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="51">
+                  <FieldID val="32"/>
+                  <WithValue val="16"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+        </TaskLogic>
+        <TaskForms>
+          <FormEntry _last_test_id="43" id="1">
+            <PropertyList model="FORM_GUI0">
+              <Width id="23" val="1102"/>
+              <Height id="24" val="293"/>
+              <_Comment id="218"/>
+              <FormName id="311" valUnicode="売掛対象伝票(本支店)　　　　計算"/>
+            </PropertyList>
+          </FormEntry>
+        </TaskForms>
+        <Expressions>
+          <Expression id="1">
+            <ExpSyntax val="DStr({0,1},'YYYY-MM-DD')"/>
+            <ExpAttribute val="U"/>
+          </Expression>
+          <Expression id="2">
+            <ExpSyntax val="DStr({0,2},'YYYY-MM-DD')"/>
+            <ExpAttribute val="U"/>
+          </Expression>
+          <Expression id="3">
+            <ExpSyntax val="{0,5}"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="4">
+            <ExpSyntax val="{0,6}"/>
+            <ExpAttribute val="A"/>
+          </Expression>
+          <Expression id="5">
+            <ExpSyntax val="{0,7}"/>
+            <ExpAttribute val="D"/>
+          </Expression>
+          <Expression id="6">
+            <ExpSyntax val="{0,8}"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="7">
+            <ExpSyntax val="{0,9}"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="8">
+            <ExpSyntax val="{0,10}"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="9">
+            <ExpSyntax val="{0,11}"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="10">
+            <ExpSyntax val="{0,12}"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="11">
+            <ExpSyntax val="{0,13}"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="12">
+            <ExpSyntax val="{0,14}"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="13">
+            <ExpSyntax val="{0,15}"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="14">
+            <ExpSyntax val="{0,16}"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="15">
+            <ExpSyntax val="{0,17}"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="16">
+            <ExpSyntax val="{0,18}"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+        </Expressions>
+      </Task>
+    </Programs>
+  </ProgramsRepository>
+
+</Application>

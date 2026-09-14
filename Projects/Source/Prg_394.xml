@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="14081.00"/>
+    <WithIsn val="Y"/>
+    <_InternalTask val="N"/>
+    <IsRoot val="N"/>
+    <InIndex val="N"/>
+    <UniqueISNConvState val="12"/>
+  </Header>
+
+  <ProgramsRepository>
+    <Programs>
+      <Task MainProgram="N">
+        <Header Description="PDF帳票CSV変換　　　　　　処理" ISN_2="1" LastIsn="1" id="394">
+          <ExecutionRight comp="-1"/>
+          <Resident val="N"/>
+          <SQL val="N"/>
+          <ReturnValue>
+            <ReturnValueAttr/>
+            <TSK_PARAMS val="2"/>
+            <ParametersAttributes>
+              <Attr MgAttr="A"/>
+              <Attr MgAttr="A"/>
+            </ParametersAttributes>
+          </ReturnValue>
+          <SqlWhereExist val="N"/>
+          <TaskType val="B"/>
+          <External val="N"/>
+          <Offline val="N"/>
+          <FormType val="N"/>
+          <DotNetObjectExists val="Y"/>
+          <LastModified _date="739821" _time="43886" date="2026/07/24" time="12:11:26"/>
+        </Header>
+        <ItemIsn val="2"/>
+        <Resource>
+          <Columns>
+            <Column id="1" name="P_ﾌｧｲﾙ名">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_ALPHA" id="1"/>
+                <Picture id="157" valUnicode="50"/>
+                <StoredAs id="173" val="1"/>
+                <Size id="174" val="50"/>
+                <_Flip id="194"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="2" name="P_CSV保存場所">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_ALPHA" id="1"/>
+                <Picture id="157" valUnicode="50"/>
+                <StoredAs id="173" val="1"/>
+                <Size id="174" val="50"/>
+                <_Flip id="194"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+          </Columns>
+        </Resource>
+        <Information>
+          <Key>
+            <Mode val="N"/>
+          </Key>
+          <DB comp="-1"/>
+          <Sort>
+            <CLS val="A"/>
+          </Sort>
+          <ForceRecordDelete DEL="N"/>
+          <EndTaskCondition val="Y"/>
+          <EvaluateEndCondition val="A"/>
+          <InitialMode val="M"/>
+          <Locate Direction="A"/>
+          <Range Direction="A"/>
+          <VarRange/>
+          <TaskProperties>
+            <SelectionTable val="N"/>
+            <ConfirmUpdate CNFU="N"/>
+            <ConfirmCancel val="N"/>
+            <ErrorStrategy val="A"/>
+            <LockingStrategy val="I"/>
+            <CacheStrategy val="T"/>
+            <ForceRecordSuffix val="N"/>
+            <TransactionMode val="P"/>
+            <TransactionBegin val="N"/>
+            <PreloadView val="N"/>
+            <AllowEmptyDataview val="N"/>
+            <KeepCreatedContext val="N"/>
+          </TaskProperties>
+          <SIDE_WIN>
+            <AllowOptions val="N"/>
+            <AllowQuery val="Y"/>
+            <AllowModify val="Y"/>
+            <AllowCreate val="Y"/>
+            <AllowDelete val="Y"/>
+            <AllowLocate val="Y"/>
+            <AllowRange val="Y"/>
+            <AllowIndexChange val="Y"/>
+            <AllowSorting val="Y"/>
+            <AllowIOFiles val="Y"/>
+            <RecordCycle val="Y"/>
+            <AllowEvents val="N"/>
+            <AllowIndexOptimization val="Y"/>
+            <AllowLocationInQuery val="Y"/>
+            <AllowPrintingData val="N"/>
+          </SIDE_WIN>
+          <WIN>
+            <OpenTaskWindow val="Y"/>
+            <CloseTaskWindow val="Y"/>
+            <ForegroundWindow val="Y"/>
+            <FlipFld val="N"/>
+            <RefreshTaskWindow ReturnValue="N"/>
+          </WIN>
+          <BOX>
+            <Direction val="V"/>
+          </BOX>
+        </Information>
+        <TaskLogic>
+          <LogicUnit id="2" propagate="78">
+            <Level val="R"/>
+            <Type val="M"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+            </Event>
+            <LogicLines>
+              <LogicLine>
+                <DATAVIEW_SRC FlowIsn="2" Type="M">
+                  <Condition val="N"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </DATAVIEW_SRC>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="1" FlowIsn="3" id="1">
+                  <Column val="1"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="Y"/>
+                  <DIFF_UPDATE val="T"/>
+                  <PartOfDataview val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="2" FlowIsn="4" id="2">
+                  <Column val="2"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="Y"/>
+                  <DIFF_UPDATE val="T"/>
+                  <PartOfDataview val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+          <LogicUnit id="3" propagate="78">
+            <Level val="R"/>
+            <Type val="S"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+            </Event>
+            <LogicLines>
+              <LogicLine>
+                <Update FlowIsn="5">
+                  <FieldID val="2"/>
+                  <WithValue val="1"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Invoke FlowIsn="8">
+                  <OperationType val="."/>
+                  <Event>
+                    <EventType val="N"/>
+                  </Event>
+                  <TaskID comp="-1"/>
+                  <Lock val="Y"/>
+                  <Arguments>
+                    <Argument>
+                      <Skip val="N"/>
+                      <DotNetType val="void"/>
+                    </Argument>
+                    <Argument>
+                      <Variable val="1"/>
+                      <Skip val="N"/>
+                      <Name val="FileName"/>
+                      <VT_Type val="4"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                    <Argument>
+                      <Variable val="2"/>
+                      <Skip val="N"/>
+                      <Name val="CsvDrive"/>
+                      <VT_Type val="4"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                  </Arguments>
+                  <Wait val="Y"/>
+                  <SyncData val="N"/>
+                  <FunctionName val="pdftocsv"/>
+                  <SnippetCode val="using System;&#xA;using System.IO;&#xA;using System.Net.Http;&#xA;using System.Net.Http.Headers;&#xA;using System.Threading.Tasks;&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static void pdftocsv(ref System.String FileName, ref System.String CsvDrive)&#xA;&#x9;{&#xA;        string filePath = FileName;&#xA;        string url = &quot; https://pdf-to-csv-39767869336.asia-northeast1.run.app/convert&quot;;&#xA;        &#xA;&#x9;&#x9;// 保存先：CsvDrive + &quot;\\output.csv&quot;&#xA;        string outputCsvPath = Path.Combine(CsvDrive + &quot;\\&quot;, &quot;output.csv&quot;);&#xA;&#x9;&#x9;&#xA;        using (var client = new HttpClient())&#xA;        using (var form = new MultipartFormDataContent())&#xA;        using (var fileStream = File.OpenRead(filePath))&#xA;        using (var content = new StreamContent(fileStream))&#xA;        {&#xA;            content.Headers.ContentType = new MediaTypeHeaderValue(&quot;application/pdf&quot;);&#xA;            form.Add(content, &quot;file&quot;, Path.GetFileName(filePath));&#xA;&#xA;            // 非同期を同期で実行&#xA;            HttpResponseMessage response = client.PostAsync(url, form).Result;&#xA;&#xA;            if (response.IsSuccessStatusCode)&#xA;            {&#xA;  &#x9;&#x9; &#x9;&#x9;string result = response.Content.ReadAsStringAsync().Result;&#xA;&#x9;&#x9;&#x9;&#x9;result += &quot;,&quot;; // ← カンマを最後に追加&#xA;   &#x9;&#x9;&#x9;&#x9;File.WriteAllText(outputCsvPath, result, System.Text.Encoding.GetEncoding(&quot;shift_jis&quot;));&#xA;    &#x9;&#x9;&#x9;Console.WriteLine(&quot;CSVファイルに保存されました: &quot; + outputCsvPath);&#xA;            }&#xA;            else&#xA;            {&#xA;                Console.WriteLine(&quot;エラー: &quot; + response.StatusCode);&#xA;            }&#xA;        }&#xA;    }&#xA;}"/>
+                  <CompiledCode val="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ZQBuAGEAbQBlAAAAaQBjAG4AYgBnAGwAdAA0AC4AZABsAGwAAAAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADAALgAwAC4AMAAuADAAAAA4AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMAAuADAALgAwAC4AMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAMAAAAEDkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+                  <SnippetLanguage val="C"/>
+                  <ForCompactFramework val="N"/>
+                  <isGuiThreadExecution val="N"/>
+                  <CompileTime HighDateTime="31267610" LowDateTime="482305006"/>
+                  <AssemblyIds val="-1532522256,-279589575,"/>
+                  <RetainFocus val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Invoke>
+              </LogicLine>
+              <LogicLine>
+                <Invoke FlowIsn="6">
+                  <OperationType val="."/>
+                  <Event>
+                    <EventType val="N"/>
+                  </Event>
+                  <TaskID comp="-1"/>
+                  <Lock val="Y"/>
+                  <Arguments>
+                    <Argument>
+                      <Skip val="N"/>
+                      <DotNetType val="void"/>
+                    </Argument>
+                    <Argument>
+                      <Variable val="1"/>
+                      <Skip val="N"/>
+                      <Name val="FileName"/>
+                      <VT_Type val="4"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                    <Argument>
+                      <Variable val="2"/>
+                      <Skip val="N"/>
+                      <Name val="CsvDrive"/>
+                      <VT_Type val="4"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                  </Arguments>
+                  <Wait val="Y"/>
+                  <SyncData val="N"/>
+                  <FunctionName val="pdftocsv"/>
+                  <SnippetCode val="using System;&#xA;using System.IO;&#xA;using System.Net.Http;&#xA;using System.Net.Http.Headers;&#xA;using System.Threading.Tasks;&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static void pdftocsv(ref System.String FileName, ref System.String CsvDrive)&#xA;&#x9;{&#xA;        string filePath = FileName;&#xA;        string url = &quot;https://pdftocsv-852459484996.asia-northeast2.run.app/convert&quot;;&#xA;        &#xA;&#x9;&#x9;// 保存先：CsvDrive + &quot;\\output.csv&quot;&#xA;        string outputCsvPath = Path.Combine(CsvDrive + &quot;\\&quot;, &quot;output.csv&quot;);&#xA;&#x9;&#x9;&#xA;        using (var client = new HttpClient())&#xA;        using (var form = new MultipartFormDataContent())&#xA;        using (var fileStream = File.OpenRead(filePath))&#xA;        using (var content = new StreamContent(fileStream))&#xA;        {&#xA;            content.Headers.ContentType = new MediaTypeHeaderValue(&quot;application/pdf&quot;);&#xA;            form.Add(content, &quot;file&quot;, Path.GetFileName(filePath));&#xA;&#xA;            // 非同期を同期で実行&#xA;            HttpResponseMessage response = client.PostAsync(url, form).Result;&#xA;&#xA;            if (response.IsSuccessStatusCode)&#xA;            {&#xA;  &#x9;&#x9; &#x9;&#x9;string result = response.Content.ReadAsStringAsync().Result;&#xA;&#x9;&#x9;&#x9;&#x9;result += &quot;,&quot;; // ← カンマを最後に追加&#xA;   &#x9;&#x9;&#x9;&#x9;File.WriteAllText(outputCsvPath, result, System.Text.Encoding.GetEncoding(&quot;shift_jis&quot;));&#xA;    &#x9;&#x9;&#x9;Console.WriteLine(&quot;CSVファイルに保存されました: &quot; + outputCsvPath);&#xA;            }&#xA;            else&#xA;            {&#xA;                Console.WriteLine(&quot;エラー: &quot; + response.StatusCode);&#xA;            }&#xA;        }&#xA;    }&#xA;}"/>
+                  <CompiledCode val="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ZQBuAGEAbQBlAAAAYQBlAGwAdgBuADMAMwBvAC4AZABsAGwAAAAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADAALgAwAC4AMAAuADAAAAA4AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMAAuADAALgAwAC4AMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAMAAAAEDkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+                  <SnippetLanguage val="C"/>
+                  <ForCompactFramework val="N"/>
+                  <isGuiThreadExecution val="N"/>
+                  <CompileTime HighDateTime="31265576" LowDateTime="1678187737"/>
+                  <AssemblyIds val="-1532522256,-279589575,"/>
+                  <RetainFocus val="Y"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Invoke>
+              </LogicLine>
+              <LogicLine>
+                <Invoke FlowIsn="7">
+                  <OperationType val="."/>
+                  <Event>
+                    <EventType val="N"/>
+                  </Event>
+                  <TaskID comp="-1"/>
+                  <Lock val="Y"/>
+                  <Arguments>
+                    <Argument>
+                      <Skip val="N"/>
+                      <DotNetType val="void"/>
+                    </Argument>
+                    <Argument>
+                      <Variable val="1"/>
+                      <Skip val="N"/>
+                      <Name val="FileName"/>
+                      <VT_Type val="4"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                    <Argument>
+                      <Variable val="2"/>
+                      <Skip val="N"/>
+                      <Name val="CsvDrive"/>
+                      <VT_Type val="4"/>
+                      <DotNetType val="System.String"/>
+                    </Argument>
+                  </Arguments>
+                  <Wait val="Y"/>
+                  <SyncData val="N"/>
+                  <FunctionName val="posttocsv"/>
+                  <SnippetCode val="using System;&#xA;using System.IO;&#xA;using System.Net.Http;&#xA;using System.Net.Http.Headers;&#xA;using System.Text;&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static void posttocsv(ref System.String FileName, ref System.String CsvDrive)&#xA;    {&#xA;        string filePath = FileName;&#xA;        string url = &quot;https://pdftocsv-852459484996.asia-northeast2.run.app/convert&quot;;&#xA;&#xA;        string outputCsvPath = Path.Combine(CsvDrive, &quot;output.csv&quot;);&#xA;        string debugPath = Path.Combine(CsvDrive, &quot;debug.txt&quot;);&#xA;&#xA;        try&#xA;        {&#xA;            File.AppendAllText(debugPath,&#xA;                &quot;===== &quot; + DateTime.Now.ToString(&quot;yyyy/MM/dd HH:mm:ss&quot;) + &quot; =====\r\n&quot;);&#xA;&#xA;            File.AppendAllText(debugPath,&#xA;                &quot;PDF : &quot; + filePath + &quot;\r\n&quot;);&#xA;&#xA;            using (var client = new HttpClient())&#xA;            using (var form = new MultipartFormDataContent())&#xA;            using (var fileStream = File.OpenRead(filePath))&#xA;            using (var content = new StreamContent(fileStream))&#xA;            {&#xA;                content.Headers.ContentType = new MediaTypeHeaderValue(&quot;application/pdf&quot;);&#xA;                form.Add(content, &quot;file&quot;, Path.GetFileName(filePath));&#xA;&#xA;                File.AppendAllText(debugPath, &quot;POST送信開始\r\n&quot;);&#xA;&#xA;                HttpResponseMessage response = client.PostAsync(url, form).Result;&#xA;&#xA;                File.AppendAllText(debugPath,&#xA;                    &quot;StatusCode : &quot; + (int)response.StatusCode + &quot; &quot; + response.StatusCode + &quot;\r\n&quot;);&#xA;&#xA;                string result = response.Content.ReadAsStringAsync().Result;&#xA;&#xA;                File.AppendAllText(debugPath,&#xA;                    &quot;Response :\r\n&quot; + result + &quot;\r\n&quot;);&#xA;&#xA;                if (response.IsSuccessStatusCode)&#xA;                {&#xA;                    result += &quot;,&quot;;&#xA;&#xA;                    File.WriteAllText(&#xA;                        outputCsvPath,&#xA;                        result,&#xA;                        Encoding.GetEncoding(&quot;shift_jis&quot;));&#xA;&#xA;                    File.AppendAllText(debugPath,&#xA;                        &quot;CSV保存成功 : &quot; + outputCsvPath + &quot;\r\n&quot;);&#xA;                }&#xA;                else&#xA;                {&#xA;                    File.AppendAllText(debugPath,&#xA;                        &quot;HTTPエラーのためCSVは保存されませんでした。\r\n&quot;);&#xA;                }&#xA;&#xA;                File.AppendAllText(debugPath,&#xA;                    &quot;処理終了\r\n\r\n&quot;);&#xA;            }&#xA;        }&#xA;        catch (Exception ex)&#xA;        {&#xA;            File.AppendAllText(debugPath,&#xA;                &quot;例外発生\r\n&quot; +&#xA;                ex.ToString() +&#xA;                &quot;\r\n\r\n&quot;);&#xA;        }&#xA;    }&#xA;}"/>
+                  <CompiledCode val="TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1vZGUuDQ0KJAAAAAAAAABQRQAATAEDANiDVWoAAAAAAAAAAOAAAiELAQsAAAwAAAAGAAAAAAAAnisAAAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACAAAAAAgAAAAAAAAMAQIUAABAAABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAEwrAABPAAAAAEAAAKgCAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAApAsAAAAgAAAADAAAAAIAAAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAKgCAAAAQAAAAAQAAAAOAAAAAAAAAAAAAAAAAABAAABALnJlbG9jAAAMAAAAAGAAAAACAAAAEgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACAKwAAAAAAAEgAAAACAAUAzCIAAIAIAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABswBADyAQAAAQAAEQJQCnIBAABwCwNQcn0AAHAoAwAACgwDUHKTAABwKAMAAAoNCXKnAABwKAQAAAoTCxILcrUAAHAoBQAACnLdAABwKAYAAAooBwAACgly7wAAcAZy/QAAcCgGAAAKKAcAAApzCAAAChMEcwkAAAoTBQYoCgAAChMGEQZzCwAAChMHEQdvDAAACnIDAQBwcw0AAApvDgAAChEFEQdyIwEAcAYoDwAACm8QAAAKCXItAQBwKAcAAAoRBAcRBW8RAAAKbxIAAAoTCAkbjQEAAAETDBEMFnJDAQBwohEMFxEIbxMAAAqMEwAAAaIRDBhyXwEAcKIRDBkRCG8TAAAKjBIAAAGiEQwacv0AAHCiEQwoFAAACigHAAAKEQhvFQAACm8WAAAKbxcAAAoTCQlyYwEAcBEJcv0AAHAoBgAACigHAAAKEQhvGAAACiw4EQlyfQEAcCgZAAAKEwkIEQlygQEAcCgaAAAKKBsAAAoJcpUBAHAIcv0AAHAoBgAACigHAAAKKwsJcqsBAHAoBwAACgly4wEAcCgHAAAK3gwRBywHEQdvHAAACtzeDBEGLAcRBm8cAAAK3N4MEQUsBxEFbxwAAArc3gwRBCwHEQRvHAAACtzeIBMKCXL1AQBwEQpvHQAACnIDAgBwKAYAAAooBwAACt4AKgAAQXwAAAIAAACAAAAAGQEAAJkBAAAMAAAAAAAAAAIAAAB3AAAAMAEAAKcBAAAMAAAAAAAAAAIAAABvAAAARgEAALUBAAAMAAAAAAAAAAIAAABoAAAAWwEAAMMBAAAMAAAAAAAAAAAAAAAjAAAArgEAANEBAAAgAAAAFgAAAUJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAABwCAAAjfgAAiAIAAOACAAAjU3RyaW5ncwAAAABoBQAAEAIAACNVUwB4BwAAEAAAACNHVUlEAAAAiAcAAPgAAAAjQmxvYgAAAAAAAAACAAABRxUCCAkAAAAA+iUzABYAAAEAAAAWAAAAAgAAAAEAAAACAAAAHQAAAAIAAAABAAAAAgAAAAEAAAADAAAAAAAKAAEAAAAAAAYALwAoAAYAcgBSAAYAmABSAAYAyQC/AAYA1gAoAAYA8AAoAAYA/gC/AAoAIQERAQoALAERAQYARQG/AAoAWQERAQYAZwG/AAoAbgERAQoAkgF6AQoAsQF6AQYA/QHmAQoABAIRAQ4AOAItAgYAVgIoAAYAngKSAgYAwAIoAAYA1AIoAAAAAAABAAAAAAABAAEAgQEQABcAAAAFAAEAAQBQIAAAAACWADYACgABAAAAAQBAAAAAAgBJABEAkgASABkAkgAXACEAzgAbACkA3wAhACkA5wAmADEA9wArADkAAwEyAEEAkgAXAEkAkgAXADkAUAFBAFkAkgBHAGkApQFNAHkAkgBSAHEAxgFXACEA1gFdAEkA4gFiAEEAGAJqAAwAIgJ9AIkARwKCADEA9wCHAIkAXAKNAGkAaAKSABQAIgJ9AIkAegKgADEA9wAbAKEApwKkADkAswKqAKkAzAIXAAkA5wCyAC4ACwDOAC4AEwDXALYAdgCaAASAAAAAAAAAAAAAAAAAAAAAALYAAAAEAAAAAAAAAAAAAAABAB8AAAAAAAQAAQABAAMAAAAAADgAEQEAAAAABAAAAAAAAAAAAAAAAQAoAAAAAAAAAAA8TW9kdWxlPgBhc2x5NGJnZi5kbGwAU25pcHBldABtc2NvcmxpYgBTeXN0ZW0AT2JqZWN0AHBvc3R0b2NzdgBGaWxlTmFtZQBDc3ZEcml2ZQBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUALmN0b3IAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAYXNseTRiZ2YAU3lzdGVtLklPAFBhdGgAQ29tYmluZQBEYXRlVGltZQBnZXRfTm93AFRvU3RyaW5nAFN0cmluZwBDb25jYXQARmlsZQBBcHBlbmRBbGxUZXh0AFN5c3RlbS5OZXQuSHR0cABIdHRwQ2xpZW50AE11bHRpcGFydEZvcm1EYXRhQ29udGVudABGaWxlU3RyZWFtAE9wZW5SZWFkAFN0cmVhbUNvbnRlbnQAU3RyZWFtAEh0dHBDb250ZW50AFN5c3RlbS5OZXQuSHR0cC5IZWFkZXJzAEh0dHBDb250ZW50SGVhZGVycwBnZXRfSGVhZGVycwBNZWRpYVR5cGVIZWFkZXJWYWx1ZQBzZXRfQ29udGVudFR5cGUAR2V0RmlsZU5hbWUAQWRkAFN5c3RlbS5UaHJlYWRpbmcuVGFza3MAVGFza2AxAEh0dHBSZXNwb25zZU1lc3NhZ2UAUG9zdEFzeW5jAGdldF9SZXN1bHQAU3lzdGVtLk5ldABIdHRwU3RhdHVzQ29kZQBnZXRfU3RhdHVzQ29kZQBJbnQzMgBnZXRfQ29udGVudABSZWFkQXNTdHJpbmdBc3luYwBnZXRfSXNTdWNjZXNzU3RhdHVzQ29kZQBTeXN0ZW0uVGV4dABFbmNvZGluZwBHZXRFbmNvZGluZwBXcml0ZUFsbFRleHQASURpc3Bvc2FibGUARGlzcG9zZQBFeGNlcHRpb24AAAAAe2gAdAB0AHAAcwA6AC8ALwBwAGQAZgB0AG8AYwBzAHYALQA4ADUAMgA0ADUAOQA0ADgANAA5ADkANgAuAGEAcwBpAGEALQBuAG8AcgB0AGgAZQBhAHMA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAwAAACgOwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="/>
+                  <SnippetLanguage val="C"/>
+                  <ForCompactFramework val="N"/>
+                  <isGuiThreadExecution val="N"/>
+                  <CompileTime HighDateTime="31265576" LowDateTime="1680150268"/>
+                  <AssemblyIds val="-1532522256,-279589575,"/>
+                  <RetainFocus val="Y"/>
+                  <Condition val="N"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Invoke>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+        </TaskLogic>
+        <TaskForms>
+          <FormEntry _last_isn="1" _last_test_id="1" id="1">
+            <PropertyList model="FORM_GUI0">
+              <Width id="23" val="738"/>
+              <Height id="24" val="280"/>
+              <TitleBar id="26" val="Y"/>
+              <SystemMenu id="27"/>
+              <MinimizeButton id="28"/>
+              <MaximizeButton id="29"/>
+              <FormUnits id="33" val="2"/>
+              <VerticalFactor id="34" val="100"/>
+              <HorizontalFactor id="35" val="100"/>
+              <GridX id="38" val="10"/>
+              <GridY id="39" val="10"/>
+              <Color id="51" val="4"/>
+              <_Comment id="218"/>
+              <StartupPosition id="275" val="3"/>
+              <FormName id="311" valUnicode="PDF帳票CSV変換　　　　　　処理"/>
+              <PersistentFormState id="493"/>
+            </PropertyList>
+            <Control _test_id="1" id="1">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="PDF読込中"/>
+                <X id="21" val="61"/>
+                <Y id="22" val="90"/>
+                <Width id="23" val="616"/>
+                <Height id="24" val="103"/>
+                <Font id="50" val="224"/>
+                <Color id="51" val="206"/>
+                <Style id="63" val="5"/>
+                <HorizontalAlignment id="65" val="2"/>
+                <EnableRTF id="69"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+          </FormEntry>
+        </TaskForms>
+        <Expressions>
+          <Expression id="1">
+            <ExpSyntax val="'E:\'"/>
+            <ExpAttribute val="A"/>
+          </Expression>
+          <Expression id="2">
+            <ExpSyntax val="'K:\'"/>
+            <ExpAttribute val="A"/>
+          </Expression>
+        </Expressions>
+      </Task>
+    </Programs>
+  </ProgramsRepository>
+
+</Application>

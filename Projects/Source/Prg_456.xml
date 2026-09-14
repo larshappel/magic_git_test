@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="14081.00"/>
+    <WithIsn val="Y"/>
+    <_InternalTask val="N"/>
+    <IsRoot val="N"/>
+    <InIndex val="N"/>
+    <UniqueISNConvState val="12"/>
+  </Header>
+
+  <ProgramsRepository>
+    <Programs>
+      <Task MainProgram="N">
+        <Header Description="売掛データ 表示" ISN_2="1" LastIsn="1" id="456">
+          <Public val="検証用260305"/>
+          <ExecutionRight comp="-1"/>
+          <Resident val="N"/>
+          <SQL val="Y"/>
+          <ReturnValue>
+            <ReturnValueAttr/>
+            <ParametersAttributes/>
+          </ReturnValue>
+          <SqlWhereExist val="N"/>
+          <TaskType val="O"/>
+          <External val="N"/>
+          <Offline val="N"/>
+          <FormType val="N"/>
+          <DotNetObjectExists val="N"/>
+          <LastModified _date="739680" _time="64174" date="2026/03/05" time="17:49:34"/>
+        </Header>
+        <ItemIsn val="9"/>
+        <Resource>
+          <Columns>
+            <Column id="1" name="得意先CD">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="6"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="6"/>
+                <_Negative id="192"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="2" name="得意先名">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_ALPHA" id="1"/>
+                <Picture id="157" valUnicode="40"/>
+                <StoredAs id="173" val="3"/>
+                <Size id="174" val="40"/>
+                <Definition id="175" val="2"/>
+                <_Flip id="194"/>
+              </PropertyList>
+            </Column>
+            <Column id="3" name="前月残高">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="4" name="売上額計">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="5" name="返品額計">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="6" name="値引額計">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="7" name="消費税計">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="8" name="入金額計">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="9" name="当月残高">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="N9"/>
+                <StoredAs id="173" val="4"/>
+                <Size id="174" val="4"/>
+                <Definition id="175" val="2"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192" val="Y"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+          </Columns>
+        </Resource>
+        <Information>
+          <Key>
+            <Mode val="N"/>
+          </Key>
+          <DB comp="-1"/>
+          <Sort>
+            <CLS val="A"/>
+          </Sort>
+          <ForceRecordDelete DEL="N"/>
+          <EndTaskCondition val="N"/>
+          <EvaluateEndCondition val="B"/>
+          <InitialMode val="E"/>
+          <Locate Direction="A"/>
+          <Range Direction="A"/>
+          <VarRange/>
+          <TaskProperties>
+            <SelectionTable val="N"/>
+            <ConfirmUpdate CNFU="N"/>
+            <ConfirmCancel val="N"/>
+            <ErrorStrategy val="R"/>
+            <LockingStrategy val="O"/>
+            <CacheStrategy val="T"/>
+            <ForceRecordSuffix val="N"/>
+            <TransactionMode val="P"/>
+            <TransactionBegin val="T"/>
+            <PreloadView val="N"/>
+            <AllowEmptyDataview val="N"/>
+            <KeepCreatedContext val="N"/>
+          </TaskProperties>
+          <SIDE_WIN>
+            <AllowOptions val="Y"/>
+            <AllowQuery val="Y"/>
+            <AllowModify val="N"/>
+            <AllowCreate val="N"/>
+            <AllowDelete val="N"/>
+            <AllowLocate val="Y"/>
+            <AllowRange val="Y"/>
+            <AllowIndexChange val="N"/>
+            <AllowSorting val="Y"/>
+            <AllowIOFiles val="Y"/>
+            <RecordCycle val="Y"/>
+            <AllowEvents val="Y"/>
+            <AllowIndexOptimization val="Y"/>
+            <AllowLocationInQuery val="Y"/>
+            <AllowPrintingData val="N"/>
+          </SIDE_WIN>
+          <WIN>
+            <OpenTaskWindow val="Y"/>
+            <CloseTaskWindow val="N"/>
+            <ForegroundWindow val="Y"/>
+            <FlipFld val="N"/>
+            <RefreshTaskWindow ReturnValue="N"/>
+          </WIN>
+          <BOX>
+            <Direction val="V"/>
+          </BOX>
+        </Information>
+        <SQL_FORM DB="MySQL Database" RESTAB="Memory">
+          <SQL_STMT_U val="WITH&#xD;&#xA;params AS (&#xD;&#xA;  SELECT&#xD;&#xA;    ':1' AS base_date,&#xD;&#xA;    DATE_SUB(':1', INTERVAL DAY(':1') - 1 DAY) AS month_start&#xD;&#xA;),&#xD;&#xA;customers_base AS (&#xD;&#xA;  SELECT&#xD;&#xA;    c.id AS customer_id,&#xD;&#xA;    c.name AS customer_name,&#xD;&#xA;    c.management_type,&#xD;&#xA;    COALESCE(NULLIF(c.billing_customer_id, 0), c.id) AS bill_to_customer_id,&#xD;&#xA;    c.closing_day1,&#xD;&#xA;    c.closing_day2,&#xD;&#xA;    c.closing_day3,&#xD;&#xA;    p.base_date,&#xD;&#xA;    p.month_start,&#xD;&#xA;    DATE_SUB(p.month_start, INTERVAL 1 MONTH) AS prev_month_start,&#xD;&#xA;    DAY(LAST_DAY(p.base_date)) AS last_day_current,&#xD;&#xA;    DAY(LAST_DAY(DATE_SUB(p.month_start, INTERVAL 1 MONTH))) AS last_day_prev&#xD;&#xA;  FROM customer c&#xD;&#xA;  CROSS JOIN params p&#xD;&#xA;  WHERE c.id BETWEEN :2 AND :3&#xD;&#xA;    AND (&#xD;&#xA;      :4 = 0&#xD;&#xA;      OR (:4 = 1 AND c.management_type = 1)&#xD;&#xA;      OR (:4 = 2 AND c.management_type = 2)&#xD;&#xA;      OR (:4 = 3 AND c.management_type = 3)&#xD;&#xA;      OR (:4 = 4 AND c.management_type IN (2,3))&#xD;&#xA;    )&#xD;&#xA;),&#xD;&#xA;customers AS (&#xD;&#xA;  SELECT&#xD;&#xA;    b.*,&#xD;&#xA;    CASE WHEN b.closing_day1 = 99 THEN b.last_day_current&#xD;&#xA;         WHEN b.closing_day1 BETWEEN 1 AND 31 THEN b.closing_day1 END AS cd1_cur,&#xD;&#xA;    CASE WHEN b.closing_day2 = 99 THEN b.last_day_current&#xD;&#xA;         WHEN b.closing_day2 BETWEEN 1 AND 31 THEN b.closing_day2 END AS cd2_cur,&#xD;&#xA;    CASE WHEN b.closing_day3 = 99 THEN b.last_day_current&#xD;&#xA;         WHEN b.closing_day3 BETWEEN 1 AND 31 THEN b.closing_day3 END AS cd3_cur,&#xD;&#xA;&#xD;&#xA;    CASE WHEN b.closing_day1 = 99 THEN b.last_day_prev&#xD;&#xA;         WHEN b.closing_day1 BETWEEN 1 AND 31 THEN b.closing_day1 END AS cd1_prev,&#xD;&#xA;    CASE WHEN b.closing_day2 = 99 THEN b.last_day_prev&#xD;&#xA;         WHEN b.closing_day2 BETWEEN 1 AND 31 THEN b.closing_day2 END AS cd2_prev,&#xD;&#xA;    CASE WHEN b.closing_day3 = 99 THEN b.last_day_prev&#xD;&#xA;         WHEN b.closing_day3 BETWEEN 1 AND 31 THEN b.closing_day3 END AS cd3_prev&#xD;&#xA;  FROM customers_base b&#xD;&#xA;),&#xD;&#xA;customers_final AS (&#xD;&#xA;  SELECT&#xD;&#xA;    c.*,&#xD;&#xA;    GREATEST(&#xD;&#xA;      IF(c.cd1_cur IS NOT NULL AND c.cd1_cur &lt;= DAY(c.base_date), c.cd1_cur, 0),&#xD;&#xA;      IF(c.cd2_cur IS NOT NULL AND c.cd2_cur &lt;= DAY(c.base_date), c.cd2_cur, 0),&#xD;&#xA;      IF(c.cd3_cur IS NOT NULL AND c.cd3_cur &lt;= DAY(c.base_date), c.cd3_cur, 0)&#xD;&#xA;    ) AS last_close_day_cur,&#xD;&#xA;    GREATEST(&#xD;&#xA;      IF(c.cd1_prev IS NOT NULL, c.cd1_prev, 0),&#xD;&#xA;      IF(c.cd2_prev IS NOT NULL, c.cd2_prev, 0),&#xD;&#xA;      IF(c.cd3_prev IS NOT NULL, c.cd3_prev, 0)&#xD;&#xA;    ) AS last_close_day_prev&#xD;&#xA;  FROM customers c&#xD;&#xA;),&#xD;&#xA;customers_period AS (&#xD;&#xA;  SELECT&#xD;&#xA;    c.*,&#xD;&#xA;    CASE&#xD;&#xA;      WHEN c.cd1_cur IS NULL AND c.cd2_cur IS NULL AND c.cd3_cur IS NULL THEN c.month_start&#xD;&#xA;      WHEN c.last_close_day_cur > 0 THEN DATE_ADD(c.month_start, INTERVAL c.last_close_day_cur - 1 DAY)&#xD;&#xA;      ELSE DATE_ADD(c.prev_month_start, INTERVAL LEAST(c.last_close_day_prev, c.last_day_prev) - 1 DAY)&#xD;&#xA;    END AS last_closing_date&#xD;&#xA;  FROM customers_final c&#xD;&#xA;),&#xD;&#xA;customers_period2 AS (&#xD;&#xA;  SELECT&#xD;&#xA;    c.*,&#xD;&#xA;    DATE_ADD(c.last_closing_date, INTERVAL 1 DAY) AS period_start&#xD;&#xA;  FROM customers_period c&#xD;&#xA;),&#xD;&#xA;prev_balance AS (&#xD;&#xA;  SELECT rf.customer_id, rf.current_balance AS previous_balance&#xD;&#xA;  FROM receivables_file rf&#xD;&#xA;  JOIN (&#xD;&#xA;    SELECT&#xD;&#xA;      customer_id,&#xD;&#xA;      MAX(`year_month`) AS max_year_month&#xD;&#xA;    FROM receivables_file&#xD;&#xA;    JOIN params p&#xD;&#xA;      ON `year_month` &lt; p.month_start&#xD;&#xA;    GROUP BY customer_id&#xD;&#xA;  ) x&#xD;&#xA;    ON x.customer_id = rf.customer_id&#xD;&#xA;   AND x.max_year_month = rf.`year_month`&#xD;&#xA;),&#xD;&#xA;sales AS (&#xD;&#xA;  SELECT&#xD;&#xA;    s.billing_customer_id AS customer_id,&#xD;&#xA;    SUM(COALESCE(s.standard_sales_amount,0) + COALESCE(s.reduced_sales_amount,0)) AS sales_amount,&#xD;&#xA;    SUM(COALESCE(s.standard_return_amount,0) + COALESCE(s.reduced_return_amount,0)) AS return_amount,&#xD;&#xA;    SUM(COALESCE(s.standard_discount_amount,0) + COALESCE(s.reduced_discount_amount,0)) AS discount_amount,&#xD;&#xA;    SUM(COALESCE(s.standard_tax,0) + COALESCE(s.reduced_tax,0)) AS tax_amount&#xD;&#xA;  FROM sale s&#xD;&#xA;  JOIN customers_period2 c&#xD;&#xA;    ON c.bill_to_customer_id = s.billing_customer_id&#xD;&#xA;  WHERE s.sales_date >= c.period_start&#xD;&#xA;    AND s.sales_date &lt;= ':1'&#xD;&#xA;  GROUP BY s.billing_customer_id&#xD;&#xA;),&#xD;&#xA;payments AS (&#xD;&#xA;  SELECT&#xD;&#xA;    r.billing_customer_id AS customer_id,&#xD;&#xA;    SUM(COALESCE(r.amount,0) + COALESCE(r.fee,0)) AS payment_amount&#xD;&#xA;  FROM receipt r&#xD;&#xA;  JOIN customers_period2 c&#xD;&#xA;    ON c.bill_to_customer_id = r.billing_customer_id&#xD;&#xA;  WHERE r.receipt_date >= c.period_start&#xD;&#xA;    AND r.receipt_date &lt;= ':1'&#xD;&#xA;  GROUP BY r.billing_customer_id&#xD;&#xA;)&#xD;&#xA;SELECT&#xD;&#xA;  c.customer_id AS 得意先CD,&#xD;&#xA;  c.customer_name AS 得意先名,&#xD;&#xA;  COALESCE(pb.previous_balance,0) AS 前月残高,&#xD;&#xA;  COALESCE(s.sales_amount,0)      AS 売上金額,&#xD;&#xA;  COALESCE(s.return_amount,0)     AS 返品金額,&#xD;&#xA;  COALESCE(s.discount_amount,0)   AS 値引金額,&#xD;&#xA;  COALESCE(s.tax_amount,0)        AS 消費税額,&#xD;&#xA;  COALESCE(p.payment_amount,0)    AS 入金金額,&#xD;&#xA;  (&#xD;&#xA;    COALESCE(pb.previous_balance,0)&#xD;&#xA;    + COALESCE(s.sales_amount,0)&#xD;&#xA;    + COALESCE(s.return_amount,0)&#xD;&#xA;    + COALESCE(s.discount_amount,0)&#xD;&#xA;    + COALESCE(s.tax_amount,0)&#xD;&#xA;    - COALESCE(p.payment_amount,0)&#xD;&#xA;  ) AS 当月残高&#xD;&#xA;FROM customers_period2 c&#xD;&#xA;LEFT JOIN prev_balance pb ON pb.customer_id = c.customer_id&#xD;&#xA;LEFT JOIN sales s         ON s.customer_id  = c.bill_to_customer_id&#xD;&#xA;LEFT JOIN payments p      ON p.customer_id  = c.bill_to_customer_id&#xD;&#xA;ORDER BY c.customer_id;"/>
+          <INARG>
+            <Arguments>
+              <Argument>
+                <Exp val="1"/>
+              </Argument>
+              <Argument>
+                <Exp val="3"/>
+              </Argument>
+              <Argument>
+                <Exp val="5"/>
+              </Argument>
+              <Argument>
+                <Exp val="2"/>
+              </Argument>
+            </Arguments>
+          </INARG>
+          <OUTARG>
+            <Arguments>
+              <Argument Variable="1"/>
+              <Argument Variable="2"/>
+              <Argument Variable="3"/>
+              <Argument Variable="4"/>
+              <Argument Variable="5"/>
+              <Argument Variable="6"/>
+              <Argument Variable="7"/>
+              <Argument Variable="8"/>
+              <Argument Variable="9"/>
+            </Arguments>
+          </OUTARG>
+        </SQL_FORM>
+        <TaskLogic>
+          <LogicUnit id="2" propagate="78">
+            <Level val="R"/>
+            <Type val="M"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+            </Event>
+            <LogicLines>
+              <LogicLine>
+                <DATAVIEW_SRC FlowIsn="2" Type="Q">
+                  <Condition val="N"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </DATAVIEW_SRC>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="1" FlowIsn="3" id="1">
+                  <Column val="1"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="11"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="2" FlowIsn="4" id="2">
+                  <Column val="2"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="12"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="3" FlowIsn="5" id="3">
+                  <Column val="3"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="13"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="4" FlowIsn="6" id="4">
+                  <Column val="4"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="14"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="5" FlowIsn="7" id="5">
+                  <Column val="5"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="15"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="6" FlowIsn="8" id="6">
+                  <Column val="6"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="16"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="7" FlowIsn="9" id="7">
+                  <Column val="7"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="17"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="8" FlowIsn="10" id="8">
+                  <Column val="8"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="18"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="9" FlowIsn="11" id="9">
+                  <Column val="9"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="19"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="12">
+                  <Type val="0"/>
+                  <Text val=" "/>
+                </Remark>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+        </TaskLogic>
+        <TaskForms>
+          <FormEntry _last_isn="19" _last_test_id="132" id="1">
+            <PropertyList model="FORM_GUI0">
+              <Placement id="20"/>
+              <Width id="23" val="2312"/>
+              <Height id="24" val="1741"/>
+              <TitleBar id="26"/>
+              <SystemMenu id="27"/>
+              <MinimizeButton id="28"/>
+              <MaximizeButton id="29"/>
+              <FormUnits id="33" val="2"/>
+              <VerticalFactor id="34" val="100"/>
+              <HorizontalFactor id="35" val="100"/>
+              <GridX id="38" val="1"/>
+              <GridY id="39" val="1"/>
+              <Color id="51" val="4"/>
+              <BorderStyle id="64" val="3"/>
+              <_Comment id="218"/>
+              <FormName id="311" valUnicode="売掛データ 表示"/>
+              <_TabbingOrder id="318" val="1"/>
+              <WindowType id="358" val="1"/>
+              <PersistentFormState id="493"/>
+            </PropertyList>
+            <Control _test_id="114" id="1">
+              <PropertyList model="CTRL_GUI0_TABLE">
+                <Placement bottom="100" id="20" right="100"/>
+                <X id="21" val="61"/>
+                <Y id="22" val="56"/>
+                <Width id="23" val="2167"/>
+                <Height id="24" val="1482"/>
+                <TitleHeight id="79" val="47"/>
+                <RowHeight id="80" val="52"/>
+                <Elements id="81" val="9"/>
+                <_WindowWidth id="241" val="2167"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" PDOD="128" _test_id="124" id="2">
+              <PropertyList model="CTRL_GUI0_COLUMN">
+                <Width id="23" val="138"/>
+                <ControlLayer id="25" val="1"/>
+                <ColumnTitle id="139" valUnicode="得意先CD"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" PDOD="128" _test_id="125" id="3">
+              <PropertyList model="CTRL_GUI0_COLUMN">
+                <Width id="23" val="664"/>
+                <ControlLayer id="25" val="2"/>
+                <ColumnTitle id="139" valUnicode="得意先名"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" PDOD="128" _test_id="126" id="4">
+              <PropertyList model="CTRL_GUI0_COLUMN">
+                <Width id="23" val="187"/>
+                <ControlLayer id="25" val="3"/>
+                <ColumnTitle id="139" valUnicode="前月残高"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" PDOD="128" _test_id="127" id="5">
+              <PropertyList model="CTRL_GUI0_COLUMN">
+                <Width id="23" val="187"/>
+                <ControlLayer id="25" val="4"/>
+                <ColumnTitle id="139" valUnicode="売上額計"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" PDOD="128" _test_id="128" id="6">
+              <PropertyList model="CTRL_GUI0_COLUMN">
+                <Width id="23" val="187"/>
+                <ControlLayer id="25" val="5"/>
+                <ColumnTitle id="139" valUnicode="返品額計"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" PDOD="128" _test_id="129" id="7">
+              <PropertyList model="CTRL_GUI0_COLUMN">
+                <Width id="23" val="187"/>
+                <ControlLayer id="25" val="6"/>
+                <ColumnTitle id="139" valUnicode="値引額計"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" PDOD="128" _test_id="130" id="8">
+              <PropertyList model="CTRL_GUI0_COLUMN">
+                <Width id="23" val="187"/>
+                <ControlLayer id="25" val="7"/>
+                <ColumnTitle id="139" valUnicode="消費税計"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" PDOD="128" _test_id="131" id="9">
+              <PropertyList model="CTRL_GUI0_COLUMN">
+                <Width id="23" val="187"/>
+                <ControlLayer id="25" val="8"/>
+                <ColumnTitle id="139" valUnicode="入金額計"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" PDOD="128" _test_id="132" id="10">
+              <PropertyList model="CTRL_GUI0_COLUMN">
+                <Width id="23" val="187"/>
+                <ControlLayer id="25" val="9"/>
+                <ColumnTitle id="139" valUnicode="当月残高"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" PDOD="1" _test_id="115" id="11">
+              <PropertyList model="CTRL_GUI0_EDIT">
+                <Model ID="MODEL_GUI_INT_TBL" id="1">
+                  <Var FieldID="1"/>
+                </Model>
+                <Placement bottom="100" id="20" right="100"/>
+                <X id="21" val="69"/>
+                <Y id="22" val="113"/>
+                <Width id="23" val="106"/>
+                <Height id="24" val="42"/>
+                <ControlLayer id="25" val="1"/>
+                <Data FieldID="1" id="43"/>
+                <ControlName id="46" val="得意先CD"/>
+                <Style id="63" val="1"/>
+                <_Orientation id="143"/>
+                <TabOrder id="314" val="1"/>
+                <Border id="452"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" _test_id="116" id="12">
+              <PropertyList model="CTRL_GUI0_EDIT">
+                <Model ID="MODEL_GUI_INT_TBL" id="1">
+                  <Var FieldID="2"/>
+                </Model>
+                <Placement bottom="100" id="20" right="100"/>
+                <X id="21" val="207"/>
+                <Y id="22" val="113"/>
+                <Width id="23" val="646"/>
+                <Height id="24" val="42"/>
+                <ControlLayer id="25" val="2"/>
+                <Data FieldID="2" id="43"/>
+                <ControlName id="46" val="得意先名"/>
+                <Style id="63" val="1"/>
+                <_Orientation id="143"/>
+                <TabOrder id="314" val="2"/>
+                <Border id="452"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" _test_id="117" id="13">
+              <PropertyList model="CTRL_GUI0_EDIT">
+                <Model ID="MODEL_GUI_INT_TBL" id="1">
+                  <Var FieldID="3"/>
+                </Model>
+                <Placement bottom="100" id="20" right="100"/>
+                <X id="21" val="871"/>
+                <Y id="22" val="113"/>
+                <Width id="23" val="169"/>
+                <Height id="24" val="42"/>
+                <ControlLayer id="25" val="3"/>
+                <Data FieldID="3" id="43"/>
+                <ControlName id="46" val="前月残高"/>
+                <Style id="63" val="1"/>
+                <_Orientation id="143"/>
+                <TabOrder id="314" val="3"/>
+                <Border id="452"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" _test_id="118" id="14">
+              <PropertyList model="CTRL_GUI0_EDIT">
+                <Model ID="MODEL_GUI_INT_TBL" id="1">
+                  <Var FieldID="4"/>
+                </Model>
+                <Placement bottom="100" id="20" right="100"/>
+                <X id="21" val="1058"/>
+                <Y id="22" val="113"/>
+                <Width id="23" val="169"/>
+                <Height id="24" val="42"/>
+                <ControlLayer id="25" val="4"/>
+                <Data FieldID="4" id="43"/>
+                <ControlName id="46" val="売上額計"/>
+                <Style id="63" val="1"/>
+                <_Orientation id="143"/>
+                <TabOrder id="314" val="4"/>
+                <Border id="452"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" _test_id="119" id="15">
+              <PropertyList model="CTRL_GUI0_EDIT">
+                <Model ID="MODEL_GUI_INT_TBL" id="1">
+                  <Var FieldID="5"/>
+                </Model>
+                <Placement bottom="100" id="20" right="100"/>
+                <X id="21" val="1245"/>
+                <Y id="22" val="113"/>
+                <Width id="23" val="169"/>
+                <Height id="24" val="42"/>
+                <ControlLayer id="25" val="5"/>
+                <Data FieldID="5" id="43"/>
+                <ControlName id="46" val="返品額計"/>
+                <Style id="63" val="1"/>
+                <_Orientation id="143"/>
+                <TabOrder id="314" val="5"/>
+                <Border id="452"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" _test_id="120" id="16">
+              <PropertyList model="CTRL_GUI0_EDIT">
+                <Model ID="MODEL_GUI_INT_TBL" id="1">
+                  <Var FieldID="6"/>
+                </Model>
+                <Placement bottom="100" id="20" right="100"/>
+                <X id="21" val="1432"/>
+                <Y id="22" val="113"/>
+                <Width id="23" val="169"/>
+                <Height id="24" val="42"/>
+                <ControlLayer id="25" val="6"/>
+                <Data FieldID="6" id="43"/>
+                <ControlName id="46" val="値引額計"/>
+                <Style id="63" val="1"/>
+                <_Orientation id="143"/>
+                <TabOrder id="314" val="6"/>
+                <Border id="452"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" _test_id="121" id="17">
+              <PropertyList model="CTRL_GUI0_EDIT">
+                <Model ID="MODEL_GUI_INT_TBL" id="1">
+                  <Var FieldID="7"/>
+                </Model>
+                <Placement bottom="100" id="20" right="100"/>
+                <X id="21" val="1619"/>
+                <Y id="22" val="113"/>
+                <Width id="23" val="169"/>
+                <Height id="24" val="42"/>
+                <ControlLayer id="25" val="7"/>
+                <Data FieldID="7" id="43"/>
+                <ControlName id="46" val="消費税計"/>
+                <Style id="63" val="1"/>
+                <_Orientation id="143"/>
+                <TabOrder id="314" val="7"/>
+                <Border id="452"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" _test_id="122" id="18">
+              <PropertyList model="CTRL_GUI0_EDIT">
+                <Model ID="MODEL_GUI_INT_TBL" id="1">
+                  <Var FieldID="8"/>
+                </Model>
+                <Placement bottom="100" id="20" right="100"/>
+                <X id="21" val="1806"/>
+                <Y id="22" val="113"/>
+                <Width id="23" val="169"/>
+                <Height id="24" val="42"/>
+                <ControlLayer id="25" val="8"/>
+                <Data FieldID="8" id="43"/>
+                <ControlName id="46" val="入金額計"/>
+                <Style id="63" val="1"/>
+                <_Orientation id="143"/>
+                <TabOrder id="314" val="8"/>
+                <Border id="452"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" _test_id="123" id="19">
+              <PropertyList model="CTRL_GUI0_EDIT">
+                <Model ID="MODEL_GUI_INT_TBL" id="1">
+                  <Var FieldID="9"/>
+                </Model>
+                <Placement bottom="100" id="20" right="100"/>
+                <X id="21" val="1993"/>
+                <Y id="22" val="113"/>
+                <Width id="23" val="169"/>
+                <Height id="24" val="42"/>
+                <ControlLayer id="25" val="9"/>
+                <Data FieldID="9" id="43"/>
+                <ControlName id="46" val="当月残高"/>
+                <Style id="63" val="1"/>
+                <_Orientation id="143"/>
+                <TabOrder id="314" val="9"/>
+                <Border id="452"/>
+              </PropertyList>
+            </Control>
+          </FormEntry>
+        </TaskForms>
+        <Expressions>
+          <Expression id="1">
+            <ExpSyntax val="'2026-02-28'"/>
+            <ExpAttribute val="A"/>
+          </Expression>
+          <Expression id="2">
+            <ExpSyntax val="0"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="3">
+            <ExpSyntax val="1"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="4">
+            <ExpSyntax val="6304"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+          <Expression id="5">
+            <ExpSyntax val="999999"/>
+            <ExpAttribute val="N"/>
+          </Expression>
+        </Expressions>
+        <EVNT DESC="合計反映" FORCE_EXIT="N" id="1">
+          <Event>
+            <EventType val="N"/>
+          </Event>
+        </EVNT>
+      </Task>
+    </Programs>
+  </ProgramsRepository>
+
+</Application>

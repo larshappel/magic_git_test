@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="14081.00"/>
+    <APPLICATION val="N"/>
+    <WithIsn val="N"/>
+    <WITH_MODELS val="N"/>
+    <MAIN_PRG_VARS val="26"/>
+    <MAIN_PRG_DSPS val="1"/>
+    <STP END="109" START="109"/>
+  </Header>
+
+
+
+ <DataSourceRepository>
+  <DataObjects>
+ 
+<DataObject Resident="N" data_source="Default Database">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <Columns/>
+
+  <Indexes/>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+ </DataObjects>
+ </DataSourceRepository>
+ 
+
+<DataRepositoryProperties>
+
+<Relationships/>
+
+</DataRepositoryProperties>
+
+
+</Application>
