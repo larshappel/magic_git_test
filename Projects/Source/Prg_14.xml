@@ -31,9 +31,9 @@
           <Offline val="N"/>
           <FormType val="N"/>
           <DotNetObjectExists val="N"/>
-          <LastModified _date="739842" _time="38524" date="2026/08/14" time="10:42:04"/>
+          <LastModified _date="739873" _time="55154" date="2026/09/14" time="15:19:14"/>
         </Header>
-        <ItemIsn val="93"/>
+        <ItemIsn val="94"/>
         <Resource>
           <DB id="1">
             <DataObject comp="-1" obj="7"/>
@@ -420,6 +420,12 @@
               </PropertyList>
             </Column>
             <Column id="40" name="V_ﾒｯｾｰｼﾞ確認FLG">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_LOGICAL" id="1"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="51" name="V_売上入力中FLG">
               <PropertyList model="FIELD">
                 <Model attr_obj="FIELD_LOGICAL" id="1"/>
                 <_FieldStyle id="276" val="1"/>
@@ -929,7 +935,7 @@
                     <v>44</v>
                     <v>4139</v>
                   </INT_RCMP_INFO>
-                  <_DitIndexForToolkit val="21"/>
+                  <_DitIndexForToolkit val="23"/>
                   <DIFF_UPDATE val="T"/>
                   <PartOfDataview val="Y"/>
                   <Condition val="Y"/>
@@ -1184,7 +1190,7 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="29"/>
+                  <_DitIndexForToolkit val="31"/>
                   <DIFF_UPDATE val="T"/>
                   <PartOfDataview val="Y"/>
                   <Condition val="Y"/>
@@ -1198,7 +1204,7 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="30"/>
+                  <_DitIndexForToolkit val="32"/>
                   <DIFF_UPDATE val="T"/>
                   <PartOfDataview val="Y"/>
                   <Condition val="Y"/>
@@ -1264,7 +1270,7 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="19"/>
+                  <_DitIndexForToolkit val="21"/>
                   <DIFF_UPDATE val="T"/>
                   <PartOfDataview val="Y"/>
                   <Condition val="Y"/>
@@ -1278,7 +1284,7 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="25"/>
+                  <_DitIndexForToolkit val="27"/>
                   <DIFF_UPDATE val="T"/>
                   <PartOfDataview val="Y"/>
                   <Condition val="Y"/>
@@ -1311,7 +1317,7 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="28"/>
+                  <_DitIndexForToolkit val="30"/>
                   <DIFF_UPDATE val="T"/>
                   <PartOfDataview val="Y"/>
                   <Condition val="Y"/>
@@ -1635,6 +1641,20 @@
                   <IsParameter val="N"/>
                   <DIFF_UPDATE val="T"/>
                   <PartOfDataview val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="94" FlowIsn="4383" id="94">
+                  <ASS val="4"/>
+                  <Column val="51"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="19"/>
+                  <DIFF_UPDATE val="T"/>
                   <Condition val="Y"/>
                   <Modifier val="S"/>
                   <Direction val="C"/>
@@ -3647,7 +3667,7 @@
             <Scope val="T"/>
             <EngineDirective val="S"/>
             <ShowMessage val="Y"/>
-            <Condition val="89"/>
+            <Condition val="-76"/>
             <Event>
               <EventType val="S"/>
               <KeyCombinationID val="87"/>
@@ -5237,7 +5257,7 @@
           </LogicUnit>
         </TaskLogic>
         <TaskForms>
-          <FormEntry _last_isn="45" _last_test_id="93" id="1">
+          <FormEntry _last_isn="49" _last_test_id="97" id="1">
             <PropertyList model="FORM_GUI0">
               <Width id="23" val="4011"/>
               <Height id="24" val="1921"/>
@@ -5582,6 +5602,32 @@
                 <TabInto id="269"/>
                 <TabOrder id="314" val="17"/>
                 <AllowParking id="315"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="97" id="49">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="V_売上入力中FLG"/>
+                <X id="21" val="2757"/>
+                <Y id="22" val="185"/>
+                <Width id="23" val="352"/>
+                <Height id="24" val="69"/>
+                <Font id="50" val="224"/>
+                <Style id="63" val="7"/>
+                <EnableRTF id="69"/>
+              </PropertyList>
+            </Control>
+            <Control PDOD="192" _test_id="96" id="48">
+              <PropertyList model="CTRL_GUI0_EDIT">
+                <Model ID="MODEL_GUI_INT" id="1">
+                  <Var FieldID="94"/>
+                </Model>
+                <X id="21" val="3111"/>
+                <Y id="22" val="212"/>
+                <Width id="23" val="90"/>
+                <Height id="24" val="42"/>
+                <Data FieldID="94" id="43"/>
+                <ControlName id="46" val="V_売上入力中FLG"/>
+                <TabOrder id="314" val="32"/>
               </PropertyList>
             </Control>
             <Control _test_id="22" id="18">
@@ -6420,9 +6466,9 @@
             <External val="N"/>
             <FormType val="N"/>
             <DotNetObjectExists val="N"/>
-            <LastModified _date="739834" _time="42948" date="2026/08/06" time="11:55:48"/>
+            <LastModified _date="739873" _time="55137" date="2026/09/14" time="15:18:57"/>
           </Header>
-          <ItemIsn val="126"/>
+          <ItemIsn val="130"/>
           <Resource>
             <DB id="1">
               <DataObject comp="-1" obj="14"/>
@@ -8873,6 +8919,43 @@
                 </LogicLine>
                 <LogicLine>
                   <END_BLK FlowIsn="186"/>
+                </LogicLine>
+                <LogicLine>
+                  <Update FlowIsn="670">
+                    <Parent val="1"/>
+                    <FieldID val="94"/>
+                    <WithValue val="3"/>
+                    <Incremental val="N"/>
+                    <ForcedUpdate val="Y"/>
+                    <Condition val="Y"/>
+                    <Modifier val="B"/>
+                    <Direction val="C"/>
+                  </Update>
+                </LogicLine>
+              </LogicLines>
+            </LogicUnit>
+            <LogicUnit id="73" propagate="78">
+              <Level val="R"/>
+              <Type val="P"/>
+              <Scope val="S"/>
+              <EngineDirective val="S"/>
+              <ShowMessage val="Y"/>
+              <Condition val="89"/>
+              <Event>
+                <EventType val="S"/>
+              </Event>
+              <LogicLines>
+                <LogicLine>
+                  <Update FlowIsn="673">
+                    <Parent val="1"/>
+                    <FieldID val="94"/>
+                    <WithValue val="2"/>
+                    <Incremental val="N"/>
+                    <ForcedUpdate val="Y"/>
+                    <Condition val="Y"/>
+                    <Modifier val="B"/>
+                    <Direction val="C"/>
+                  </Update>
                 </LogicLine>
               </LogicLines>
             </LogicUnit>

@@ -31,7 +31,7 @@
           <Offline val="N"/>
           <FormType val="N"/>
           <DotNetObjectExists val="N"/>
-          <LastModified _date="739547" _time="61125" date="2025/10/23" time="16:58:45"/>
+          <LastModified _date="739873" _time="41708" date="2026/09/14" time="11:35:08"/>
         </Header>
         <ItemIsn val="52"/>
         <Resource>
@@ -2793,6 +2793,7 @@
           <LogicUnit id="5" propagate="78">
             <Level val="H"/>
             <Type val="U"/>
+            <Comment val="Last month: Pass parameter 2"/>
             <Scope val="T"/>
             <EngineDirective val="S"/>
             <ShowMessage val="Y"/>
@@ -2846,6 +2847,7 @@
           <LogicUnit id="6" propagate="78">
             <Level val="H"/>
             <Type val="U"/>
+            <Comment val="Right arrow (Next month) pass parameter: 4"/>
             <Scope val="T"/>
             <EngineDirective val="S"/>
             <ShowMessage val="Y"/>
@@ -2964,6 +2966,7 @@
           <LogicUnit id="8" propagate="78">
             <Level val="H"/>
             <Type val="U"/>
+            <Comment val="Last month. Pass parameter: 2"/>
             <Scope val="T"/>
             <EngineDirective val="S"/>
             <ShowMessage val="Y"/>
@@ -3094,6 +3097,7 @@
           <LogicUnit id="10" propagate="78">
             <Level val="H"/>
             <Type val="U"/>
+            <Comment val="Next month. Pass parameter: 4"/>
             <Scope val="T"/>
             <EngineDirective val="S"/>
             <ShowMessage val="Y"/>
@@ -5014,7 +5018,7 @@
           </Event>
         </EVNT>
         <Task MainProgram="N">
-          <Header Description="ToDoﾘｽﾄ" ISN_2="2" id="8">
+          <Header Description="ToDoﾘｽﾄ" ISN_2="2" LastIsn="5" id="8">
             <ExecutionRight comp="-1"/>
             <Resident val="N"/>
             <SQL val="N"/>
@@ -5476,7 +5480,7 @@
           <VarRangeInfo Mode="E" VarRangeVeeIsn="3" id="2"/>
           <VarRangeInfo Mode="E" VarRangeVeeIsn="5" id="3"/>
           <Task MainProgram="N">
-            <Header Description="ToDo書込" ISN_2="3" id="8">
+            <Header Description="ToDo書込" ISN_2="3" LastIsn="5" id="8">
               <ExecutionRight comp="-1"/>
               <Resident val="N"/>
               <SQL val="N"/>
@@ -5753,7 +5757,7 @@
             </Expressions>
           </Task>
           <Task MainProgram="N">
-            <Header Description="ToDo完了" ISN_2="4" id="8">
+            <Header Description="ToDo完了" ISN_2="4" LastIsn="5" id="8">
               <ExecutionRight comp="-1"/>
               <Resident val="N"/>
               <SQL val="N"/>
@@ -5938,7 +5942,7 @@
           </Task>
         </Task>
         <Task MainProgram="N">
-          <Header Description="T_処理年月変更" ISN_2="5" id="8">
+          <Header Description="T_処理年月変更" ISN_2="5" LastIsn="5" id="8">
             <ExecutionRight comp="-1"/>
             <Resident val="N"/>
             <SQL val="N"/>
