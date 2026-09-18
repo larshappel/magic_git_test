@@ -229,7 +229,7 @@
       <SourceFileTimeStamp _date="739831" _time="22300" date="2026/08/03" time="06:11:40"/>
     </Program>
     <Program>
-      <Header Description="売上入力　　　　　　　　　画面" ISN_2="1" LastIsn="41" id="14">
+      <Header Description="売上入力　　　　　　　　　画面" ISN_2="1" LastIsn="1" id="14">
         <Public val="売上入力(青果)"/>
         <ExecutionRight comp="-1"/>
         <Resident val="N"/>
@@ -249,7 +249,7 @@
         <DotNetObjectExists val="N"/>
         <LastModified _date="739873" _time="55154" date="2026/09/14" time="15:19:14"/>
       </Header>
-      <SourceFileTimeStamp _date="739873" _time="22754" date="2026/09/14" time="06:19:14"/>
+      <SourceFileTimeStamp _date="739876" _time="19954" date="2026/09/17" time="05:32:34"/>
     </Program>
     <Program>
       <Header Description="入金一覧　　　　　　　　　画面" ISN_2="1" LastIsn="4" id="15">
@@ -325,7 +325,7 @@
         <DotNetObjectExists val="N"/>
         <LastModified _date="739570" _time="65048" date="2025/11/15" time="18:04:08"/>
       </Header>
-      <SourceFileTimeStamp _date="739709" _time="2894" date="2026/04/03" time="00:48:14"/>
+      <SourceFileTimeStamp _date="739876" _time="19954" date="2026/09/17" time="05:32:34"/>
     </Program>
     <Program>
       <Header Description="請求一覧　　　　　　　　　画面" ISN_2="1" LastIsn="17" id="383">
