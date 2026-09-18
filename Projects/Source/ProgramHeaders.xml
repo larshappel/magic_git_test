@@ -229,7 +229,7 @@
       <SourceFileTimeStamp _date="739831" _time="22300" date="2026/08/03" time="06:11:40"/>
     </Program>
     <Program>
-      <Header Description="売上入力　　　　　　　　　画面" ISN_2="1" LastIsn="1" id="14">
+      <Header Description="売上入力　　　　　　　　　画面" ISN_2="1" LastIsn="41" id="14">
         <Public val="売上入力(青果)"/>
         <ExecutionRight comp="-1"/>
         <Resident val="N"/>
@@ -296,9 +296,9 @@
         <Offline val="N"/>
         <FormType val="N"/>
         <DotNetObjectExists val="N"/>
-        <LastModified _date="739793" _time="42867" date="2026/06/26" time="11:54:27"/>
+        <LastModified _date="739877" _time="40888" date="2026/09/18" time="11:21:28"/>
       </Header>
-      <SourceFileTimeStamp _date="739793" _time="10466" date="2026/06/26" time="02:54:26"/>
+      <SourceFileTimeStamp _date="739877" _time="8488" date="2026/09/18" time="02:21:28"/>
     </Program>
     <Program>
       <Header Description="入金一覧表　　　　　　　　印刷" ISN_2="1" LastIsn="1" id="336">
@@ -9613,6 +9613,63 @@
         <LastModified _date="739736" _time="43779" date="2026/04/30" time="12:09:39"/>
       </Header>
       <SourceFileTimeStamp _date="739811" _time="19834" date="2026/07/14" time="05:30:34"/>
+    </Program>
+    <Program>
+      <Header ISEMPTY_TSK="1" ISN_2="1" LastIsn="1" id="749">
+        <ExecutionRight comp="-1"/>
+        <Resident val="N"/>
+        <SQL val="N"/>
+        <ReturnValue>
+          <ReturnValueAttr/>
+          <ParametersAttributes/>
+        </ReturnValue>
+        <SqlWhereExist val="N"/>
+        <TaskType val="O"/>
+        <External val="N"/>
+        <Offline val="N"/>
+        <FormType val="N"/>
+        <DotNetObjectExists val="N"/>
+        <LastModified date="0000/00/00" time="00:00:00"/>
+      </Header>
+      <SourceFileTimeStamp _date="739877" _time="9401" date="2026/09/18" time="02:36:41"/>
+    </Program>
+    <Program>
+      <Header Description="--- TEST stuff ---" ISEMPTY_TSK="1" ISN_2="1" LastIsn="1" id="750">
+        <ExecutionRight comp="-1"/>
+        <Resident val="N"/>
+        <SQL val="N"/>
+        <ReturnValue>
+          <ReturnValueAttr/>
+          <ParametersAttributes/>
+        </ReturnValue>
+        <SqlWhereExist val="N"/>
+        <TaskType val="O"/>
+        <External val="N"/>
+        <Offline val="N"/>
+        <FormType val="N"/>
+        <DotNetObjectExists val="N"/>
+        <LastModified date="0000/00/00" time="00:00:00"/>
+      </Header>
+      <SourceFileTimeStamp _date="739877" _time="9411" date="2026/09/18" time="02:36:51"/>
+    </Program>
+    <Program>
+      <Header Description="Mysql updating" ISEMPTY_TSK="1" ISN_2="1" LastIsn="1" id="751">
+        <ExecutionRight comp="-1"/>
+        <Resident val="N"/>
+        <SQL val="N"/>
+        <ReturnValue>
+          <ReturnValueAttr/>
+          <ParametersAttributes/>
+        </ReturnValue>
+        <SqlWhereExist val="N"/>
+        <TaskType val="O"/>
+        <External val="N"/>
+        <Offline val="N"/>
+        <FormType val="N"/>
+        <DotNetObjectExists val="N"/>
+        <LastModified date="0000/00/00" time="00:00:00"/>
+      </Header>
+      <SourceFileTimeStamp _date="739877" _time="9635" date="2026/09/18" time="02:40:35"/>
     </Program>
   </ProgramsRepositoryHeaders>
 
