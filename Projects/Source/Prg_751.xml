@@ -13,7 +13,7 @@
   <ProgramsRepository>
     <Programs>
       <Task MainProgram="N">
-        <Header Description="Mysql updating" ISN_2="1" LastIsn="2" id="751">
+        <Header Description="mysql_testing" ISN_2="1" LastIsn="2" id="751">
           <ExecutionRight comp="-1"/>
           <Resident val="N"/>
           <SQL val="Y"/>
@@ -27,9 +27,9 @@
           <Offline val="N"/>
           <FormType val="N"/>
           <DotNetObjectExists val="N"/>
-          <LastModified _date="739877" _time="48509" date="2026/09/18" time="13:28:29"/>
+          <LastModified _date="739877" _time="49510" date="2026/09/18" time="13:45:10"/>
         </Header>
-        <ItemIsn val="2"/>
+        <ItemIsn val="3"/>
         <Resource>
           <Columns>
             <Column id="1" name="v_productId">
@@ -53,6 +53,15 @@
                 <Size id="174" val="50"/>
                 <Definition id="175" val="2"/>
                 <_Flip id="194"/>
+              </PropertyList>
+            </Column>
+            <Column id="3" name="v_write_successfull">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_LOGICAL" id="1"/>
+                <StoredAs id="173" val="15"/>
+                <Size id="174" val="1"/>
+                <Definition id="175" val="2"/>
+                <_FieldStyle id="276" val="1"/>
               </PropertyList>
             </Column>
           </Columns>
@@ -115,7 +124,7 @@
           </BOX>
         </Information>
         <SQL_FORM DB="MariaDB_Local" RESTAB="Memory">
-          <SQL_STMT_U val="select id, name from product for update;"/>
+          <SQL_STMT_U val="select id, name from product;"/>
           <OUTARG>
             <Arguments>
               <Argument Variable="1"/>
@@ -148,7 +157,7 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="4"/>
+                  <_DitIndexForToolkit val="6"/>
                   <DIFF_UPDATE val="T"/>
                   <Condition val="Y"/>
                   <Modifier val="S"/>
@@ -161,7 +170,20 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="5"/>
+                  <_DitIndexForToolkit val="7"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="3" FlowIsn="7" id="3">
+                  <Column val="3"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="2"/>
                   <DIFF_UPDATE val="T"/>
                   <Condition val="Y"/>
                   <Modifier val="S"/>
@@ -221,19 +243,47 @@
           </LogicUnit>
         </TaskLogic>
         <TaskForms>
-          <FormEntry _last_isn="5" _last_test_id="5" id="1">
+          <FormEntry _last_isn="7" _last_test_id="7" id="1">
             <PropertyList model="FORM_GUI0">
               <Width id="23" val="577"/>
               <Height id="24" val="511"/>
               <_Comment id="218"/>
-              <FormName id="311" valUnicode="Mysql updating"/>
+              <FormName id="311" valUnicode="mysql_testing"/>
             </PropertyList>
+            <Control _test_id="7" id="7">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text id="19" valUnicode="v_write_successfull"/>
+                <X id="21" val="97"/>
+                <Y id="22" val="9"/>
+                <Width id="23" val="77"/>
+                <Height id="24" val="9"/>
+                <Font id="50" val="1"/>
+                <Style id="63" val="7"/>
+                <EnableRTF id="69"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
+            <Control PDOD="192" _test_id="6" id="6">
+              <PropertyList model="CTRL_GUI0_EDIT">
+                <Model ID="MODEL_GUI_INT" id="1">
+                  <Var FieldID="3"/>
+                </Model>
+                <X id="21" val="178"/>
+                <Y id="22" val="9"/>
+                <Width id="23" val="23"/>
+                <Height id="24" val="11"/>
+                <Data FieldID="3" id="43"/>
+                <ControlName id="46" val="v_write_successfull"/>
+                <_Orientation id="143"/>
+                <TabOrder id="314" val="1"/>
+              </PropertyList>
+            </Control>
             <Control _test_id="1" id="1">
               <PropertyList model="CTRL_GUI0_TABLE">
-                <X id="21" val="83"/>
-                <Y id="22" val="203"/>
+                <X id="21" val="35"/>
+                <Y id="22" val="37"/>
                 <Width id="23" val="351"/>
-                <Height id="24" val="283"/>
+                <Height id="24" val="411"/>
                 <TitleHeight id="79" val="12"/>
                 <RowHeight id="80" val="22"/>
                 <Elements id="81" val="2"/>
@@ -260,8 +310,8 @@
                   <Var FieldID="1"/>
                 </Model>
                 <Placement bottom="100" id="20" right="100"/>
-                <X id="21" val="85"/>
-                <Y id="22" val="218"/>
+                <X id="21" val="37"/>
+                <Y id="22" val="52"/>
                 <Width id="23" val="94"/>
                 <Height id="24" val="19"/>
                 <ControlLayer id="25" val="1"/>
@@ -269,7 +319,7 @@
                 <ControlName id="46" val="v_productId"/>
                 <Style id="63" val="1"/>
                 <_Orientation id="143"/>
-                <TabOrder id="314" val="1"/>
+                <TabOrder id="314" val="2"/>
                 <Border id="452"/>
               </PropertyList>
             </Control>
@@ -279,8 +329,8 @@
                   <Var FieldID="2"/>
                 </Model>
                 <Placement bottom="100" id="20" right="100"/>
-                <X id="21" val="183"/>
-                <Y id="22" val="218"/>
+                <X id="21" val="135"/>
+                <Y id="22" val="52"/>
                 <Width id="23" val="143"/>
                 <Height id="24" val="19"/>
                 <ControlLayer id="25" val="2"/>
@@ -288,7 +338,7 @@
                 <ControlName id="46" val="v_productName"/>
                 <Style id="63" val="1"/>
                 <_Orientation id="143"/>
-                <TabOrder id="314" val="2"/>
+                <TabOrder id="314" val="3"/>
                 <Border id="452"/>
               </PropertyList>
             </Control>
@@ -319,7 +369,7 @@
             <External val="N"/>
             <FormType val="N"/>
             <DotNetObjectExists val="N"/>
-            <LastModified _date="739877" _time="48059" date="2026/09/18" time="13:20:59"/>
+            <LastModified _date="739877" _time="49397" date="2026/09/18" time="13:43:17"/>
           </Header>
           <ItemIsn val="2"/>
           <Resource>
@@ -405,13 +455,18 @@
             </BOX>
           </Information>
           <SQL_FORM DB="MariaDB_Local" RESTAB="Memory">
-            <SQL_STMT_U val="update product set name = :2 where id = :1;"/>
+            <SQL_STMT_U val="begin; select id, name from product for update; update product set name = 'bla' where id = 1; commit;"/>
             <INARG>
               <Arguments>
                 <Argument Variable="1"/>
                 <Argument Variable="2"/>
               </Arguments>
             </INARG>
+            <RETARG>
+              <Arguments>
+                <Argument Parent="1" Variable="3"/>
+              </Arguments>
+            </RETARG>
           </SQL_FORM>
           <TaskLogic>
             <LogicUnit id="1" propagate="78">
