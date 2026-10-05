@@ -32,6 +32,7 @@
 </DataRepositoryProperties>
  <DataSourceRepository>
   <DataObjects>
+ 
    
 <DataObject PhysicalName="system_company" Resident="N" UniqueISNConvState="12" data_source="MySQL Database" id="1" name="M_会社概要_ﾏｽﾀ">
 
@@ -32472,7 +32473,7 @@
   <WebS/>
 
 </DataObject> 
-<DataObject Resident="N" UniqueISNConvState="12" data_source="Default Database" id="99">
+<DataObject PhysicalName="dbtest" Resident="N" UniqueISNConvState="12" data_source="JSONTest" id="99" name="dbtest">
 
   <Encrypt val="N"/>
 
@@ -32485,6 +32486,8 @@
   <CheckExistence val="D"/>
 
   <ObjectType val="T"/>
+
+  <PositionIndex val="-1"/>
 
   <Columns/>
 

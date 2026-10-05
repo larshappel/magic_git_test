@@ -1,0 +1,239 @@
+14:05:06.838 -- We are here!
+14:05:06.838 -- 
+14:07:29.731 -- Is it null? False
+14:07:29.731 -- 
+14:07:49.466 -- Is it null? False
+14:07:49.466 -- 
+14:16:23.556 -- Exception occured!
+14:16:23.556 -- System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 Snippet.func(DataTable dataTable)
+14:17:13.258 -- Is it null? False
+14:17:13.258 -- No of rows: 1
+14:17:13.258 -- Some other info: 
+14:19:22.125 -- Is it null? False
+14:19:22.125 -- No of columns: 1
+14:19:22.125 -- First column: v_productId
+14:19:22.125 -- Some other info: 
+14:19:54.175 -- Is it null? False
+14:19:54.175 -- No of columns: 1
+14:19:54.175 -- Exception occured!
+14:19:54.184 -- System.IndexOutOfRangeException: 列 1 が見つかりません。
+   場所 System.Data.DataColumnCollection.get_Item(Int32 index)
+   場所 Snippet.func(DataTable dataTable)
+14:26:21.858 -- Is it null? False
+14:26:21.858 -- No of columns: 1
+14:26:21.858 -- First column: v_productId
+14:26:21.858 -- Some other info: System.Data.DataRow
+14:29:14.316 -- Is it null? False
+14:29:14.316 -- No of columns: 1
+14:29:14.316 -- First column: v_productId
+14:29:14.316 -- v_productId
+14:29:14.316 -- Some other info: System.Data.DataRow
+14:29:31.577 -- Is it null? False
+14:29:31.577 -- No of columns: 1
+14:29:31.577 -- First column: v_productId
+14:29:31.577 -- v_productId
+14:29:31.577 -- Some other info: System.Data.DataRow
+14:32:24.701 -- Is it null? False
+14:32:24.701 -- No of columns: 1
+14:32:24.701 -- First column: v_productId
+14:32:24.701 -- System.Int64
+14:32:24.701 -- Some other info: 2706
+14:36:30.690 -- Is it null? True
+14:36:30.690 -- Exception occured!
+14:36:30.690 -- System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 Snippet.func(DataTable dataTable)
+14:38:45.823 -- Is it null? True
+14:38:45.823 -- Exception occured!
+14:38:45.823 -- System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 Snippet.func(DataTable dataTable)
+14:39:14.260 -- Is it null? True
+14:39:14.260 -- Exception occured!
+14:39:14.260 -- System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 Snippet.func(DataTable dataTable)
+14:39:51.770 -- Is it null? True
+14:39:51.770 -- Exception occured!
+14:39:51.770 -- System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 Snippet.func(DataTable dataTable)
+14:40:13.753 -- Is it null? False
+14:40:13.753 -- No of columns: 1
+14:40:13.753 -- First column: v_productId
+14:40:13.753 -- System.Int64
+14:40:39.451 -- Is it null? False
+14:40:39.451 -- No of columns: 1
+14:40:39.451 -- First column: v_productId
+14:40:39.451 -- System.Int64
+14:40:39.451 -- Some other info: False
+14:41:08.424 -- Is it null? False
+14:41:08.424 -- No of columns: 1
+14:41:08.424 -- First column: v_productId
+14:41:08.424 -- System.Int64
+14:41:08.424 -- Some other info: System.Data.DataRow
+14:53:06.797 -- Is it null? False
+14:53:06.797 -- No of columns: 1
+14:53:06.797 -- First column: v_productId
+14:53:06.797 -- System.Int64
+14:53:06.797 -- Some other info: 0
+14:53:52.785 -- Is it null? False
+14:53:52.785 -- No of columns: 1
+14:53:52.785 -- First column: v_productId
+14:53:52.785 -- System.Int64
+14:53:52.785 -- Some other info: 4
+14:54:52.631 -- Is it null? False
+14:54:52.631 -- No of columns: 1
+14:54:52.631 -- First column: v_productId
+14:54:52.631 -- System.Int64
+14:54:52.642 -- Some other info: 4
+09:09:54.698 -- testlog
+09:11:19.363 -- testlog
+09:12:06.047 -- Starting dotnet
+09:12:06.051 -- Is it null? False
+09:12:06.051 -- No of columns: 1
+09:12:06.051 -- First column: v_productId
+09:12:06.051 -- System.Int64
+09:12:06.051 -- Some other info: 4
+09:12:06.051 -- Finished dotnet
+09:12:58.062 -- Starting dotnet
+09:12:58.066 -- Is it null? True
+09:12:58.066 -- Exception occured!
+09:12:58.066 -- System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 Snippet.func(DataTable dataTable)
+09:12:58.066 -- Finished dotnet
+09:18:13.755 -- Starting dotnet
+09:18:13.755 -- Is it null? True
+09:18:13.755 -- Exception occured!
+09:18:13.755 -- System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 Snippet.func(DataTable dataTable)
+09:18:13.755 -- Finished dotnet
+09:18:28.417 -- Starting dotnet
+09:18:28.417 -- Is it null? True
+09:18:28.417 -- Exception occured!
+09:18:28.421 -- System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 Snippet.func(DataTable dataTable)
+09:18:28.421 -- Finished dotnet
+09:19:12.226 -- Starting dotnet
+09:19:12.226 -- Is it null? True
+09:19:12.226 -- Exception occured!
+09:19:12.226 -- System.NullReferenceException: オブジェクト参照がオブジェクト インスタンスに設定されていません。
+   場所 Snippet.func(DataTable dataTable)
+09:19:12.226 -- Finished dotnet
+09:19:36.112 -- Starting dotnet
+09:19:36.115 -- Is it null? False
+09:19:36.115 -- No of columns: 1
+09:19:36.115 -- First column: v_productId
+09:19:36.115 -- System.Int64
+09:19:36.115 -- Some other info: 4
+09:19:36.115 -- Finished dotnet
+09:21:02.375 -- Starting dotnet
+09:21:02.375 -- Is it null? False
+09:21:02.375 -- No of columns: 1
+09:21:02.375 -- First column: v_productId
+09:21:02.375 -- System.Int64
+09:21:02.375 -- Some other info: 4
+09:21:02.375 -- Finished dotnet
+09:21:46.394 -- Starting dotnet
+09:21:46.397 -- Is it null? False
+09:21:46.397 -- No of columns: 1
+09:21:46.397 -- First column: v_productId
+09:21:46.397 -- System.Int64
+09:21:46.397 -- Some other info: 4
+09:21:46.397 -- Finished dotnet
+09:22:10.575 -- Starting dotnet
+09:22:10.575 -- Is it null? False
+09:22:10.575 -- No of columns: 1
+09:22:10.575 -- First column: v_productId
+09:22:10.575 -- System.Int64
+09:22:10.586 -- Exception occured!
+09:22:10.590 -- System.IndexOutOfRangeException: 位置 4 に行がありません。
+   場所 System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   場所 Snippet.func(DataTable dataTable)
+09:22:10.590 -- Finished dotnet
+09:22:46.892 -- Starting dotnet
+09:22:46.892 -- Is it null? False
+09:22:46.892 -- No of columns: 1
+09:22:46.892 -- First column: v_productId
+09:22:46.892 -- System.Int64
+09:22:46.892 -- Some other info: 4
+09:22:46.892 -- Finished dotnet
+09:31:29.034 -- testlog
+09:32:28.658 -- testlog
+09:34:37.544 -- testlog
+10:42:13.705 -- Starting dotnet
+10:42:13.705 -- Is it null? False
+10:42:13.705 -- No of columns: 1
+10:42:13.705 -- First column: v_productId
+10:42:13.705 -- System.Int64
+10:42:13.705 -- Some other info: 4
+10:42:13.705 -- Finished dotnet
+10:46:37.463 -- Starting dotnet
+10:46:37.463 -- Is it null? False
+10:46:37.463 -- No of columns: 1
+10:46:37.463 -- First column: v_productId
+10:46:37.463 -- Couldn't access the 2nd column.
+10:46:37.463 -- System.IndexOutOfRan
+10:46:37.463 -- System.Int64
+10:46:37.463 -- Some other info: 4
+10:46:37.463 -- Finished dotnet
+10:53:28.285 -- -- Starting dotnet
+10:53:28.285 -- Is it null? False
+10:53:28.285 -- No of columns: 1
+10:53:28.285 -- First column: productId
+10:53:28.285 -- Some other info: 4
+10:53:28.285 -- Couldn't access the 2nd column.
+10:53:28.285 -- System.IndexOutOfRangeExceptio
+10:53:28.285 -- System.Int64
+10:53:28.285 -- Finished dotnet.
+10:53:39.879 -- -- Starting dotnet
+10:53:39.879 -- Is it null? False
+10:53:39.879 -- No of columns: 1
+10:53:39.879 -- First column: productId
+10:53:39.879 -- Some other info: 4
+10:53:39.879 -- Couldn't access the 2nd column.
+10:53:39.879 -- System.IndexOutOfRangeExceptio
+10:53:39.879 -- System.Int64
+10:53:39.879 -- Finished dotnet.
+11:04:40.449 -- -- Starting dotnet
+11:04:40.449 -- Is it null? False
+11:04:40.449 -- No of columns: 1
+11:04:40.449 -- First column: productId
+11:04:40.449 -- Some other info: 4
+11:04:40.449 -- Couldn't access the 2nd column.
+11:04:40.449 -- System.IndexOutOfRangeExceptio
+11:04:40.449 -- System.Int64
+11:04:40.449 -- Finished dotnet.
+11:05:14.662 -- -- Starting dotnet
+11:05:14.662 -- Is it null? False
+11:05:14.662 -- No of columns: 1
+11:05:14.662 -- First column: productId
+11:05:14.662 -- Some other info: 4
+11:05:14.662 -- Couldn't access the 2nd column.
+11:05:14.662 -- System.IndexOutOfRangeExceptio
+11:05:14.662 -- System.Int64
+11:05:14.662 -- Finished dotnet.
+11:08:32.256 -- -- Starting dotnet
+11:08:32.256 -- Is it null? False
+11:08:32.256 -- No of columns: 1
+11:08:32.256 -- First column: productId
+11:08:32.256 -- Some other info: 4
+11:08:32.256 -- Couldn't access the 2nd column.
+11:08:32.256 -- System.IndexOutOfRangeExceptio
+11:08:32.256 -- System.Int64
+11:08:32.256 -- Finished dotnet.
+11:08:42.352 -- -- Starting dotnet
+11:08:42.353 -- Is it null? False
+11:08:42.353 -- No of columns: 1
+11:08:42.353 -- First column: productId
+11:08:42.353 -- Some other info: 4
+11:08:42.353 -- Couldn't access the 2nd column.
+11:08:42.354 -- System.IndexOutOfRangeExceptio
+11:08:42.354 -- System.Int64
+11:08:42.354 -- Finished dotnet.
+11:18:32.872 -- -- Starting dotnet
+11:18:32.872 -- Is it null? False
+11:18:32.872 -- No of columns: 1
+11:18:32.872 -- First column: productId
+11:18:32.872 -- Some other info: 4
+11:18:32.872 -- Couldn't access the 2nd column.
+11:18:32.872 -- System.IndexOutOfRangeExceptio
+11:18:32.872 -- System.Int64
+11:18:32.872 -- Finished dotnet.
