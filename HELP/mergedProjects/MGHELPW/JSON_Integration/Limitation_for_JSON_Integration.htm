@@ -1,0 +1,97 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Reference Guide &gt; JSON Integration" />
+<meta name="generator" content="Adobe RoboHelp 2019" />
+<title>JSON連携の制限事項</title>
+<link rel="StyleSheet" href="../eDev-Styles.css" type="text/css" />
+ <link rel="StyleSheet" href="../eDev-Styles.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../template/styles/widgets.min.css">
+ <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "..";
+gCommonRootRelPath = "..";
+gTopicId = "2.25.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="リファレンスガイド > JSON連携" />
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+
+
+<div><script type="text/javascript" language="javascript">//<![CDATA[
+document.write("<p  style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../index.htm", "breadcrumbs", "&gt;", "ホーム", "../Magic_xpa_Reference_Guide.htm");
+document.write("<a class=\"breadcrumbs\" href=\"../Magic_xpa_Reference_Guide.htm\">リファレンスガイド<\/a> &gt; <a class=\"breadcrumbs\" href=\"JSON_Integration.htm\">JSON連携<\/a> &gt; JSON連携の制限事項<\/p>");
+//]]></script>
+</div>
+
+<h1>JSON連携の制限事項</h1>
+<p class="Procedure">JSONデータソース</p>
+<ul>
+	<li class="p-BULLET"><p class="BULLET">テーブル名、データソース名、カラム名を修正しても、データソースの自動変更は行われません。</p></li>
+	<li class="p-BULLET"><p class="BULLET">定義されたJSONのデータソースに対する複写登録、上書登録、移動登録は無効です。</p></li>
+	<li class="p-BULLET"><p class="BULLET">複数の異なるデータソースで、同じデータソース名を定義した場合、正しく動作しません。構文チェック（F8）でエラーは出力されません。</p></li>
+	<li class="p-BULLET"><p class="BULLET">データソースのテーブル定義を削除しても、対応するJSONファイルは削除されません。</p></li>
+	<li class="p-BULLET"><p class="BULLET">プライベートデータソースを設定したJSON型のカラムの名前を変更したい場合、そのカラムを削除して再定義する必要があります。</p></li>
+	<li class="p-BULLET"><p class="BULLET">共有データソースを設定したJSON型のカラムは、それに対応するテーブル名と同じ名前に設定する必要があります。</p></li>
+	<li class="p-BULLET"><p class="BULLET">配列のないJSONファイルは、JSON DBに対応していません。</p></li>
+</ul>
+<p class="Procedure">プログラム</p>
+<ul>
+	<li class="p-BULLET"><p class="BULLET">プログラムでJSONデータソースに書き込まれたデータについて、改行やインデントの整形は行われません。</p></li>
+	<li class="p-BULLET"><p class="BULLET">JSON型項目は、フォーム上で直接［エディット］コントロールに設定できません。</p></li>
+	<li class="p-BULLET"><p class="BULLET">RIAプログラムでは、JSON型に対応するデータソースをメインソースとする子タスク(子プログラム)は、サブフォームに対応していません。</p></li>
+</ul>
+<table style="vertical-align: top; left: 0px; top: 1425px;" cellspacing="0">
+	<col width="140" />
+	<col width="50" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="VersionUP">サポートバージョン：</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Text-in-a-table">4.8.1</p></td>
+	</tr>
+</table>
+</body>
+</html>

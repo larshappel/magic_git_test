@@ -1,0 +1,222 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Reference Guide &gt; Variables &gt; Variable and Column Properties" />
+<meta name="generator" content="Adobe RoboHelp 2019" />
+<title>データ項目 JSON</title>
+<link rel="StyleSheet" href="../eDev-Styles.css" type="text/css" />
+ <link rel="StyleSheet" href="../eDev-Styles.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../template/styles/widgets.min.css">
+ <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "..";
+gCommonRootRelPath = "..";
+gTopicId = "2.5.1.2_1";
+</script>
+ <meta name="topic-breadcrumbs" content="リファレンスガイド > データ項目 > 変数とカラムの特性" />
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+
+
+<div><script type="text/javascript" language="javascript">//<![CDATA[
+document.write("<p  style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../index.htm", "breadcrumbs", "&gt;", "ホーム", "../Magic_xpa_Reference_Guide.htm");
+document.write("<a class=\"breadcrumbs\" href=\"../Magic_xpa_Reference_Guide.htm\">リファレンスガイド<\/a> &gt; <a class=\"breadcrumbs\" href=\"../Variable_and_Column_Properties/Variables_-_Reference_Guide.htm\">データ項目<\/a> &gt; <a class=\"breadcrumbs\" href=\"../Variable_and_Column_Properties/Variable_and_Column_Properties.htm\">変数とカラムの特性<\/a> &gt; JSON<\/p>");
+//]]></script>
+</div>
+
+<h1>JSON</h1>
+<p class="Body-Text">JSON型のデータ項目は、データ ソース定義内の埋め込み JSON 構造を指定します。</p>
+<p class="Body-Text">JSONは、一つのデータ項目の中に階層構造を持ったオブジェクトまたは配列を格納することが可能です。このようなJSONの定義に対して、Magic 
+ xpaではJSON型項目を定義して対応します。 </p>
+<p class="Body-Text">JSON型のデータは、内部では Unicode として格納されています。</p>
+<p class="Body-Text">JSON型の項目には以下の特性があります。</p>
+<table cellspacing="0">
+	<col />
+	<col />
+	<tr style="vertical-align: top;">
+		<td style="border: Solid 1px #000000; padding-right: 1px; padding-left: 1px;"><p 
+			 class="Bold-in-a-table">JSON 定義</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; padding-right: 1px; padding-left: 1px;"><p 
+			 class="Text-in-a-table">この特性は、［データソース］リポジトリやコンポーネントからJSONデータソースを選択できるようにするものです。</p>
+		<p class="Text-in-a-table">&#160;</p>
+		<p class="Text-in-a-table">この特性からズームすると、共有データソースの一覧が表示されます。共有データソース一覧からさらにズームすると、関連するすべてのプライベートデータソースが表示されます。</p>
+		<p class="Text-in-a-table">ここで他の共有データソースのプライベートデータソースを選択すると、そのプライベートデータソースが共有データソースに変換されます。</p>
+		<p class="Text-in-a-table">この共有データソースは、［データ］リポジトリで表示されます。</p>
+		<p class="Text-in-a-table">&#160;</p>
+		<p class="Text-in-a-table">例えば、以下の状態を想定します。</p>
+		<ul>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">&quot;A&quot;は共有データソース</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">&quot;B&quot; 
+			 は&quot;A&quot; のプライベートデータソース</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">&quot;C&quot;は、別の共有データソース</p></li>
+		</ul>
+		<p class="Text-in-a-table">このような場合、</p>
+		<ol>
+			<li class="p-Table-Number"><p class="Table-Number">JSONテーブル&quot;C&quot;の［JSON 
+			 定義］特性から［データソース一覧］にズームします。</p></li>
+			<li class="p-Table-Number"><p class="Table-Number">一覧で&quot;A&quot; 
+			 を選択した状態で ［ズーム］ボタンをクリックすして［プライベートデータソース一覧］を表示します。(<b><span 
+			 style="font-weight: normal;">［</span></b>ズーム］ボタンは、コンポーネントのJSONテーブルや、データソースの選択一覧から複数のデータソースが選択されている場合は無効です。)</p></li>
+			<li class="p-Table-Number"><p class="Table-Number">ここで &quot;B&quot;を選択して［選択］ボタンをクリックすると、確認ダイアログが表示された後、&quot;B&quot;は共有テーブルに変換されます。</p></li>
+		</ol>
+		<p class="Text-in-a-table">この特性が空白かつ［カラム名］をが設定された状態の場合、カラム名からズームすると、プライベートデータソースが作成され、作成されたJSONデータソースを修正することができます。</p>
+		<table style="border: Solid 1px #000000; margin-top: 10px; margin-bottom: 10px;" 
+				 cellspacing="0" width="100%">
+			<col width="46" />
+			<col />
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;" bgcolor="#FFFFFF"><p 
+					 class="Text-in-a-table" style="font-weight: bold;"><img src="../image/Noteicon.gif" alt="" style=" border:none; width:100%; max-width:39px;" border="0" /></p></td>
+				<td style="padding-right: 10px; padding-left: 10px; vertical-align: middle;" 
+					 bgcolor="#FFFFFF"><p class="Text-in-a-table">プライベートデータソースは、［データ］リポジトリ上には表示されませんが、、［ナビゲータ］の［データ］に表示される登録数に反映されています。</p></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; padding-right: 1px; padding-left: 1px;"><p 
+			 class="Bold-in-a-table">インスタンス</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 padding-right: 1px; padding-left: 1px;"><p class="Text-in-a-table">この特性は、JSONが持つインスタンス数を指定します。可能な値は2つあります。</p>
+		<ul>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">シングル</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">マルチ</p></li>
+		</ul>
+		<table style="border: Solid 1px #000000; margin-top: 10px; margin-bottom: 10px;" 
+				 cellspacing="0" width="100%">
+			<col width="46" />
+			<col />
+			<tr style="vertical-align: top;">
+				<td style="padding-right: 10px; padding-left: 10px;" bgcolor="#FFFFFF"><p 
+					 class="Text-in-a-table" style="font-weight: bold;"><img src="../image/Noteicon.gif" alt="" style=" border:none; width:100%; max-width:39px;" border="0" /></p></td>
+				<td style="padding-right: 10px; padding-left: 10px; vertical-align: middle;" 
+					 bgcolor="#FFFFFF"><p class="Text-in-a-table">「シングル」が選択された場合、{...} 
+				 で囲まれたオブジェクトのデータとして格納されます。 </p>
+				<p class="Text-in-a-table">例：</p>
+				<table style="border: Solid 1px #000000;" cellspacing="0" 
+						 width="100%">
+					<col style="width: 100%;" />
+					<tr>
+						<td bgcolor="#D9D9B3"><p class="Text-in-a-table">&quot;EmpName&quot;: 
+						 {</p>
+						<p class="Text-in-a-table">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;firstName&quot;: 
+						 &quot;John&quot;,</p>
+						<p class="Text-in-a-table">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;lastName&quot;: 
+						 &quot;Williams&quot;</p>
+						<p class="Text-in-a-table">&#160;&#160;&#160;&#160;&#160;&#160;},</p></td>
+					</tr>
+				</table>
+				<p class="Text-in-a-table">「マルチ」が選択された場合、[{...}]で囲まれた配列のデータとして格納されます。 
+				 </p>
+				<p class="Text-in-a-table">例：</p>
+				<table style="border: Solid 1px #000000;" cellspacing="0" 
+						 width="100%">
+					<col style="width: 100%;" />
+					<tr>
+						<td bgcolor="#D9D9B3"><p class="Text-in-a-table">&#160;&quot;EmpContact&quot;: 
+						 [</p>
+						<p class="Text-in-a-table">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</p>
+						<p class="Text-in-a-table">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;MobNo&quot;: 
+						 1,</p>
+						<p class="Text-in-a-table">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;PhoneNo&quot;: 
+						 09012345678</p>
+						<p class="Text-in-a-table">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</p>
+						<p class="Text-in-a-table">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</p>
+						<p class="Text-in-a-table">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;MobNo&quot;: 
+						 2,</p>
+						<p class="Text-in-a-table">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;PhoneNo&quot;: 
+						 08012345678</p>
+						<p class="Text-in-a-table">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</p>
+						<p class="Text-in-a-table">&#160;&#160;&#160;&#160;&#160;&#160;],</p></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+<p class="Table-Bullet">&#160;</p>
+<p class="Body-Text">JSON型項目を定義するには、2つの方法があります。 </p>
+<ul>
+	<li class="p-BULLET"><p class="BULLET">［JSON定義］特性から、他のJSONデータソースの番号を指定します。…… 
+	 指定したデータソースのことを Magicでは共有データソースと呼びます。</p></li>
+	<li class="p-BULLET"><p class="BULLET">JSON型項目の［名前］からズームしてデータソースの定義を行います。このデータソースは他のテーブルから参照できないので、&#160;Magicではプライベートデータソースと呼びます。</p></li>
+</ul>
+<p class="BULLET-Cont">プライベートデータソースで作成した定義を他のJSONテーブルで利用するために、次のように共有データソースに変更することが可能です。 
+ </p>
+<ol>
+	<ol>
+		<li class="p-How"><p class="How-to">新しく定義したJSON型項目の［JSON定義］プロパティでズームします。 
+		 </p></li>
+		<li class="p-How-to"><p class="How-to">JSONデータソースの一覧が表示されるので、すでに定義済みのプライベートデータソースのJSONデータソースにカーソルを置いて、左下のズームボタンを押下します。 
+		 </p></li>
+		<li class="p-How-to"><p class="How-to">プライベートデータソースの中で利用するデータソースを選択します。 
+		 </p></li>
+		<li class="p-How-to"><p class="How-to">Escキーを押下して戻ると、確認のダイアログが表示されるので[OK]ボタンを押下します。 
+		 </p></li>
+		<li class="p-How-to"><p class="How-to">［JSON定義］特性に番号が設定され、選択したデータソースが［データ］リポジトリの最終行に追加されます。 
+		 </p></li>
+	</ol>
+</ol>
+<p class="Table-Bullet">&#160;</p>
+<table style="vertical-align: top; left: 0px; top: 1425px;" cellspacing="0">
+	<col width="140" />
+	<col width="40" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px; border-left-style: Solid; 
+			 border-top-style: Solid; border-right-style: Solid; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-left-width: 1px; border-top-width: 1px; 
+			 border-bottom-width: 1px; background-color: Transparent;"><p 
+			 class="VersionUP">サポートバージョン：</p></td>
+		<td style="padding-right: 10px; padding-left: 10px; border-top-style: Solid; 
+			 border-right-style: Solid; border-bottom-style: Solid; border-top-width: 1px; 
+			 border-bottom-width: 1px; border-right-width: 1px; background-color: Transparent;"><p 
+			 class="Text-in-a-table">4.8.1</p></td>
+	</tr>
+</table>
+</body>
+</html>

@@ -5,7 +5,7 @@
     <Version val="14081.00"/>
     <WithIsn val="Y"/>
     <Exe comp="-1"/>
-    <LastIsn val="10"/>
+    <LastIsn val="37"/>
     <LastIsnFolder val="0"/>
   </Header>
 
@@ -72,6 +72,136 @@
         <AssemblyPath val="C:\Projects\shiraki_project\DLL\dotnetLogger.dll"/>
         <UseSpecificVersion val="N"/>
         <isGuiThreadExecution val="N"/>
+      </Component>
+      <Component id="13" name="Newtonsoft.Json">
+        <Description val="Newtonsoft.Json"/>
+        <ComponentType val=".NET"/>
+        <Type val="D"/>
+        <LoadImmediate val="Y"/>
+        <AssemblyName val="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed"/>
+        <AssemblyPath val="C:\Projects\shiraki_project\DLL\Newtonsoft.Json.dll"/>
+        <UseSpecificVersion val="N"/>
+        <isGuiThreadExecution val="Y"/>
+      </Component>
+      <Component id="18" name="System.Threading.Tasks.Extensi">
+        <Description val="System.Threading.Tasks.Extensions"/>
+        <ComponentType val=".NET"/>
+        <Type val="D"/>
+        <LoadImmediate val="Y"/>
+        <AssemblyName val="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51"/>
+        <AssemblyPath val="C:\Projects\shiraki_project\DLL\System.Threading.Tasks.Extensions.dll"/>
+        <UseSpecificVersion val="N"/>
+        <isGuiThreadExecution val="N"/>
+      </Component>
+      <Component id="21" name="System.Memory">
+        <Description val="System.Memory"/>
+        <ComponentType val=".NET"/>
+        <Type val="D"/>
+        <LoadImmediate val="Y"/>
+        <AssemblyName val="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51"/>
+        <AssemblyPath val="C:\Projects\shiraki_project\DLL\System.Memory.dll"/>
+        <UseSpecificVersion val="N"/>
+        <isGuiThreadExecution val="N"/>
+      </Component>
+      <Component id="31">
+        <ComponentType val="Magic xpa"/>
+        <Type val="U"/>
+        <LoadImmediate val="N"/>
+      </Component>
+      <Component id="30" name="Microsoft.Bcl.AsyncInterfaces">
+        <Description val="Microsoft.Bcl.AsyncInterfaces"/>
+        <ComponentType val=".NET"/>
+        <Type val="D"/>
+        <LoadImmediate val="Y"/>
+        <AssemblyName val="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51"/>
+        <AssemblyPath val="C:\Projects\shiraki_project\DLL\Microsoft.Bcl.AsyncInterfaces.dll"/>
+        <UseSpecificVersion val="N"/>
+        <isGuiThreadExecution val="N"/>
+      </Component>
+      <Component id="33" name="Microsoft.Extensions.Dependenc">
+        <Description val="Microsoft.Extensions.DependencyInjection.Abstractions"/>
+        <ComponentType val=".NET"/>
+        <Type val="D"/>
+        <LoadImmediate val="Y"/>
+        <AssemblyName val="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60"/>
+        <AssemblyPath val="C:\Projects\shiraki_project\DLL\Microsoft.Extensions.DependencyInjection.Abstractions.dll"/>
+        <UseSpecificVersion val="N"/>
+        <isGuiThreadExecution val="N"/>
+      </Component>
+      <Component id="35" name="System.Buffers">
+        <Description val="System.Buffers"/>
+        <ComponentType val=".NET"/>
+        <Type val="D"/>
+        <LoadImmediate val="Y"/>
+        <AssemblyName val="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51"/>
+        <AssemblyPath val="C:\Projects\shiraki_project\DLL\System.Buffers.dll"/>
+        <UseSpecificVersion val="N"/>
+        <isGuiThreadExecution val="N"/>
+      </Component>
+      <Component id="36" name="System.Numerics.Vectors">
+        <Description val="System.Numerics.Vectors"/>
+        <ComponentType val=".NET"/>
+        <Type val="D"/>
+        <LoadImmediate val="Y"/>
+        <AssemblyName val="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+        <AssemblyPath val="C:\Projects\shiraki_project\DLL\System.Numerics.Vectors.dll"/>
+        <UseSpecificVersion val="N"/>
+        <isGuiThreadExecution val="N"/>
+      </Component>
+      <Component id="37" name="System.Runtime.CompilerService">
+        <Description val="System.Runtime.CompilerServices.Unsafe"/>
+        <ComponentType val=".NET"/>
+        <Type val="D"/>
+        <LoadImmediate val="Y"/>
+        <AssemblyName val="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+        <AssemblyPath val="C:\Projects\shiraki_project\DLL\System.Runtime.CompilerServices.Unsafe.dll"/>
+        <UseSpecificVersion val="N"/>
+        <isGuiThreadExecution val="N"/>
+      </Component>
+      <Component id="34">
+        <ComponentType val="Magic xpa"/>
+        <Type val="U"/>
+        <LoadImmediate val="N"/>
+      </Component>
+      <Component id="29" name="System.Diagnostics.DiagnosticS">
+        <Description val="System.Diagnostics.DiagnosticSource"/>
+        <ComponentType val=".NET"/>
+        <Type val="D"/>
+        <LoadImmediate val="Y"/>
+        <AssemblyName val="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51"/>
+        <AssemblyPath val="C:\Projects\shiraki_project\DLL\System.Diagnostics.DiagnosticSource.dll"/>
+        <UseSpecificVersion val="N"/>
+        <isGuiThreadExecution val="N"/>
+      </Component>
+      <Component id="28" name="Microsoft.Extensions.Logging.A">
+        <Description val="Microsoft.Extensions.Logging.Abstractions"/>
+        <ComponentType val=".NET"/>
+        <Type val="D"/>
+        <LoadImmediate val="Y"/>
+        <AssemblyName val="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60"/>
+        <AssemblyPath val="C:\Projects\shiraki_project\DLL\Microsoft.Extensions.Logging.Abstractions.dll"/>
+        <UseSpecificVersion val="N"/>
+        <isGuiThreadExecution val="N"/>
+      </Component>
+      <Component id="27" name="MySqlConnector">
+        <Description val="MySqlConnector"/>
+        <ComponentType val=".NET"/>
+        <Type val="D"/>
+        <LoadImmediate val="Y"/>
+        <AssemblyName val="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92"/>
+        <AssemblyPath val="C:\Projects\shiraki_project\DLL\MySqlConnector.dll"/>
+        <UseSpecificVersion val="N"/>
+        <isGuiThreadExecution val="Y"/>
+      </Component>
+      <Component id="26" name="mysql_dotnet_connect">
+        <Description val="mysql_dotnet_connect"/>
+        <ComponentType val=".NET"/>
+        <Type val="D"/>
+        <LoadImmediate val="Y"/>
+        <AssemblyName val="mysql_dotnet_connect, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"/>
+        <AssemblyPath val="C:\Projects\shiraki_project\DLL\mysql_dotnet_connect.dll"/>
+        <UseSpecificVersion val="N"/>
+        <isGuiThreadExecution val="Y"/>
       </Component>
     </Components>
   </ComponentsRepository>

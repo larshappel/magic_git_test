@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-comment" content="" />
+<meta name="template" content="functions.htt" />
+<meta name="MS-HAID" content="Webクライアントアプリケーション" />
+<meta name="generator" content="Adobe RoboHelp 2019" />
+<title>Web Clientアプリケーション</title>
+<link rel="StyleSheet" href="../eDev-Styles.css" type="text/css" />
+ <link rel="StyleSheet" href="../eDev-Styles.css" type="text/css" />
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+
+
+<?rh-cbt_start condition="HTML5_ONLY" ?><?rh-placeholder type="breadcrumbs" 
+ ph-align="0" usetopicformat="1" home="ホーム" sep-char="&gt;" ph-style="font-family:MS UI Gothic;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;" ?><?rh-cbt_end ?>
+
+<h1>Web Clientアプリケーション</h1>
+<p class="Body-Text">Magic xpaは、Web Clientアプリケーションに対する総合的なソリューションを提供します。</p>
+<p class="Body-Text">Web Clientは、リモートおよび分散ユーザにサービスを提供するビジネスアプリケーションを開発および実行するためのプラットフォームです。</p>
+<p class="Header">インストール要件</p>
+<p class="Body-Text">Web Clientアプリケーションをクライアントにインストールするには、以下の前提条件が必要です。</p>
+<ul>
+	<li class="p-BULLET"><p class="BULLET"><span style="font-weight: bold;">Node-js</span>® 
+	 …… ChromeのV8 JavaScriptエンジンでビルドされたJavaScriptの実行環境。最小推奨バージョン：12.22.9。</p></li>
+</ul>
+<ul>
+	<li class="p-BULTIN"><p class="BULTIN"><span style="font: 6.0pt 'Times New Roman';">&#160;</span>Windows 
+	 32bit …… <a href="https://nodejs.org/download/release/v16.16.0/win-x86/">https://nodejs.org/download/release/v16.16.0/win-x86/</a></p></li>
+	<li class="p-BULTIN"><p class="BULTIN">Windows 64bit …… <a href="https://nodejs.org/download/release/v16.16.0/win-x64/">https://nodejs.org/download/release/v16.16.0/win-x64/</a></p></li>
+</ul>
+<ul>
+	<li class="p-BULLET"><p class="BULLET"><span style="font-weight: bold;">NPM</span> 
+	 …… JavaScriptランタイム環境Node-jsのデフォルトのパッケージマネージャ。Node-jsをインストールすると インストールされます。このため、NPMを別途インストールする必要はありません。裁定推奨バージョン：8.3.0。</p></li>
+	<li class="p-BULLET"><p class="BULLET"><span style="font-weight: bold;">Angular/CLI</span> 
+	 …… プロジェクトの作成、ファイルの追加、テスト、ビルド、デプロイなどのさまざまな開発作業を実行できるコマンドラインインターフェイス。最小推奨バージョン：13.0.0。<br />
+	Node-js をインストールした後、以下のコマンドを実行してインストールします。</p></li>
+</ul>
+<table style="margin-left: 40px;" cellspacing="0" width="80%">
+	<col style="width: 100%;" />
+	<tr>
+		<td style="border: Solid 1px #000000;" bgcolor="#D9D9B3"><p class="Code-Para">npm 
+		 install -g @angular/cli@13</p></td>
+	</tr>
+</table>
+<p class="Body-Text">&#160;</p>
+<table style="margin-left: 40px;" cellspacing="0" width="80%">
+	<col style="width: 100%;" />
+	<tr>
+		<td style="border: Solid 1px #000000;" bgcolor="#D9D9B3"><p class="Code-Para">npm 
+		 config set legacy-peer-deps true</p></td>
+	</tr>
+</table>
+<p class="BULLET-Cont">&#160;</p>
+<p class="BULLET-Cont">インストールされたAngularのバージョンを確認するには、以下のコマンドを実行してください。</p>
+<table style="margin-left: 40px;" cellspacing="0" width="80%">
+	<col style="width: 100%;" />
+	<tr>
+		<td style="border: Solid 1px #000000;" bgcolor="#D9D9B3"><p class="Code-Para">ng 
+		 version</p></td>
+	</tr>
+</table>
+<ul>
+	<li class="p-BULLET"><p class="BULLET"><span style="font-weight: bold;">HTML 
+	 コードエディタ</span> …… 開発作業をサポートするNotepad ++、WebStorm、Visual Studio Codeが使用できます。Visual 
+	 Studio Codeは、<a href="https://code.visualstudio.com/Download" target="_blank">https://code.visualstudio.com/Download</a> 
+	 からダウンロードできます。推奨バージョン：1.64.0。</p></li>
+</ul>
+<p class="Header">便利なリソース</p>
+<p class="Body-Text">次のリンクは、Web Clientアプリケーションを開発するために必要な情報を提供しています。</p>
+<ul>
+	<li class="p-BULLET"><p class="BULLET"><a href="Web_Client_Task.htm">Web 
+	 Clientタスク</a></p></li>
+	<li class="p-BULLET"><p class="BULLET"><a href="Web_Client_Functions.htm">Web 
+	 Client関数</a></p></li>
+	<li class="p-BULLET"><p class="BULLET"><a href="../Expression_Editor/Angular_Functions.htm">Angular関数</a></p></li>
+	
+	<li class="p-BULLET"><p class="BULLET"><a href="The_Spinner.htm">スピナー</a></p></li>
+	<li class="p-BULLET"><p class="BULLET"><a href="mgError.htm">mgError</a></p></li>
+	<li class="p-BULLET"><p class="BULLET"><a href="Web_Client_Application_Generation.htm">Web 
+	 Clientアプリケーションの生成</a></p></li>
+	<li class="p-BULLET"><p class="BULLET"><a href="Web_Client_Server_Client_Handling.htm">Web 
+	 Clientサーバ/クライアントの処理</a></p></li>
+	<li class="p-BULLET"><p class="BULLET"><a href="Web_Client_Application_Logging.htm">Web 
+	 Clientのロギング</a></p></li>
+	<li class="p-BULLET"><p class="BULLET">サンプルプログラム</p></li>
+	<li class="p-BULTIN"><p class="BULTIN">Getting Started for Web Client 
+	 サンプル</p></li>
+</ul>
+
+
+
+<?rh-cbt_start condition="HTML5_ONLY" ?><p class="Link"><?rh-cbt_start condition="HTML5_ONLY" ?><a 
+	 href="../../Technical Notes/Concept_Papers/Developing_Web_Client_Applications/Developing_Web_Client_Applications.htm">Web 
+ Clientアプリケーションの開発</a><?rh-cbt_end ?></p><?rh-cbt_end ?>
+<?rh-cbt_start condition="HTML5_ONLY" ?><p class="Link"><?rh-cbt_start condition="HTML5_ONLY" ?><a 
+	 href="../../Technical Notes/Concept_Papers/Deploying_Web_Client_Applications/Deploying_Web_Client_Applications.htm">Web 
+ Clientアプリケーションの実行</a><?rh-cbt_end ?></p><?rh-cbt_end ?>
+
+
+<table style="vertical-align: top; left: 0px; top: 1425px;" cellspacing="0">
+	<col width="140" />
+	<col width="50" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="VersionUP">サポートバージョン：</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Text-in-a-table">4.5</p></td>
+	</tr>
+</table>
+</body>
+</html>

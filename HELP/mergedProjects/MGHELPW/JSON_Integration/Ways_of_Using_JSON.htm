@@ -1,0 +1,103 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Reference Guide &gt; JSON Integration" />
+<meta name="generator" content="Adobe RoboHelp 2019" />
+<title>JSONの利用方法</title>
+<link rel="StyleSheet" href="../eDev-Styles.css" type="text/css" />
+ <link rel="StyleSheet" href="../eDev-Styles.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../template/styles/widgets.min.css">
+ <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "..";
+gCommonRootRelPath = "..";
+gTopicId = "2.25.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="リファレンスガイド > JSON連携" />
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+
+
+<div><script type="text/javascript" language="javascript">//<![CDATA[
+document.write("<p  style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../index.htm", "breadcrumbs", "&gt;", "ホーム", "../Magic_xpa_Reference_Guide.htm");
+document.write("<a class=\"breadcrumbs\" href=\"../Magic_xpa_Reference_Guide.htm\">リファレンスガイド<\/a> &gt; <a class=\"breadcrumbs\" href=\"JSON_Integration.htm\">JSON連携<\/a> &gt; JSONの利用方法<\/p>");
+//]]></script>
+</div>
+
+<h1>JSONの利用方法</h1>
+<p class="Body-Text">JSONを扱うには、2つの方法があります。</p>
+<ul>
+	<li class="p-BULLET"><p class="BULLET">JSONデータソースの利用</p></li>
+	<li class="p-BULLET"><p class="BULLET"><a href="JSON_Functions.htm">JSON関数</a>の使用</p></li>
+</ul>
+<p class="Procedure">JSONデータソースの利用</p>
+<ol>
+	<li class="p-How-to"><p class="How-to">［データベース］テーブルで［データソースタイプ］に「J=JSON」を指定したエントリを作成します。［位置］にJSONファイルを格納するフォルダを指定することができます。</p></li>
+	<li class="p-How-to"><p class="How-to">［データ］リポジトリ で［データベース］にこのエントリを指定したテーブルを作成します。 
+	 </p></li>
+</ol>
+<ul>
+	<li class="p-BULTIN"><p class="BULTIN">テーブルの名前: JSONの最初のkey(変数)の名前 
+	 </p></li>
+	<li class="p-BULTIN"><p class="BULTIN">データソース名：JSONのファイル名</p></li>
+	<li class="p-BULTIN"><p class="BULTIN">カラムの名前: 配列[...]で囲まれたkey(変数)の名前</p></li>
+	<li class="p-BULTIN"><p class="BULTIN">インデックス: JSONの定義には影響しません。</p></li>
+</ul>
+<ol start="3" style="list-style: decimal;">
+	<li class="p-How-to"><p class="How-to">プログラムでは、メインソースまたは、リンクテーブルに定義してデータを操作します。 
+	 </p></li>
+</ol>
+<table style="vertical-align: top; left: 0px; top: 1425px;" cellspacing="0">
+	<col width="140" />
+	<col width="50" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="VersionUP">サポートバージョン：</p></td>
+		<td style="padding-right: 10px; padding-left: 10px;"><p class="Text-in-a-table">4.8.1</p></td>
+	</tr>
+</table>
+</body>
+</html>

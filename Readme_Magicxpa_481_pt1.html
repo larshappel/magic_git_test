@@ -1,0 +1,450 @@
+﻿<!DOCTYPE html  PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+      <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <style>
+  body       { line-height: 130%; }
+  p.doctitle { text-align: left; font-size: x-large; line-height: 150%;}
+  hr         { color: #808080; width: 100%;  height: 8pt }
+  table      { border: 1pt solid #111111; border-collapse: collapse;  } 
+  th         { border: 1pt solid #111111; padding: 2pt; background-color: Khaki; }
+  td         { border: 1pt solid #111111; padding: 4pt;  vertical-align: top; }
+  img        { border-style: none; margin: 1em; } 
+  img.nomrgn { border-style: none; margin: 0pt; } 
+  h1         { line-height: 100%; }
+  h2         { line-height: 100%; }
+  h3         { line-height: 100%; text-decoration: underline; }
+  h4         { line-height: 100%; font-weight: bold; }
+  pre        { line-height: 100%; border: 1pt solid #111111; padding: 1em; background-color: lightyellow}
+  span.smalltitle { font-size: large; font-weight: bold}
+  ul li      { padding-top: 0.5em }
+  ul ul li   { padding-top: 0em }
+  ol li      { padding-top: 0em }
+  .auto-style2 {
+	color: #FF0000;
+}
+    </style>
+    <title>Magic xpa Ver 4.8.1 パッチモジュール (PT1)追加情報</title>
+
+    <script type="text/javascript">//<![CDATA[
+<!--
+function qcjlink(qcjno){
+	window.open( "https://esupp.magicsoftware.co.jp/QCJSys/qcj.req?arguments=-A" + qcjno,"_blank");
+	}
+
+	
+//-->
+//]]></script>  
+  </head>
+  <body>
+    <p align="right"><b>マジックソフトウェア・ジャパン 株式会社<br>
+        ２０２２年１０月</b></p>
+    <h1 style="font-family: 'Futura Com Medium';">Magic® xpa™ Application Platform 
+        Ver4.8.1 
+        <br />
+        パッチモジュール (PT1)追加情報<font color="#ff0000"> </font></h1>
+    <h2 style="font-family: 'Futura Com Medium';">Magic xpa Enterprise Studio<br>
+        Magic xpa Enterprise Client&nbsp;<br>
+        Magic xpa Enterprise Server<br>
+        Magic xpa RIA Server<br>Magic xpa Web Client Server&nbsp;</h2>
+    <p>本文書では、Magic xpa Ver 4.8.1 パッチモジュール (PT1) として提供されるモジュールについての追加情報を記載しています。</p>
+    <hr>
+    <h1> 目次</h1>
+    <ol>
+      <li><a href="#ENV">動作環境及び注意事項</a></li>
+      <li><a href="#FILES">提供ファイル一覧</a></li>
+      <li><a href="#HOWTOINSTALL">インストール方法</a></li>
+      <li><a href="#CHANGES">変更内容 </a></li>
+    </ol>
+    <a href="#LIMITATION">
+      <hr> </a>
+    <h1><a href="#LIMITATION"></a><a name="ENV">1.動作環境及び注意事項</a></h1>
+    <ul>
+		<li>本パッチでの「Magic情報」のバージョン表記は下記のようになっています。本パッチの適用後には、Magic xpa 
+		Studioを起動して 「ヘルプ → Magic情報」メニューでバージョンを確認してください。</li>
+		<li>
+		<table cellpadding="0" cellspacing="0" style="border-bottom-color: rgb(17, 17, 17); border-bottom-style: solid; border-bottom-width: 0.66px; border-collapse: collapse; border-image-outset: 0; border-image-repeat: stretch; border-image-slice: 100%; border-image-source: none; border-image-width: 1; border-left-color: rgb(17, 17, 17); border-left-style: solid; border-left-width: 0.66px; border-right-color: rgb(17, 17, 17); border-right-style: solid; border-right-width: 0.66px; border-top-color: rgb(17, 17, 17); border-top-style: solid; border-top-width: 0.66px;">
+			<tbody style="border-bottom-color: rgb(17, 17, 17); border-bottom-style: none; border-bottom-width: 0px; border-collapse: collapse; border-image-outset: 0; border-image-repeat: stretch; border-image-slice: 100%; border-image-source: none; border-image-width: 1; border-left-color: rgb(17, 17, 17); border-left-style: none; border-left-width: 0px; border-right-color: rgb(17, 17, 17); border-right-style: none; border-right-width: 0px; border-top-color: rgb(17, 17, 17); border-top-style: none; border-top-width: 0px;">
+				<tr style="border-bottom-color: rgb(17, 17, 17); border-bottom-style: none; border-bottom-width: 0px; border-collapse: collapse; border-image-outset: 0; border-image-repeat: stretch; border-image-slice: 100%; border-image-source: none; border-image-width: 1; border-left-color: rgb(17, 17, 17); border-left-style: none; border-left-width: 0px; border-right-color: rgb(17, 17, 17); border-right-style: none; border-right-width: 0px; border-top-color: rgb(17, 17, 17); border-top-style: none; border-top-width: 0px;">
+					<th style="background-color: rgb(240, 230, 140); border-bottom-color: rgb(17, 17, 17); border-bottom-style: solid; border-bottom-width: 1.29px; border-image-outset: 0; border-image-repeat: stretch; border-image-slice: 100%; border-image-source: none; border-image-width: 1; border-left-color: rgb(17, 17, 17); border-left-style: solid; border-left-width: 1.29px; border-right-color: rgb(17, 17, 17); border-right-style: solid; border-right-width: 1.29px; border-top-color: rgb(17, 17, 17); border-top-style: solid; border-top-width: 1.29px; padding-bottom: 2.66px; padding-left: 2.66px; padding-right: 2.66px; padding-top: 2.66px;">
+					モジュール</th>
+					<th style="background-color: rgb(240, 230, 140); border-bottom-color: rgb(17, 17, 17); border-bottom-style: solid; border-bottom-width: 1.29px; border-image-outset: 0; border-image-repeat: stretch; border-image-slice: 100%; border-image-source: none; border-image-width: 1; border-left-color: rgb(17, 17, 17); border-left-style: solid; border-left-width: 1.29px; border-right-color: rgb(17, 17, 17); border-right-style: solid; border-right-width: 1.29px; border-top-color: rgb(17, 17, 17); border-top-style: solid; border-top-width: 1.29px; padding-bottom: 2.66px; padding-left: 2.66px; padding-right: 2.66px; padding-top: 2.66px;">
+					バージョン表示</th>
+					<th style="background-color: rgb(240, 230, 140); border-bottom-color: rgb(17, 17, 17); border-bottom-style: solid; border-bottom-width: 1.29px; border-image-outset: 0; border-image-repeat: stretch; border-image-slice: 100%; border-image-source: none; border-image-width: 1; border-left-color: rgb(17, 17, 17); border-left-style: solid; border-left-width: 1.29px; border-right-color: rgb(17, 17, 17); border-right-style: solid; border-right-width: 1.29px; border-top-color: rgb(17, 17, 17); border-top-style: solid; border-top-width: 1.29px; padding-bottom: 2.66px; padding-left: 2.66px; padding-right: 2.66px; padding-top: 2.66px;">
+					作成日付</th>
+				</tr>
+				<tr style="border-bottom-color: rgb(17, 17, 17); border-bottom-style: none; border-bottom-width: 0px; border-collapse: collapse; border-image-outset: 0; border-image-repeat: stretch; border-image-slice: 100%; border-image-source: none; border-image-width: 1; border-left-color: rgb(17, 17, 17); border-left-style: none; border-left-width: 0px; border-right-color: rgb(17, 17, 17); border-right-style: none; border-right-width: 0px; border-top-color: rgb(17, 17, 17); border-top-style: none; border-top-width: 0px;">
+					<td style="border-bottom-color: rgb(17, 17, 17); border-bottom-style: solid; border-bottom-width: 1.29px; border-image-outset: 0; border-image-repeat: stretch; border-image-slice: 100%; border-image-source: none; border-image-width: 1; border-left-color: rgb(17, 17, 17); border-left-style: solid; border-left-width: 1.29px; border-right-color: rgb(17, 17, 17); border-right-style: solid; border-right-width: 1.29px; border-top-color: rgb(17, 17, 17); border-top-style: solid; border-top-width: 1.29px; padding-bottom: 5.29px; padding-left: 5.29px; padding-right: 5.29px; padding-top: 5.29px; vertical-align: top;">
+					Magic xpa本体 (MgxpaStudio.exe)</td>
+					<td style="border-bottom-color: rgb(17, 17, 17); border-bottom-style: solid; border-bottom-width: 1.29px; border-image-outset: 0; border-image-repeat: stretch; border-image-slice: 100%; border-image-source: none; border-image-width: 1; border-left-color: rgb(17, 17, 17); border-left-style: solid; border-left-width: 1.29px; border-right-color: rgb(17, 17, 17); border-right-style: solid; border-right-width: 1.29px; border-top-color: rgb(17, 17, 17); border-top-style: solid; border-top-width: 1.29px; padding-bottom: 5.29px; padding-left: 5.29px; padding-right: 5.29px; padding-top: 5.29px; vertical-align: top;">
+					Version 4.8.1 PT1</td>
+					<td style="border-bottom-color: rgb(17, 17, 17); border-bottom-style: solid; border-bottom-width: 1.29px; border-image-outset: 0; border-image-repeat: stretch; border-image-slice: 100%; border-image-source: none; border-image-width: 1; border-left-color: rgb(17, 17, 17); border-left-style: solid; border-left-width: 1.29px; border-right-color: rgb(17, 17, 17); border-right-style: solid; border-right-width: 1.29px; border-top-color: rgb(17, 17, 17); border-top-style: solid; border-top-width: 1.29px; padding-bottom: 5.29px; padding-left: 5.29px; padding-right: 5.29px; padding-top: 5.29px; vertical-align: top;">
+					2022/10/04</td>
+				</tr>
+		</table>
+		</li>
+		<li>実行製品（Magic xpa Enterprise Client/Enterprise Server/RIA 
+		Server/Web Client Server）の場合は、コマンドプロンプト上で以下のコマンドを実行してください。mgxpaver.txt 
+		というファイルが作成され、バージョン情報を確認することができます。<br>
+		<strong style="line-height: 21.29px;">MgxpaRuntime -version</strong></li>
+      <li>本パッチモジュールは、Magic xpa Ver 4.8.1をインストールした実行環境に対して適用するものです。それ以外の製品と組み合わせて使用した場合の動作は予測できません。</li>
+      <li>プロジェクトファイル(.edp) は、Magic xpa Ver 4.8.1と互換性があります。</li>
+      <li>キャビネットファイル(.ecf) は、Magic xpa Ver 4.8.1とバイナリ互換性があります。</li>
+      <li>本パッチモジュールは、弊社サポートセンターのサポート対象となっています。サポート契約をされているお客様は、本パッチモジュールでの質問・問題等について、Magic xpa Ver4.8.1の正式製品版と同等のサポートを受けることができます。</li>
+      <li>本パッチモジュールは、下記「変更内容」で記述されている問題に該当する障害が起こった場合にだけ適用するようにしてください。また、適用時には、本番運用に先立ってお客様のアプリケーションで十分に検証を行ってください。</li>
+      <li>Enterprise Server、およびRIA Server/Web Client Server製品にパッチを適用する場合は、<a href="#LicenseExpirationDate">ライセンスのメンテナンス終了日</a>を確認してください。</li>
+		<li>ヘルプファイルは、Magic xpa Studio のみ更新しています。実行製品のみを利用されている場合は、<a href="https://www.magicsoftware.co.jp/files/magic_help/Magicxpa4/MGHELP.htm">Web 
+		ヘルプ </a>を参照してください。</li>
+    </ul>
+    <hr>
+    <h1><a name="FILES">２．提供ファイル一覧</a></h1>
+    <blockquote>
+      <p>本パッチは、次のZIPファイルからなります。</p>
+        <table style="border-style: none" border="1">
+          <tbody>
+            <tr>
+              <td style="border-style: none"> ● Mgxpa_481_PT1_Studio.zip：</td>
+              <td style="border-style: none"> &nbsp;&nbsp;&nbsp;&nbsp; Magic xpa Enterprise Studio用パッチモジュール</td>
+            </tr>
+          </tbody>
+        </table>
+        <table style="border-style: none" border="1">
+          <tbody>
+            <tr>
+              <td style="border-style: none"> ● Mgxpa_481_PT1_Client.zip：</td>
+              <td style="border-style: none"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Magic xpa Enterprise Client用パッチモジュール</td>
+            </tr>
+          </tbody>
+        </table>
+        <table style="border-style: none" border="1">
+          <tbody>
+            <tr>
+              <td style="border-style: none"> ● Mgxpa_481_PT1_Server_x64.zip：</td>
+              <td style="border-style: none"> Magic xpa Enterprise Server/RIA 
+			  Server/WCL Server 64bit版用パッチモジュール</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table style="border-style: none" border="1">
+          <tbody>
+            <tr>
+              <td style="border-style: none"> ● Mgxpa_481_PT1_Server_x86.zip：</td>
+              <td style="border-style: none"> Magic xpa Enterprise Server/RIA 
+			  Server/WCL Server 32bit版用パッチモジュール</td>
+            </tr>
+          </tbody>
+        </table>
+
+      <h2>パッチモジュール</h2>
+      <p>Zipで提供されるパッチモジュール Mgxpa_481_PT1_Studio.zip には、以下のファイルがあります。他のパッチモジュールには、含まれていないファイルがあります。</p>
+      <pre>ルートディレクトリ
+
+2022/10/04 14:40  11,973,432 MgCore.dll
+2022/09/28 18:20      67,384 MgDotNet.dll
+2022/10/04 14:40     457,016 MgxpaRuntime.exe
+2022/10/04 14:40  17,135,928 MgxpaSettings.exe
+2022/10/04 14:40     191,800 MgxpaStudio.exe
+2022/10/04 14:40  19,018,552 MgxpaStudioHybrid.dll
+
+HELP\mergedProjects\Mastering_Magicxpa\46_JSON のディレクトリ
+
+2022/08/30 14:04      14,843 How_Do_I_Work_with_JSON.htm
+2022/08/30 11:00      51,614 SingleInstanceInfo.png
+
+HELP\mergedProjects\MGHELPW\Expression_Editor のディレクトリ
+
+2022/08/25 11:57       3,665 JSet.htm
+2022/08/25 11:56       3,395 JSetStatic.htm
+2022/08/25 11:57       7,599 JSONCnt.htm
+2022/08/25 11:57      11,115 JSONDelete.htm
+2022/08/25 11:57       9,047 JSONExist.htm
+2022/08/25 11:56      18,471 JSONFind.htm
+2022/08/25 11:56       7,242 JSONGet.htm
+2022/08/25 11:57      18,913 JSONInsert.htm
+2022/08/25 11:56      16,129 JSONModify.htm
+
+HELP\mergedProjects\MGHELPW\JSON_Integration のディレクトリ
+
+2022/10/04 08:13       8,547 JSON_Functions.htm
+2022/09/20 11:20       5,540 Limitation_for_JSON_Integration.htm
+2022/10/04 08:13       5,007 Ways_of_Using_JSON.htm
+
+HELP\mergedProjects\MGHELPW\models のディレクトリ
+
+2022/09/27 08:00      14,134 JSON.htm
+
+HELP\mergedProjects\MGHELPW\SpecialSettings_files のディレクトリ
+
+2022/09/20 11:20       6,012 Engine_Flow_and_Online_Task_Related_Settings.htm
+2022/09/20 11:20       4,600 Studio_Related_Settings.htm
+
+HELP\mergedProjects\MGHELPW\Utilities のディレクトリ
+
+2022/09/20 11:20       8,312 Check_Operation.htm
+
+HELP\mergedProjects\MGHELPW\Web_Client_Applications のディレクトリ
+
+2022/07/25 15:37       7,013 Web_Client_Applications.htm
+
+RIAModules のディレクトリ
+
+2022/09/30 16:10       2,124 MgxpaRIA.application
+
+RIAModules\Android のディレクトリ
+
+2022/09/14 13:52  10,167,444 MagicDev.apk
+
+RIAModules\Android\Source\app\libs のディレクトリ
+
+2022/09/14 13:52    4,349,060 libMgxpaRC.aar
+
+RIAModules\Desktop のディレクトリ
+
+2022/09/28 18:20      390,968 MgControls.dll
+2022/09/28 18:20    1,008,952 MgGui.dll
+2022/09/28 18:20       92,984 MgHttpClient.dll
+2022/09/28 18:20       43,320 MgNative.dll
+2022/09/28 18:20       36,152 MgRIAGatewayTypes.dll
+2022/09/28 18:20      166,712 MgRIASqliteGateway.dll
+2022/09/28 18:20       77,624 MgRuntimeDesigner.dll
+2022/09/28 18:20      200,504 MgUtils.dll
+2022/09/30 16:10    1,967,416 MgxpaRIA.exe
+2022/09/30 16:10       13,555 MgxpaRIA.exe.manifest
+
+RIAModules\Desktop\ja-JP のディレクトリ
+
+2022/09/28 17:37        7,168 MgControls.resources.dll
+2022/09/28 17:37        5,120 MgRuntimeDesigner.resources.dll
+
+RIAModules\iOS\custom_dpi のディレクトリ
+
+2022/09/12 11:13         1,058 custom_dpi.txt
+
+Support のディレクトリ
+
+2022/08/30 13:57    26,725,738 Mastering Magic xpa.pdf
+2022/08/30 13:46    21,727,381 MasteringMagicxpa.chm
+2022/08/30 11:55     1,942,600 mgconstw.ENG
+2022/08/31 08:52     1,897,405 mgconstw.JPN
+2022/10/04 08:07     8,868,235 MGhelpw.chm
+
+TaskEditor\Application のディレクトリ
+
+2022/09/28 18:20       168,248 HybridStudio.dll
+2022/05/17 10:34         8,262 HybridStudio.pkgdef
+2022/09/28 18:20        53,048 MagicExpressionLanguage.dll
+2022/09/28 18:20       214,840 MagicSoftware.Common.Controls.DataGrid.dll
+2022/09/28 18:20       143,160 MagicSoftware.Common.Controls.dll
+2022/09/28 18:20       281,400 MagicSoftware.Common.dll
+2022/09/28 18:20        46,392 MagicSoftware.Common.VisualStudio.Controls.dll
+2022/09/28 18:20        20,280 MagicSoftware.Common.VisualStudio.dll
+2022/09/28 18:20     5,201,720 MagicSoftware.Studio.dll
+2022/09/28 18:20       390,968 MgControls.dll
+2022/09/28 18:20        67,384 MgDotNet.dll
+2022/09/28 18:20        43,320 MgNative.dll
+2022/09/28 18:20       200,504 MgUtils.dll
+2022/09/28 18:20       932,664 Studio.VSIntegration.dll
+
+TaskEditor\Application\ja-JP のディレクトリ
+
+2022/09/28 17:42     1,335,296 MagicSoftware.Studio.resources.dll
+2022/09/28 17:37         7,168 MgControls.resources.dll
+
+x64 のディレクトリ
+
+2022/10/04 14:40    14,045,496 MgCore.dll
+2022/10/04 14:40       456,504 MgxpaRuntime.exe</pre>
+      </blockquote>
+    <hr>
+    <h1><a name="HOWTOINSTALL">３．インストール方法</a></h1>
+    <blockquote >
+      <p>今回のパッチ版は、Magic xpa Ver 4.8.1製品版に対するアップデートパッチとして提供されています。次の順序で適用してください。&nbsp;</p>
+      <table>
+        <tbody>
+          <tr>
+            <td bgcolor="Yellow"><span style="font-weight: bold;"> 順</span></td>
+            <td bgcolor="Yellow"><span style="font-weight: bold;"> 適用作業</span></td>
+            <td bgcolor="Yellow"><span style="font-weight: bold;"> 適用対象製品</span></td>
+            <td bgcolor="Yellow"><span style="font-weight: bold;"> 詳細説明</span></td>
+          </tr>
+          <tr>
+            <td> 1.</td>
+            <td> ライセンスのメンテナンス終了日を確認します。必要ならばライセンスコードの更新を行います。</td>
+            <td> Enterprise Server、RIA Server 、Web Client Server製品の場合のみ必要です。</td>
+            <td> <a href="#LicenseExpirationDate">ライセンスのメンテナンス終了日の確認</a></td>
+          </tr>
+          <tr>
+            <td> 2.</td>
+            <td> MRB、Magicアプリケーションサーバ、 Internet Information 
+                Server、GSA (Giga Spaces)などを停止してください。停止していない状態では正しくファイルが差し替えられないことがあります。 </td>
+            <td> Studio、Enterprise Server、RIA Server、Web Client Server 製品の場合のみ必要です。</td>
+            <td> &nbsp;</td>
+          </tr>
+          <tr>
+            <td> 3.</td>
+            <td>
+                バックアップファイルとして、差し替え対象となる旧モジュールを別のフォルダに退避します。(HDDに余裕がある場合には、フォルダごと、退避フォルダにコピーするのが簡単です)</td>
+            <td> 全て</td>
+            <td> &nbsp;</td>
+          </tr>
+          <tr>
+            <td> 4.</td>
+            <td> 各製品用のパッチモジュールを適用します。</td>
+            <td> 全て</td>
+            <td> <a href="#CommonPatch">パッチモジュールの適用</a></td>
+          </tr>
+          <tr>
+            <td> 7.</td>
+            <td> リッチクライアント キャッシュのクリア</td>
+            <td> リッチクライアント アプリケーションの場合のみ必要です。</td>
+            <td> <a href="#ClearRCCache">リッチクライアント キャッシュのクリア</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2><a name="LicenseExpirationDate"></a>ライセンスのメンテナンス終了日の確認</h2>
+      <p>Magic xpa Enterprise Server および Magic xpa RIA Server、Magic xpa Web Client Server 製品は、メンテナンス対象製品で、メンテナンス終了日以降はパッチモジュールの適用ができなくなります。（既存のモジュールは、そのまま継続して利用できます）。</p>
+      <p>メンテナンス終了日より後に作成されたパッチモジュールを適用すると、モジュール起動時にエラーが発生し起動できなくなります。パッチの適用にあたっては、以下の要領で、メンテナンス終了日を必ず確認するようにしてください。</p>
+      <ol>
+        <li>インストールされているPCの License.datをテキストエディタで開きます。Magic xpa Enterprise ServerおよびMagic xpa RIA/WCL Serverのスタートメニューから｢Magicﾗｲｾﾝｽｻｰﾊﾞ→ライセンスファイルの表示｣を選択しても表示されます。</li>
+        <li>以下の例のような赤字の部分を確認してください。</li>
+      </ol>
+      <pre id="line223"><span class="auto-style2"><strong>MGRIA14</strong></span> V=4,T=MGRIA,C=99,GS=Y,P=N,SN=472930017,ISSUER=TECH_EVALUATE4,<span class="auto-style2"><strong>MED=31-dec-2022</strong></span> 1234567890ABCDEF123</pre>
+      <ul>
+        <li>ライセンス名（FEATURE XXXXXXX）
+		<ul>
+			<li>MGENT14 …… Magic xpa Enterprise Server<li>MGRIA14 …… Magic xpa RIA Server</li>
+			<li>MGWeb14 …… Magic xpa Web Client Server</li>
+		</ul>
+        </li>
+        <li>メンテナンス終了日（MED=dd-mmm-yyyy）<br>
+              上記の例では、Magic xpa Enterprise Serverのライセンスで、メンテナンス終了日が2022年12月31日になっています。
+        </li>
+      </ul>
+      <p> <b><font color="red">本パッチモジュール (4.8.1 PT1) の作成日付は 2022年10月4日 
+          です。ライセンスファイルのメンテナンス終了日が、本パッチモジュールの作成日付より後であることを確認してください。メンテナンス終了日が過ぎている場合は動作いたしませんので、ライセンス再発行手続きが必要になります(下記)。</font></b></p>
+      <h4>使用しているライセンスのメンテナンス終了日が過ぎている場合の手続き</h4>
+      <p>ソフトウェア・メンテナンスの更新手続き、ライセンス発行は、サイト単位に設定しているサイト管理者が行ってください。</p>
+      <ul>
+        <li>ソフトウェア・メンテナンス契約を更新している場合は、<a href="http://apps2.magicsoftware.co.jp/udclink/" target="_blank">UDC</a>を使用してライセンスコードの再発行を行ってください。</li>
+        <li>新しいライセンスを取得したら、現在のライセンスを一旦削除した上で、再度登録し直してください。</li>
+        <li>ソフトウェア・メンテナンスの更新手続きを行っていない場合は、更新手続きが必要です。更新手続は、Magicの購入元、又は最 寄の営業所にご確認ください。</li>
+      </ul>
+      <h2><a name="CommonPatch"></a>パッチモジュールの適用</h2>
+      <p>各製品に対応したパッチモジュール を解凍し、ファイルをディレクトリ構造ごと、Magic xpa  製品をインストールしたディレクトリに上書きコピーします。</p>
+	  <p class="auto-style2"><strong>サーバ製品は、64bit版と32bit版があります。どちらでインストールされたかを確認の上で上書きしてください。</strong></p>
+      <h2><a name="ClearRCCache"></a>リッチクライアント キャッシュのクリア</h2>
+      <p>パッチを適用したら念のためにリッチクライアントキャッシュをクリアしてください。</p>
+      <ul>
+        <li>サーバ側のリッチクライアントキャッシュフォルダ（RIACache ディレクトリ）にファイルが残っている場合には、ファイルを削除してください。</li>
+        <li>Windowsクライアント側のリッチクライアントキャッシュフォルダ (%TEMP%MgxpaRIACache 以下) のファイルを削除してください。</li>
+        <li>iOS版には、キャッシュを削除する設定はありません。</li>
+      </ul>
+      </blockquote>
+
+
+	<hr>
+    <h1>4<a name="CHANGES">.変更内容 </a> </h1>
+
+	<h2>PT1での新機能</h2>
+	<h4>JSON連携機能のサポートしました。</h4>
+	<p>※Magic xpa 4.8.1でJSON機能(JSONデータベース、JSON型項目、JSON関数) 
+	を定義したプロジェクトファイルは、リポジトリ出入力を行ってください。</p>
+	<h4>Gitを使用したバージョン管理をサポートしました。</h4>
+	<p>サポート動作環境は、以下の通りです。</p>
+	<ul>
+		<li>Magic xpa 4.8.1 PT1</li>
+		<li>Magic Compare &amp; Merge 4.8</li>
+	</ul>
+	<p>※Gitの対象はMagic xpa のプロジェクトで、WebClient Angularの部分は対象外（別管理）となります。<br>
+	※詳細は、スキルアップセンターの「Getting Started with Magic Git」を参照してください。<br>
+	<a href="https://devnet.magicsoftware.co.jp/skillup/magicskillup/#selfstudy-xpa4">
+	https://devnet.magicsoftware.co.jp/skillup/magicskillup/#selfstudy-xpa4</a><br>
+	</p>
+	<h2>PT1での変更内容</h2>
+
+    <h3>Studio</h3>
+    <table style="border-style: solid; border-collapse: collapse;" width="92%" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <th width="144">テクニカル情報番号</th>
+          <th>内容</th>         
+       </tr>
+          <tr>
+          <td><a href="javascript:qcjlink('2004278.480')">2004278</a></td>
+		  <td>DBMS特性の内容を変更してもINIに保存されない問題</td>
+          </tr>
+          <tr>
+          <td><a href="javascript:qcjlink('2004264.480')">2004264</a></td>
+          <td>データビューのドロップダウンからSQLコマンドを選択してSQLコマンド画面を開いた場合、SELECT文のAPGを実行すると異常終了する問題</td>
+          </tr>
+          <tr>
+          <td><a href="javascript:qcjlink('2004272.480')">2004272</a></td>
+          <td>
+		 プログラムにブレイクポイントを設定して、デバッグ実行を行うと異常終了することがある問題</td>
+          </tr>
+     </tbody>
+    </table>
+
+
+    <h3>実行エンジン</h3>
+    <table style="border-style: solid; border-collapse: collapse;" width="92%"  cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <th width="144">テクニカル情報番号</th>
+          <th>内容</th>         
+       </tr>
+          <tr>
+          <td><a href="javascript:qcjlink('2004169.480')">2004169</a></td>
+          <td>コンテキストを有効にしたWebマージプログラムに対して、Brokerモニタからコンテキストが削除できないことがある問題</td>
+          </tr>
+          <tr>
+          <td><a href="javascript:qcjlink('2004217.480')">2004217</a></td>
+          <td>サブフォームから何度も別プログラムをコールした後、メインプログラムのフォームをクリックすると異常終了することがある問題</td>
+          </tr>
+          <tr>
+          <td><a href="javascript:qcjlink('2004294.480')">2004294</a></td>
+          <td>テーブルのスクロールバーで右クリックメニューから「最上部」または「最下部」をクリックしても、レコードが正しい位置に移動しないことがある問題</td>
+          </tr>
+          <tr>
+          <td><a href="javascript:qcjlink('2004300.480')">2004300</a></td>
+          <td>MnuToJSON関数がバッチタスクで実行できない問題</td>
+          </tr>
+     </tbody>
+    </table>
+
+    <h3>RichClient</h3>
+    <table style="border-style: solid; border-collapse: collapse;" width="92%"  cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <th width="144">テクニカル情報番号</th>
+          <th>内容</th>
+       </tr>
+          <tr>
+          <td style="height: 28px"><a href="javascript:qcjlink('2004285.480')">2004285</a></td>
+          <td style="height: 28px">レコード削除時にレコード後処理のコマンドが正しいタイミングで実行されないことがある問題</td>
+          </tr>
+
+     </tbody>
+    </table>
+
+
+    <h3>Android RIA</h3>
+    <table style="border-style: solid; border-collapse: collapse;" width="92%"  cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <th width="144">テクニカル情報番号</th>
+          <th>内容</th>
+        </tr>
+         <tr>
+          <td style=""><a href="javascript:qcjlink('2004148.480')">2004148</a></td>
+          <td style=""> Android HHTでファンクションキー、矢印キー、ESCキーなどのキー入力をシステムイベントとして取得できない問題</td>
+          </tr>        
+      </tbody>
+    </table>
+
+
+	<p>以上</p>
+
+    </body>
+</html>

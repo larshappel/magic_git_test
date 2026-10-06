@@ -1,0 +1,196 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Mastering Magic xpa &gt; JSON" />
+<meta name="MS-HAID" content="JSONを処理するには" />
+<meta name="generator" content="Adobe RoboHelp 2019" />
+<title>JSONを処理するには</title>
+<link rel="StyleSheet" href="../eDev-Styles.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../template/styles/widgets.min.css">
+ <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "..";
+gCommonRootRelPath = "..";
+gTopicId = "1.44.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Magic xpa 逆引き辞典 > JSON" />
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+
+
+<div><script type="text/javascript" language="javascript">//<![CDATA[
+document.write("<p  style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../index.htm", "breadcrumbs", "&gt;", "ホーム", "../Mastering_Magicxpa.htm");
+document.write("<a class=\"breadcrumbs\" href=\"../Mastering_Magicxpa.htm\">Magic xpa 逆引き辞典<\/a> &gt; <a class=\"breadcrumbs\" href=\"JSON.htm\">JSON<\/a> &gt; JSONを処理するには<\/p>");
+//]]></script>
+</div>
+
+<h1>JSONを処理するには</h1>
+<p>以下のようなプログラムを作成することで、JSONの構造体の読込、変更、更新を行うことができます。</p>
+<ol>
+	<li class="p-How-to"><p class="How-to">［データベース］テーブルに「Default JSON Database」という 
+	 JSONタイプの項目がデフォルトで定義されています。JSONデータベースのタイプを使用することでJSONデータソースを作成することができます。</p></li>
+</ol>
+<p style="margin-left: 40px;"><img src="JSON-Databases_Default_and_Temporary.png" alt="" style=" border:none; width:100%; max-width:814px;" border="0" /></p>
+<p class="Body-Text" style="margin-left: 40px;">&quot;Default JSON Database&quot; 
+ の ［データベース］特性には 「Temporary JSON Database」 というメモリデータベースが定義されています。</p>
+<ol start="2" style="list-style: decimal;">
+	<li class="p-How-to"><p class="How-to">［データソース］リポジトリに、以下のように &quot;Emp&quot;、&quot;EmpName&quot;、&quot;EmpContact&quot;、&quot;EmpAddress&quot; 
+	 のデータソースを定義します。［データベース］には、「Default JSON Database」を設定します。</p></li>
+</ol>
+<p class="Procedure">Emp データソース</p>
+<p class="Body-Text">&quot;Emp&quot;データソースには、&quot;EmpName&quot;、&quot;EmpContact&quot;、&quot;EmpAddress&quot; 
+ のカラムを定義し、データ型に「S=JSON」を設定します。</p>
+<p class="Body-Text" style="margin-left: 40px;"><img src="EmpDS.png" alt="" style=" border:none; width:100%; max-width:683px;" border="0" /></p>
+<p class="Procedure">EmpName データソース</p>
+<p class="Body-Text" style="margin-left: 40px;"><img src="EmpNameDS.png" alt="" style=" border:none; width:100%; max-width:685px;" border="0" /></p>
+<p class="Procedure">EmpContact データソース</p>
+<p class="Body-Text" style="margin-left: 40px;"><img src="EmpContactDS.png" alt="" style=" border:none; width:100%; max-width:693px;" border="0" /></p>
+<p class="Procedure">EmpAddress データソース</p>
+<p class="Body-Text" style="margin-left: 40px;"><img src="EmpAddressDS.png" alt="" style=" border:none; width:100%; max-width:684px;" border="0" /></p>
+<table class="Magic_xpa_Note" style="margin-top: 10px; margin-bottom: 10px;" 
+		 cellspacing="0" width="100%">
+	<col width="46" />
+	<col width="1261" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;" bgcolor="#FFFFFF"><p 
+			 class="Text-in-a-table"><img src="../Noteicon.gif" alt="" style=" border:none; max-width:39px; width:100%;" border="0" /></p></td>
+		<td style="padding-right: 10px; padding-left: 10px; vertical-align: middle;" 
+			 bgcolor="#FFFFFF"><p class="Text-in-a-table">JSONデータソースのの［データソース］特性は無効になっています。定義取得（オプション 
+		 &gt; 定義取得） も無効です。</p></td>
+	</tr>
+</table>
+<ol start="3" style="list-style: decimal;">
+	<li class="p-How-to"><p class="How-to">&quot;Emp&quot; データソースの &quot;EmpName&quot;カラム 
+	 の［JSON 定義］特性にEmpNameデータソースを指定します。［インスタンス］特性には、「S=シングル」を設定します。、</p></li>
+</ol>
+<p class="Body-Text" style="margin-left: 40px;"><img src="singleInstance.png" alt="" style=" border:none; width:100%; max-width:770px;" border="0" /></p>
+<ol start="4" style="list-style: decimal;">
+	<li class="p-How-to"><p class="How-to">&quot;Emp データソースの &quot;EmpCotact&quot;カラム 
+	 の［JSON 定義］特性にEmpContactデータソースを指定します。［インスタンス］特性には、「M=マルチ」を設定します。</p></li>
+</ol>
+<p class="Body-Text" style="margin-left: 40px;"><img src="MultiInstance.png" alt="" style=" border:none; width:100%; max-width:820px;" border="0" /></p>
+<ol start="5" style="list-style: decimal;">
+	<li class="p-How-to"><p class="How-to">Emp データソースの &quot;EmpAddress&quot;カラム 
+	 の［JSON 定義］特性にEmpAddressデータソースを指定します。［インスタンス］特性には、「マルチ」を設定します。</p></li>
+</ol>
+<p class="Body-Text" style="margin-left: 40px;">、<img src="MultiInstance2.png" alt="" style=" border:none; width:100%; max-width:713px;" border="0" /></p>
+<table class="Magic_xpa_Note" style="margin-top: 10px; margin-bottom: 10px;" 
+		 cellspacing="0" width="100%">
+	<col width="46" />
+	<col width="1261" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;" bgcolor="#FFFFFF"><p 
+			 class="Text-in-a-table" style="font-weight: bold;"><img src="../Noteicon.gif" alt="" style=" border:none; max-width:39px; width:100%;" border="0" /></p></td>
+		<td style="padding-right: 10px; padding-left: 10px; vertical-align: middle;" 
+			 bgcolor="#FFFFFF"><p class="Body-Text" style="color: 透明;">［JSON定義］特性でズームすると、［データ］リポジトリ内に定義されたJSONデータソースソースが一覧表示されます。</p></td>
+	</tr>
+</table>
+<ol start="6" style="list-style: decimal;">
+	<li class="p-How-to"><p class="How-to">対応する「シングル」と「マルチ」のインスタンステーブルを表示するプログラム 
+	 &#160;&quot;EmployeesOLDetails&quot; を作成します。</p></li>
+</ol>
+<ul>
+	<li class="p-BULTIN"><p class="BULTIN">メインソースには、&quot;Emp&quot; データソースを定義し、全てのカラムを［データビュー］ユニットに定義します。</p></li>
+	<li class="p-BULTIN"><p class="BULTIN">&quot;EmpName&quot;、&quot;EmpContact&quot;、&quot;EmpAddress&quot; 
+	 の各データソースをメインソースにしたサブタスクを作成します。</p></li>
+</ul>
+<p class="Body-Text" style="margin-left: 40px;"><img src="SubtaskStructure.png" alt="" style=" border:none; width:100%; max-width:873px;" border="0" /></p>
+<ol start="7" style="list-style: decimal;">
+	<li class="p-How-to"><p class="How-to">サブタスクにデータを提供するために、各サブタスクのメインソースの［JSONソース項目］特性を定義します。</p></li>
+</ol>
+<p class="Body-Text" style="margin-left: 40px;"><img src="JSON_source_variable.png" alt="" style=" border:none; width:100%; max-width:873px;" border="0" /></p>
+<p class="BULLET-Cont">この特性には、&quot;EmpName&quot;サブタスクの場合、親タスクのデータビュー項目C（&quot;EmpNam&quot;）を、サブタスク&quot;EmpName&quot;を呼び出す際のパラメータとして指定します。</p>
+<ol start="8" style="list-style: decimal;">
+	<li class="p-How-to"><p class="How-to">メインフォームに、「シングル」および「マルチ」のインスタンス出力用のサブフォームを作成します。</p></li>
+</ol>
+<p class="Body-Text" style="margin-left: 40px;"><img src="SingleInstanceInfo.png" alt="" style=" border:none; width:100%; max-width:1064px;" border="0" /></p>
+<p class="Body-Text">&#160;</p>
+<ol start="9" style="list-style: decimal;">
+	<li class="p-How-to"><p class="How-to">プログラム &quot;EmployeesOLDetails&quot;を実行すると、作業ディレクトリ上の 
+	 &quot;emp.json&quot; が読み込まれ、以下のようなフォームが表示されます。プログラムの実行後に 同じファイル名で更新されます。</p></li>
+</ol>
+<p class="MsoListParagraphCxSpLast" style="margin-left: .75in; mso-add-space: auto; 
+	 mso-list: l0 level1 lfo1; text-indent: -48px; font-size: 12.0pt; line-height: 107%;"><img 
+	 src="SingleMultipleOutput.png" alt="" style="border: none; width: 100%; 
+	 max-width: 1204px;" border="0" /></p>
+<p class="BULLET-Cont">プログラムを終了すると、&quot;emp.json&quot; ファイルが更新されます。以下のような内容で出力されます。</p>
+<div style="mso-element: para-border-div; border: solid #000000 1.0pt; 
+	 mso-border-alt: solid windowtext .5pt; padding: 1.0pt 4.0pt 1.0pt 4.0pt; 
+	 margin-left: 48px; float: none; background-color: #d9d9b3;">
+	<p class="Code-Para" style="font-size: 10.0pt;">{&quot;Emp&quot;:[{&quot;DeptName&quot;:&quot;HR&quot;,&quot;EmpAddress&quot;:[{&quot;City&quot;:&quot;&quot;,&quot;Country&quot;:&quot;&quot;,&quot;HomeNo&quot;:1,&quot;State&quot;:&quot;&quot;,&quot;StreetName&quot;:&quot;1&quot;},</p>
+	<p class="Code-Para" style="font-size: 10.0pt;">{&quot;City&quot;:&quot;&quot;,&quot;Country&quot;:&quot;&quot;,&quot;HomeNo&quot;:2,&quot;State&quot;:&quot;&quot;,&quot;StreetName&quot;:&quot;2&quot;},</p>
+	<p class="Code-Para" style="font-size: 10.0pt;">{&quot;City&quot;:&quot;&quot;,&quot;Country&quot;:&quot;&quot;,&quot;HomeNo&quot;:3,&quot;State&quot;:&quot;&quot;,&quot;StreetName&quot;:&quot;3&quot;}],</p>
+	<p class="Code-Para" style="font-size: 10.0pt;">&quot;EmpContact&quot;:[{&quot;MobNo&quot;:1,&quot;PhoneNo&quot;:1},{&quot;MobNo&quot;:2,&quot;PhoneNo&quot;:2},<span 
+	 style="font-size: 10.0pt;">{&quot;MobNo&quot;:3,&quot;PhoneNo&quot;:3}],&quot;EmpID&quot;:&quot;1&quot;,&quot;EmpJoinDate&quot;:&quot;12/12/2000&quot;,&quot;EmpName&quot;:{&quot;firstName&quot;:&quot;aa&quot;,&quot;lastName&quot;:&quot;aaa&quot;},</span></p>
+	<p class="Code-Para" style="font-size: 10.0pt;">&quot;EmpStatus&quot;:false},{&quot;DeptName&quot;:&quot;QA&quot;,&quot;EmpID&quot;:&quot;2&quot;,&quot;EmpJoinDate&quot;:&quot;01/01/2021&quot;,&quot;EmpStatus&quot;:true},</p>
+	<p class="Code-Para" style="font-size: 10.0pt;">{&quot;DeptName&quot;:&quot;Dev&quot;,&quot;EmpAddress&quot;:[{&quot;City&quot;:&quot;Pune&quot;,&quot;Country&quot;:&quot;India&quot;,&quot;HomeNo&quot;:40,&quot;State&quot;:&quot;Maha&quot;,&quot;StreetName&quot;:&quot;Baker's 
+	 st&quot;},</p>
+	<p class="Code-Para" style="font-size: 10.0pt;">{&quot;City&quot;:&quot;Mumbai&quot;,&quot;Country&quot;:&quot;India&quot;,&quot;HomeNo&quot;:50,&quot;State&quot;:&quot;Maha&quot;,&quot;StreetName&quot;:&quot;MG 
+	 Road&quot;}],</p>
+	<p class="Code-Para" style="font-size: 10.0pt;">&quot;EmpContact&quot;:[{&quot;MobNo&quot;:2147483647,&quot;PhoneNo&quot;:20450000},{&quot;MobNo&quot;:2147483647,&quot;PhoneNo&quot;:20288888}],&quot;EmpID&quot;:&quot;3&quot;,&quot;EmpJoinDate&quot;:&quot;10/10/2005&quot;,</p>
+	<p class="Code-Para" style="font-size: 10.0pt;">&quot;EmpName&quot;:{&quot;firstName&quot;:&quot;Jenny&quot;,&quot;lastName&quot;:&quot;Murphy&quot;},&quot;EmpStatus&quot;:false},</p>
+	<p class="Code-Para" style="font-size: 10.0pt;"><span style="font-size: 10.0pt;">{&quot;DeptName&quot;:&quot;sgahs&quot;,&quot;EmpID&quot;:&quot;4&quot;,&quot;EmpJoinDate&quot;:&quot;01/01/1901&quot;,&quot;EmpStatus&quot;:false}]}</span></p>
+</div>
+<p class="Body-Text">&#160;</p>
+
+<table style="vertical-align: top; left: 0px; top: 1425px;" cellspacing="0">
+	<col width="140" />
+	<col width="40" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px; border-left-style: Solid; 
+			 border-top-style: Solid; border-right-style: Solid; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-left-width: 1px; border-top-width: 1px; 
+			 border-bottom-width: 1px; background-color: Transparent;"><p 
+			 class="VersionUP">サポートバージョン：</p></td>
+		<td style="padding-right: 10px; padding-left: 10px; border-top-style: Solid; 
+			 border-right-style: Solid; border-bottom-style: Solid; border-top-width: 1px; 
+			 border-bottom-width: 1px; border-right-width: 1px; background-color: Transparent;"><p 
+			 class="Text-in-a-table">4.8.1</p></td>
+	</tr>
+</table>
+</body>
+</html>

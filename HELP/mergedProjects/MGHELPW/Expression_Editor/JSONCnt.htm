@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Reference Guide &gt; Expression Editor &gt; Function Directory" />
+<meta name="build tags" content="48" />
+<meta name="template" content="functions.htt" />
+<meta name="generator" content="Adobe RoboHelp 2019" />
+<title>JSONCnt 関数</title>
+<link rel="StyleSheet" href="../eDev-Styles.css" type="text/css" />
+ <link rel="StyleSheet" href="../eDev-Styles.css" type="text/css" />
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+
+
+<?rh-cbt_start condition="HTML5_ONLY" ?><?rh-placeholder type="breadcrumbs" 
+ ph-align="0" usetopicformat="1" home="ホーム" sep-char="&gt;" ph-style="font-family:MS UI Gothic;font-size:9pt;font-weight: normal;font-style: normal;text-decoration: none;" ?><?rh-cbt_end ?>
+
+<h1>JSONCnt</h1>
+<table class="whs1" cellspacing="0" width="100%">
+	<col width="100" />
+	<col />
+	<tr style="vertical-align: top;">
+		<td colspan="2"><p class="Bold-in-a-table">JSONオブジェクト数の取得</p>
+		<p class="Text-in-a-table">JSONオブジェクト/配列の出現回数を、JSONソース変数 をそのパスにしたがって返します。</p></td>
+		
+	</tr>
+	<tr style="vertical-align: top;">
+		<td width="80"><p class="Bold-in-a-table">構文：</p></td>
+		<td><p class="Text-in-a-table">JSONCnt (<span style="font-style: italic;">JSON 
+		 ソース</span>, <span style="font-style: italic;">パス</span>)</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td width="80"><p class="Bold-in-a-table">パラメータ：</p></td>
+		<td><ul>
+			<li class="p-Table-Bullet"><p class="Table-Bullet"><span style="font-style: italic;">JSON 
+			 ソース</span> …… JSON 型項目の参照値です。</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet"><span style="font-style: italic;">パス 
+			 </span>&#160;…… パスの中の1つのオブジェクト/配列を一意に定義する文字列です。</p></li>
+		</ul></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td width="80"><p class="Bold-in-a-table">戻り値：</p></td>
+		<td><p class="Text-in-a-table">数値 …… JSONオブジェクト/配列の出現回数。負数の場合は以下のような数が返ります。</p>
+		<ul>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">-1 …… パスが見つかりません。</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">-2 …… JSONソース項目にキーが存在しません。</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">-4 …… パスで使用されているインデックスが無効です。</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">-5 …… JSONの解析でエラーが発生しました。</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">-6 …… パラメータが指定されていません。</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">-7 …… 指定されたソース項目がJSON型ではありません。</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">-8 …… 指定されたソース項目がNULL 
+			 です。</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">-9 …… オブジェクトのパスがインデックスを持たない配列を参照しています。</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">-10 …… シングルインスタンスのパスは指定できません。</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">-12 …… インデックスまたは[]が単一のインスタンス（オブジェクト）で使用されています。</p></li>
+		</ul></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td width="80"><p class="Bold-in-a-table">例：</p></td>
+		<td><p class="Text-in-a-table">JSONオブジェクトの出現回数を取得する。</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td width="80"><p class="Bold-in-a-table">&#160;</p></td>
+		<td bgcolor="#DEDEBC"><p class="Text-in-a-table">JSONCnt('B'VAR,'/AddressBook[1]/Contact')</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td width="80"><p class="Bold-in-a-table">&#160;</p></td>
+		<td><p class="Text-in-a-table">'A'VAR は JSON 型の項目です。以下の JSONデータが含まれています。</p>
+		<p class="Text-in-a-table">パス '/AddressBook[1]/Contact' からJSONオブジェクトの出現回数を取得すると、'Contact'は2つしか存在しないため、&quot;2&quot; 
+		 が戻り値として返ります。</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td width="80"><p class="Bold-in-a-table">&#160;</p></td>
+		<td bgcolor="#D9D9B3"><p class="Text-in-a-table">{&quot;AddressBook&quot;: 
+		 [{<br />
+		&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Contact&quot;: 
+		 [{<br />
+		&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Record_ID&quot;: 
+		 0,<br />
+		&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Name&quot;: 
+		 &quot;Mrs. Lee Smith&quot;,&#160;<br />
+		&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;City&quot;: 
+		 &quot;Tel Aviv&quot;<br />
+		&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},<br />
+		&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{<br />
+		&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Record_ID&quot;: 
+		 1,<br />
+		&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;Name&quot;: 
+		 &quot;Mr. Joy Smith&quot; <br />
+		&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}&#160;]<br />
+		&#160;&#160;&#160;&#160;&#160;}]<br />
+		}</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td width="80"><p class="Bold-in-a-table">注意事項：</p></td>
+		<td><p class="Text-in-a-table">オブジェクトのパスとして、複数のインスタンスを指定することはできません。</p></td>
+	</tr>
+	<tr style="vertical-align: top;">
+		<td width="80"><p class="Bold-in-a-table">関連トピック：</p></td>
+		<td><p class="Text-in-a-table">&#160;</p></td>
+	</tr>
+</table>
+<p class="Body-Text">&#160;</p>
+<table style="vertical-align: top; left: 0px; top: 1425px;" cellspacing="0">
+	<col width="140" />
+	<col width="40" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px; border-left-style: Solid; 
+			 border-top-style: Solid; border-right-style: Solid; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-left-width: 1px; border-top-width: 1px; 
+			 border-bottom-width: 1px; background-color: Transparent;"><p 
+			 class="VersionUP">サポートバージョン：</p></td>
+		<td style="padding-right: 10px; padding-left: 10px; border-top-style: Solid; 
+			 border-right-style: Solid; border-bottom-style: Solid; border-top-width: 1px; 
+			 border-bottom-width: 1px; border-right-width: 1px; background-color: Transparent;"><p 
+			 class="Text-in-a-table">4.8.1</p></td>
+	</tr>
+</table>
+</body>
+</html>

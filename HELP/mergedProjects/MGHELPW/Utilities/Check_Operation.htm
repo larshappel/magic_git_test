@@ -1,0 +1,150 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Reference Guide &gt; Utilities &gt; Tools Infrastructure" />
+<meta name="generator" content="Adobe RoboHelp 2019" />
+<title>チェック</title>
+<link rel="StyleSheet" href="../eDev-Styles.css" type="text/css" />
+ <link rel="StyleSheet" href="../eDev-Styles.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/constants.js"></script>
+<script type="text/javascript" src="../template/scripts/utils.js"></script>
+<script type="text/javascript" src="../template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="../template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="../template/scripts/mhver.js"></script>
+<script type="text/javascript" src="../template/scripts/settings.js"></script>
+<script type="text/javascript" src="../template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="../template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="../template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="../template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="../template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="../template/styles/widgets.min.css">
+ <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = "..";
+gCommonRootRelPath = "..";
+gTopicId = "2.35.6.1.1_4";
+</script>
+ <meta name="topic-breadcrumbs" content="リファレンスガイド > ユーティリティ > ユーザ定義開発メニュー > 処理コマンド" />
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+
+
+<div><script type="text/javascript" language="javascript">//<![CDATA[
+document.write("<p  style=\"text-align:left;\" class=\"breadcrumbs\">");
+AddMasterBreadcrumbs("../index.htm", "breadcrumbs", "&gt;", "ホーム", "../Magic_xpa_Reference_Guide.htm");
+document.write("<a class=\"breadcrumbs\" href=\"../Magic_xpa_Reference_Guide.htm\">リファレンスガイド<\/a> &gt; <a class=\"breadcrumbs\" href=\"Utilities.htm\">ユーティリティ<\/a> &gt; <a class=\"breadcrumbs\" href=\"Tools_Infrastructure.htm\">ユーザ定義開発メニュー<\/a> &gt; <a class=\"breadcrumbs\" href=\"Operation_Commands.htm\">処理コマンド<\/a> &gt; チェック<\/p>");
+//]]></script>
+</div>
+
+<h1 style="color: #3d5e91; margin-top: 3.5pt;">チェック</h1>
+<p>この処理には以下のパラメータがあります。</p>
+<table style=" vertical-align:top; width:100%; max-width:56.667%;" cellspacing="0">
+	<col style="width: 100%;" />
+	<tr style="vertical-align: top;">
+		<td style="border: Solid 1px #000000; width: 100%; padding-right: 10px; 
+			 padding-left: 10px;" bgcolor="#DEDEBC"><p class="Text-in-a-table">Check, 
+		 &lt;ファイル名&gt;, &lt;リポジトリ&gt; &lt;不要な式の削除&gt;</p></td>
+	</tr>
+</table>
+<p class="Header2">ファイル名</p>
+<p class="Body-Text">チェッカーファイルの有効なファイル名とパス。ファイル名は論理名をサポートしています。</p>
+<p class="Header2">Repository=X</p>
+<p class="Body-Text">出力するリポジトリを指定します。以下の文字が指定できます。</p>
+<ul>
+	<li class="p-BULLET"><p class="BULLET"><span style="font-weight: bold;">M</span> 
+	 …… モデル</p></li>
+	<li class="p-BULLET"><p class="BULLET"><span style="font-weight: bold;">T</span> 
+	 …… データソース</p></li>
+	<li class="p-BULLET"><p class="BULLET"><span style="font-weight: bold;">P</span> 
+	 …… プログラム</p></li>
+	<li class="p-BULLET"><p class="BULLET"><span style="font-weight: bold;">H</span> 
+	 …… ヘルプ</p></li>
+	<li class="p-BULLET"><p class="BULLET"><span style="font-weight: bold;">R</span> 
+	 …… 権利</p></li>
+	<li class="p-BULLET"><p class="BULLET"><span style="font-weight: bold;">U</span> 
+	 …… メニュー</p></li>
+	<li class="p-BULLET"><p class="BULLET"><span style="font-weight: bold;">A</span> 
+	 …… プロジェクト全体</p></li>
+</ul>
+<p class="Header2">DeleteUnusedExp=Y/N</p>
+<p class="Body-Text">このスイッチをYに設定すると使用されていない式が削除されます。</p>
+<p class="Body-Text">例：以下のように設定します。</p>
+<table style="vertical-align: top;" cellspacing="0" width="100%">
+	<col style="width: 100%;" />
+	<tr style="vertical-align: top;">
+		<td style="border: Solid 1px #000000; width: 100%; padding-right: 10px; 
+			 padding-left: 10px;" bgcolor="#DEDEBC"><p class="Text-in-a-table">Check, 
+		 Chekeroutput.txt, Repository=P &#160;DeleteUnusedExp=Y</p></td>
+	</tr>
+</table>
+<p class="Body-Text">&#160;</p>
+<table style="border: Solid 1px #000000; margin-top: 10px; margin-bottom: 10px;" 
+		 cellspacing="0" width="100%">
+	<col width="46" />
+	<col />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px;" bgcolor="#FFFFFF"><p 
+			 class="Text-in-a-table" style="font-weight: bold;"><img src="../image/Noteicon.gif" alt="" style=" border:none; width:100%; max-width:39px;" border="0" /></p></td>
+		<td style="padding-right: 10px; padding-left: 10px; vertical-align: middle;" 
+			 bgcolor="#FFFFFF"><ul>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">ファイル名パスなしで指定された場合、チェッカーファイルはそれぞれのアプリケーションのフォルダに作成されます。</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">デフォルトのリポジトリスイッチはAです。</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">［Check］コマンドは、<a 
+			 href="Automatic_Processing.htm">AutomaticProcessingMode</a>=B 
+			 の場合に動作します。</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">チェッカーの結果ファイルは、JSON形式で生成されます。これらのファイルには、エラー、警告、推奨事項の数を知らせるヘッダーサマリーが含まれています。</p></li>
+			<li class="p-Table-Bullet"><p class="Table-Bullet">チェッカーの結果ファイルは、［オプション］メニューの［<a 
+			 href="Load_Background_Checker_Results.htm">バックグラウンドチェック結果の読込</a>］で読み込むことができます。</p></li>
+		</ul></td>
+	</tr>
+</table>
+<p class="Body-Text">&#160;</p>
+<table style="vertical-align: top; left: 0px; top: 1425px;" cellspacing="0">
+	<col width="140" />
+	<col width="40" />
+	<tr style="vertical-align: top;">
+		<td style="padding-right: 10px; padding-left: 10px; border-left-style: Solid; 
+			 border-top-style: Solid; border-right-style: Solid; border-bottom-style: Solid; 
+			 border-right-width: 1px; border-left-width: 1px; border-top-width: 1px; 
+			 border-bottom-width: 1px; background-color: Transparent;"><p 
+			 class="VersionUP">サポートバージョン：</p></td>
+		<td style="padding-right: 10px; padding-left: 10px; border-top-style: Solid; 
+			 border-right-style: Solid; border-bottom-style: Solid; border-top-width: 1px; 
+			 border-bottom-width: 1px; border-right-width: 1px; background-color: Transparent;"><p 
+			 class="Text-in-a-table">4.8.1</p></td>
+	</tr>
+</table>
+</body>
+</html>
