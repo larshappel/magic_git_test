@@ -27,12 +27,12 @@
           <Offline val="N"/>
           <FormType val="N"/>
           <DotNetObjectExists val="Y"/>
-          <LastModified _date="739895" _time="50740" date="2026/10/06" time="14:05:40"/>
+          <LastModified _date="739898" _time="42285" date="2026/10/09" time="11:44:45"/>
         </Header>
-        <ItemIsn val="16"/>
+        <ItemIsn val="28"/>
         <Resource>
           <Columns>
-            <Column id="1" name="v_productId">
+            <Column id="1" name="v_id">
               <PropertyList model="FIELD">
                 <Model attr_obj="FIELD_NUMERIC" id="1"/>
                 <Picture id="157" valUnicode="10"/>
@@ -45,7 +45,7 @@
                 <_FieldStyle id="276" val="1"/>
               </PropertyList>
             </Column>
-            <Column id="2" name="v_productName">
+            <Column id="2" name="v_name">
               <PropertyList model="FIELD">
                 <Model attr_obj="FIELD_ALPHA" id="1"/>
                 <Picture id="157" valUnicode="50"/>
@@ -55,7 +55,7 @@
                 <_Flip id="194"/>
               </PropertyList>
             </Column>
-            <Column id="16" name="v_standardCost">
+            <Column id="16" name="v_standard_cost">
               <PropertyList model="FIELD">
                 <Model attr_obj="FIELD_NUMERIC" id="1"/>
                 <Picture id="157" valUnicode="10"/>
@@ -65,6 +65,51 @@
                 <_Dec id="181"/>
                 <_Whole id="182" val="10"/>
                 <_Negative id="192"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="19" name="v_deleted_date">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_DATE" id="1"/>
+                <StoredAs id="173" val="19"/>
+                <Size id="174" val="8"/>
+                <Definition id="175" val="2"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="20" name="v_deleted_time">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_TIME" id="1"/>
+                <StoredAs id="173" val="24"/>
+                <Size id="174" val="6"/>
+                <Definition id="175" val="2"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="23" name="v_changed">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_LOGICAL" id="1"/>
+                <StoredAs id="173" val="15"/>
+                <Size id="174" val="1"/>
+                <Definition id="175" val="2"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="24" name="v_update_date">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_DATE" id="1"/>
+                <StoredAs id="173" val="19"/>
+                <Size id="174" val="8"/>
+                <Definition id="175" val="2"/>
+                <_FieldStyle id="276" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="25" name="v_update_time">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_TIME" id="1"/>
+                <StoredAs id="173" val="24"/>
+                <Size id="174" val="6"/>
+                <Definition id="175" val="2"/>
                 <_FieldStyle id="276" val="1"/>
               </PropertyList>
             </Column>
@@ -108,6 +153,7 @@
               </PropertyList>
             </Column>
             <Column id="10" name="v_recordCount">
+              <Comment val="Note that DbRecs(25,'') will look at the table in the DB, so it gives back the total rows, which includes the logical-delete rows. The SQL statement will filter these rows, so the row numbers might diverge."/>
               <PropertyList model="FIELD">
                 <Model attr_obj="FIELD_NUMERIC" id="1"/>
                 <StoredAs id="173" val="4"/>
@@ -155,6 +201,28 @@
                 <_Flip id="194"/>
               </PropertyList>
             </Column>
+            <Column id="21" name="v_SELECT_timestamp">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_ALPHA" id="1"/>
+                <StoredAs id="173" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="22" name="v_lastValue">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_ALPHA" id="1"/>
+                <StoredAs id="173" val="1"/>
+              </PropertyList>
+            </Column>
+            <Column id="26" name="v_busyIndicator">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_ALPHA" id="1"/>
+                <Picture id="157" valUnicode="10"/>
+                <StoredAs id="173" val="3"/>
+                <Size id="174" val="10"/>
+                <Definition id="175" val="2"/>
+                <_Flip id="194"/>
+              </PropertyList>
+            </Column>
           </Columns>
         </Resource>
         <Information>
@@ -190,7 +258,7 @@
             <AllowOptions val="Y"/>
             <AllowQuery val="Y"/>
             <AllowModify val="Y"/>
-            <AllowCreate val="N"/>
+            <AllowCreate val="Y"/>
             <AllowDelete val="N"/>
             <AllowLocate val="Y"/>
             <AllowRange val="Y"/>
@@ -215,12 +283,17 @@
           </BOX>
         </Information>
         <SQL_FORM DB="MariaDB_Local" RESTAB="Memory">
-          <SQL_STMT_U val="select id, name, standard_cost from product;"/>
+          <SQL_STMT_U val="select id, name, standard_cost, deleted_date, deleted_time, false, false, false from product where deleted_time is null;"/>
           <OUTARG>
             <Arguments>
               <Argument Variable="1"/>
               <Argument Variable="2"/>
               <Argument Variable="16"/>
+              <Argument Variable="20"/>
+              <Argument Variable="21"/>
+              <Argument Variable="24"/>
+              <Argument Variable="26"/>
+              <Argument Variable="27"/>
             </Arguments>
           </OUTARG>
         </SQL_FORM>
@@ -249,7 +322,7 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="4"/>
+                  <_DitIndexForToolkit val="5"/>
                   <DIFF_UPDATE val="T"/>
                   <Condition val="Y"/>
                   <Modifier val="S"/>
@@ -262,7 +335,7 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="6"/>
+                  <_DitIndexForToolkit val="7"/>
                   <DIFF_UPDATE val="T"/>
                   <Condition val="Y"/>
                   <Modifier val="S"/>
@@ -275,7 +348,7 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="22"/>
+                  <_DitIndexForToolkit val="25"/>
                   <DIFF_UPDATE val="T"/>
                   <Condition val="Y"/>
                   <Modifier val="S"/>
@@ -283,12 +356,85 @@
                 </Select>
               </LogicLine>
               <LogicLine>
+                <Select FieldID="20" FlowIsn="276" id="20">
+                  <Column val="19"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <INT_DIT_INFO>
+                    <v>43</v>
+                  </INT_DIT_INFO>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="21" FlowIsn="277" id="21">
+                  <Column val="20"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <INT_DIT_INFO>
+                    <v>43</v>
+                  </INT_DIT_INFO>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="24" FlowIsn="339" id="24">
+                  <Column val="23"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="26"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="26" FlowIsn="376" id="26">
+                  <Column val="24"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="27" FlowIsn="377" id="27">
+                  <Column val="25"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="243">
+                  <Type val="0"/>
+                  <Text val=" "/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
                 <Select FieldID="3" FlowIsn="7" id="3">
                   <Column val="3"/>
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="2"/>
+                  <_DitIndexForToolkit val="3"/>
                   <DIFF_UPDATE val="T"/>
                   <Condition val="Y"/>
                   <Modifier val="S"/>
@@ -329,7 +475,7 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="11"/>
+                  <_DitIndexForToolkit val="12"/>
                   <DIFF_UPDATE val="T"/>
                   <Condition val="Y"/>
                   <Modifier val="S"/>
@@ -343,7 +489,7 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="13"/>
+                  <_DitIndexForToolkit val="14"/>
                   <DIFF_UPDATE val="T"/>
                   <Condition val="Y"/>
                   <Modifier val="S"/>
@@ -381,7 +527,7 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="15"/>
+                  <_DitIndexForToolkit val="16"/>
                   <DIFF_UPDATE val="T"/>
                   <Condition val="Y"/>
                   <Modifier val="S"/>
@@ -395,7 +541,47 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
-                  <_DitIndexForToolkit val="9"/>
+                  <_DitIndexForToolkit val="10"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="22" FlowIsn="310" id="22">
+                  <Column val="21"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="23" FlowIsn="313" id="23">
+                  <Column val="22"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="28" FlowIsn="416" id="28">
+                  <ASS val="22"/>
+                  <Column val="26"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <INT_DIT_INFO>
+                    <v>41</v>
+                  </INT_DIT_INFO>
                   <DIFF_UPDATE val="T"/>
                   <Condition val="Y"/>
                   <Modifier val="S"/>
@@ -448,6 +634,7 @@
           <LogicUnit id="7" propagate="78">
             <Level val="H"/>
             <Type val="U"/>
+            <Comment val="The main rows are:&#xD;&#xA;- Calling the expression function DataViewToJSON to create the JSON string&#xD;&#xA;- The external call of the dotnet code, passing the JSON string&#xD;&#xA;&#xD;&#xA;Questions:&#xD;&#xA;- Why does the JSON output text in the form become updated later than the busy indicator?"/>
             <Scope val="S"/>
             <EngineDirective val="S"/>
             <ShowMessage val="Y"/>
@@ -458,34 +645,15 @@
             </Event>
             <LogicLines>
               <LogicLine>
-                <Invoke FlowIsn="157">
-                  <OperationType val="."/>
-                  <Event>
-                    <EventType val="N"/>
-                  </Event>
-                  <TaskID comp="-1"/>
-                  <Lock val="N"/>
-                  <Arguments>
-                    <Argument>
-                      <Skip val="N"/>
-                      <DotNetType val="void"/>
-                    </Argument>
-                  </Arguments>
-                  <Wait val="Y"/>
-                  <SyncData val="N"/>
-                  <FunctionName val="func"/>
-                  <SnippetCode val="using System;&#xA;using DebugLogger;&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static void func()&#xA;&#x9;{&#xA;&#x9;&#x9;DebugLogger.Logger.Log(&quot;testlog&quot;);&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;}&#xA;&#xA;}"/>
-                  <CompiledCode val="TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1vZGUuDQ0KJAAAAAAAAABQRQAATAEDABCBxGoAAAAAAAAAAOAAAiELAQsAAAQAAAAGAAAAAAAALiMAAAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACAAAAAAgAAAAAAAAMAQIUAABAAABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAOAiAABLAAAAAEAAAKgCAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAANAMAAAAgAAAABAAAAAIAAAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAKgCAAAAQAAAAAQAAAAGAAAAAAAAAAAAAAAAAABAAABALnJlbG9jAAAMAAAAAGAAAAACAAAACgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAAQIwAAAAAAAEgAAAACAAUAXCAAAIQCAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC5yAQAAcCgDAAAKKkJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAAOQAAAAjfgAAUAEAAMwAAAAjU3RyaW5ncwAAAAAcAgAAFAAAACNVUwAwAgAAEAAAACNHVUlEAAAAQAIAAEQAAAAjQmxvYgAAAAAAAAACAAABRxQAAAkAAAAA+iUzABYAAAEAAAAEAAAAAgAAAAEAAAADAAAAAgAAAAEAAAACAAAAAAAKAAEAAAAAAAYALwAoAAYAWwA7AAYAgQA7AAoAwQC1AAAAAAABAAAAAAABAAEAgQEQABcAAAAFAAEAAQBQIAAAAACWADYACgABABEAewAOABkAewATACEAyAAXAC4ACwAcAC4AEwAlAASAAAAAAAAAAAAAAAAAAAAAAJ8AAAAEAAAAAAAAAAAAAAABAB8AAAAAAAEAAAAAAAAAAAAAAAAAqAAAAAAAAAAAAAA8TW9kdWxlPgB3bzN6bXR4MC5kbGwAU25pcHBldABtc2NvcmxpYgBTeXN0ZW0AT2JqZWN0AGZ1bmMAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRlAC5jdG9yAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAHdvM3ptdHgwAGRvdG5ldExvZ2dlcgBEZWJ1Z0xvZ2dlcgBMb2dnZXIATG9nAAAPdABlAHMAdABsAG8AZwAAAAAA0bXZikzpAkKgzWZSzn60KQAIt3pcVhk04IkDAAABBCABAQgDIAABBAABAQ4IAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCCMAAAAAAAAAAAAAHiMAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAjAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAAAABIAAAAWEAAAEwCAAAAAAAAAAAAAEwCNAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBPAAAAAAC9BO/+AAABAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAARAAAAAEAVgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBvAG4AAAAAAAAAsASsAQAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAACIAQAAAQAwADAAMAAwADAANABiADAAAAAsAAIAAQBGAGkAbABlAEQAZQBzAGMAcgBpAHAAdABpAG8AbgAAAAAAIAAAADAACAABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMAAuADAALgAwAC4AMAAAADwADQABAEkAbgB0AGUAcgBuAGEAbABOAGEAbQBlAAAAdwBvADMAegBtAHQAeAAwAC4AZABsAGwAAAAAACgAAgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgAdAAAACAAAABEAA0AAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAdwBvADMAegBtAHQAeAAwAC4AZABsAGwAAAAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADAALgAwAC4AMAAuADAAAAA4AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMAAuADAALgAwAC4AMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAMAAAAMDMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
-                  <SnippetLanguage val="C"/>
-                  <ForCompactFramework val="N"/>
-                  <isGuiThreadExecution val="N"/>
-                  <CompileTime HighDateTime="31282511" LowDateTime="4243466240"/>
-                  <AssemblyIds val="332988144,"/>
-                  <RetainFocus val="N"/>
+                <Update FlowIsn="417">
+                  <FieldID val="28"/>
+                  <WithValue val="23"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
                   <Condition val="Y"/>
                   <Modifier val="B"/>
                   <Direction val="C"/>
-                </Invoke>
+                </Update>
               </LogicLine>
               <LogicLine>
                 <Update FlowIsn="86">
@@ -526,7 +694,7 @@
                   <WithValue val="12"/>
                   <Incremental val="N"/>
                   <ForcedUpdate val="Y"/>
-                  <Condition val="Y"/>
+                  <Condition val="N"/>
                   <Modifier val="B"/>
                   <Direction val="C"/>
                 </Update>
@@ -554,12 +722,12 @@
                   <Wait val="Y"/>
                   <SyncData val="N"/>
                   <FunctionName val="tryJson"/>
-                  <SnippetCode val="using System;&#xA;using DebugLogger;&#xA;using Newtonsoft.Json;&#xA;using System.Data;&#xA;using MagicSqlConnector;&#xA;// using System.Data.SqlClient; // SqlDataAdapter BUT only MS SQL Server!?&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static void tryJson(System.String jsonString)&#xA;&#x9;{&#xA;&#x9;&#x9;DebugLogger.Logger.Log(&quot;Starting JSON deserialization attempts.&quot;);&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;DebugLogger.Logger.Log(jsonString.Substring(0, 20));&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;try {&#xA;&#x9;&#x9;&#x9;DataTable table = JsonConvert.DeserializeObject&lt;DataTable>(jsonString);&#xA;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(&quot;Column count&quot;);&#xA;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(table.Columns.Count.ToString());&#xA;&#x9;&#x9;&#x9;//DebugLogger.Logger.Log(table[1][2]);&#xA;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(&quot;Row info: &quot; + table.Rows[4][1]);&#xA;&#x9;&#x9;&#x9;//DebugLogger.Logger.Log(&quot;Column info: &quot; + table.Columns[0][0]);&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;// Try putting data back to the SQL DB.&#xA;&#x9;&#x9;&#x9;MagicSqlConnector.Connector.DataTableIntoDb(&quot;HelloFromMagic&quot;);&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;catch (Exception e) {&#xA;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(e.Message);&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;DebugLogger.Logger.Log(&quot;Finished JSON deserialization attempts.&quot;);&#xA;&#x9;}&#xA;&#xA;}"/>
-                  <CompiledCode val="TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1vZGUuDQ0KJAAAAAAAAABQRQAATAEDABCBxGoAAAAAAAAAAOAAAiELAQsAAAgAAAAGAAAAAAAA/iYAAAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAEAAAAAAAAAACAAAAAAgAAAAAAAAMAQIUAABAAABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAKwmAABPAAAAAEAAAKgCAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAABAcAAAAgAAAACAAAAAIAAAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAKgCAAAAQAAAAAQAAAAKAAAAAAAAAAAAAAAAAABAAABALnJlbG9jAAAMAAAAAGAAAAACAAAADgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADgJgAAAAAAAEgAAAACAAUA9CAAALgFAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABswAwCHAAAAAQAAEXIBAABwKAMAAAoCFh8UbwQAAAooAwAACgIoAQAAKwpyUQAAcCgDAAAKBm8GAAAKbwcAAAoMEgIoCAAACigDAAAKcmsAAHAGbwkAAAoabwoAAAoXbwsAAAooDAAACigDAAAKcoEAAHAoDQAACt4OCwdvDgAACigDAAAK3gBynwAAcCgDAAAKKgABEAAAAAAYAFZuAA4OAAABQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAAtAEAACN+AAAgAgAAEAIAACNTdHJpbmdzAAAAADAEAADwAAAAI1VTACAFAAAQAAAAI0dVSUQAAAAwBQAAiAAAACNCbG9iAAAAAAAAAAIAAAFHFQIACQgAAAD6JTMAFgAAAQAAAA4AAAACAAAAAQAAAAEAAAAOAAAAAgAAAAEAAAABAAAABQAAAAEAAAAAAAoAAQAAAAAABgAvACgABgBpAEkABgCPAEkACgDPAMMABgDaACgADgD7AOsAEgAlARkBEgAvARkBEgBQARkBBgB1ASgAEgCEARkBEgCfARkBFgDeAcwBBgD4ASgAAAAAAAEAAAAAAAEAAQCBARAAFwAAAAUAAQABAFAgAAAAAJYANgAKAAEAAAABAD4AEQCJAA8AGQCJABQAIQDWAAoAKQDhABgAMQAHAScAOQBEATMASQBrATgAUQB7ATwAOQCWAUAAWQCnAUUAYQCnAUsAKQCwAVAAaQDoAQoAcQACAjwALgALAF4ALgATAGcAVgAEgAAAAAAAAAAAAAAAAAAAAACtAAAABAAAAAAAAAAAAAAAAQAfAAAAAAABAAAAAAAAAAAAAAAAALYAAAAAAA0AAAAAAAAAAAAAAB4A6wAAAAAABAAAAAAAAAAAAAAAAQAZAQAAAAABAAAAAAAAAAAAAAAAALcBAAAAAAsALgAAAAA8TW9kdWxlPgBnam1uZWV3dC5kbGwAU25pcHBldABtc2NvcmxpYgBTeXN0ZW0AT2JqZWN0AHRyeUpzb24AanNvblN0cmluZwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1dGUALmN0b3IAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAZ2ptbmVld3QAZG90bmV0TG9nZ2VyAERlYnVnTG9nZ2VyAExvZ2dlcgBMb2cAU3RyaW5nAFN1YnN0cmluZwBOZXd0b25zb2Z0Lkpzb24ASnNvbkNvbnZlcnQARGVzZXJpYWxpemVPYmplY3QAU3lzdGVtLkRhdGEARGF0YVRhYmxlAERhdGFDb2x1bW5Db2xsZWN0aW9uAGdldF9Db2x1bW5zAEludGVybmFsRGF0YUNvbGxlY3Rpb25CYXNlAGdldF9Db3VudABJbnQzMgBUb1N0cmluZwBEYXRhUm93Q29sbGVjdGlvbgBnZXRfUm93cwBEYXRhUm93AGdldF9JdGVtAENvbmNhdABteXNxbF9kb3RuZXRfY29ubmVjdABNYWdpY1NxbENvbm5lY3RvcgBDb25uZWN0b3IARGF0YVRhYmxlSW50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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="/>
+                  <SnippetCode val="using System;&#xA;using DebugLogger;&#xA;using Newtonsoft.Json;&#xA;using System.Data;&#xA;using MagicSqlConnector;&#xA;// using System.Data.SqlClient; // SqlDataAdapter BUT only MS SQL Server!?&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static void tryJson(System.String jsonString)&#xA;&#x9;{&#xA;&#x9;&#x9;DebugLogger.Logger.Log(&quot;Starting JSON deserialization attempts.&quot;);&#xA;&#x9;&#x9;try {&#xA;&#x9;&#x9;&#x9;DataTable table = JsonConvert.DeserializeObject&lt;DataTable>(jsonString);&#xA;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(table.TableName);&#xA;&#x9;&#x9;&#x9;table.TableName = &quot;product&quot;;&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;//DebugLogger.Logger.Log(&quot;Column count&quot;);&#xA;&#x9;&#x9;&#x9;//DebugLogger.Logger.Log(table.Columns.Count.ToString());&#xA;&#x9;&#x9;&#x9;//DebugLogger.Logger.Log(&quot;Row info: &quot; + table.Rows[4][1]);&#xA;&#xA;&#x9;&#x9;&#x9;MagicSqlConnector.MagicSqlConnector.DataTableIntoDb(table);&#xA;&#x9;&#x9;&#x9;// Try putting data back to the SQL DB.&#xA;&#x9;&#x9;&#x9;//MagicSqlConnector.MagicSqlConnector.UpdateProductName(&quot;somethinghappened&quot;);&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;catch (Exception e) {&#xA;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(e.Message);&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;DebugLogger.Logger.Log(&quot;Finished JSON deserialization attempts.&quot;);&#xA;&#x9;}&#xA;&#xA;}"/>
+                  <CompiledCode val="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aQBvAG4AAAAwAC4AMAAuADAALgAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAwAAACgNQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="/>
                   <SnippetLanguage val="C"/>
                   <ForCompactFramework val="N"/>
                   <isGuiThreadExecution val="Y"/>
-                  <CompileTime HighDateTime="31282511" LowDateTime="4244438333"/>
+                  <CompileTime HighDateTime="31283088" LowDateTime="2272074098"/>
                   <AssemblyIds val="332988144,-1906569271,932965495,772783046,"/>
                   <RetainFocus val="N"/>
                   <Condition val="Y"/>
@@ -568,12 +736,15 @@
                 </Invoke>
               </LogicLine>
               <LogicLine>
-                <STP Buttons="O" DefaultButton="1" ERR_LOG_DEF_CHG="N" FlowIsn="109" IMG_DEF_CHG="N" Image="E" Mode="W" TTL_DEF_CHG="N" TXT="'JSON Get Done.'" TitleTxt="警告" VR_DISP="B">
-                  <AppendToErrorLog val="N"/>
+                <Update FlowIsn="418">
+                  <FieldID val="28"/>
+                  <WithValue val="22"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="Y"/>
                   <Condition val="Y"/>
                   <Modifier val="B"/>
                   <Direction val="C"/>
-                </STP>
+                </Update>
               </LogicLine>
             </LogicLines>
           </LogicUnit>
@@ -646,11 +817,11 @@
                   <SyncData val="N"/>
                   <FunctionName val="func"/>
                   <SnippetCode val="using System;&#xA;using DebugLogger;&#xA;using System.Data;&#xA;&#xA;public static class Snippet&#xA;{&#xA;&#x9;public static void func(System.Data.DataTable dataTable)&#xA;&#x9;{&#xA;&#x9;&#x9;DebugLogger.Logger.Log(&quot;-- Starting dotnet&quot;);&#xA;&#x9;&#x9;try {&#xA;&#x9;&#x9;&#x9;// Basic access / sanity checks&#xA;&#x9;&#x9;&#x9;bool isNull = (dataTable == null);&#xA;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(&quot;Is it null? &quot; + isNull.ToString());&#xA;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(&quot;No of columns: &quot; + dataTable.Columns.Count); // Expected to be 2.&#xA;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(&quot;First column: &quot; + dataTable.Columns[0].ToString()); // v_productId&#xA;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(&quot;Some other info: &quot; + dataTable.Rows[4][0]);&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;// Try to get the 2nd column&#xA;&#x9;&#x9;&#x9;try {&#xA;&#x9;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(&quot;2nd column: &quot; + dataTable.Columns[1].ToString()); // v_productName&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;catch (Exception e) {&#xA;&#x9;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(&quot;Couldn't access the 2nd column.&quot;);&#xA;&#x9;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(e.ToString().Substring(0,30));&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;// Iterate columns, see what we get&#xA;&#x9;&#x9;&#x9;foreach (DataColumn col in dataTable.Columns) {&#xA;&#x9;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(col.DataType.ToString());&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;catch (Exception e) {&#xA;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(&quot;General exception occured.&quot;);&#xA;&#x9;&#x9;&#x9;DebugLogger.Logger.Log(e.ToString());&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;DebugLogger.Logger.Log(&quot;Finished dotnet.&quot;);&#xA;&#x9;&#x9;&#xA;&#x9;}&#xA;&#xA;}"/>
-                  <CompiledCode val="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ZQBuAGEAbQBlAAAAbQBqAG0AZQB0AGgAMgBrAC4AZABsAGwAAAAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADAALgAwAC4AMAAuADAAAAA4AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMAAuADAALgAwAC4AMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAMAAAAYDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+                  <CompiledCode val="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ZQBuAGEAbQBlAAAAMgBoADAAaQA1ADQAdgB5AC4AZABsAGwAAAAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADAALgAwAC4AMAAuADAAAAA4AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMAAuADAALgAwAC4AMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAMAAAAYDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
                   <SnippetLanguage val="C"/>
                   <ForCompactFramework val="N"/>
                   <isGuiThreadExecution val="Y"/>
-                  <CompileTime HighDateTime="31282511" LowDateTime="4245523839"/>
+                  <CompileTime HighDateTime="31282516" LowDateTime="1465994556"/>
                   <AssemblyIds val="932965495,332988144,"/>
                   <RetainFocus val="N"/>
                   <Condition val="Y"/>
@@ -723,18 +894,130 @@
                   <Direction val="C"/>
                 </STP>
               </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="244">
+                  <Type val="2"/>
+                  <Text val=" "/>
+                </Remark>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="245">
+                  <Type val="2"/>
+                  <Text val=" "/>
+                </Remark>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+          <LogicUnit id="10" propagate="78">
+            <Level val="H"/>
+            <Type val="U"/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+              <KeyCombinationID val="82"/>
+            </Event>
+            <LogicLines>
+              <LogicLine>
+                <Update FlowIsn="273">
+                  <FieldID val="20"/>
+                  <WithValue val="18"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="N"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="278">
+                  <FieldID val="21"/>
+                  <WithValue val="19"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="N"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Remark FlowIsn="311">
+                  <Type val="2"/>
+                  <Text val=" "/>
+                </Remark>
+              </LogicLine>
+            </LogicLines>
+          </LogicUnit>
+          <LogicUnit id="11" propagate="78">
+            <Level val="R"/>
+            <Type val="S"/>
+            <Comment val="This will update the &quot;ephemeral&quot; column that tracks (for UI purposes only) whether a change has been made to the record."/>
+            <Scope val="S"/>
+            <EngineDirective val="S"/>
+            <ShowMessage val="Y"/>
+            <Condition val="89"/>
+            <Event>
+              <EventType val="S"/>
+            </Event>
+            <LogicLines>
+              <LogicLine>
+                <Update FlowIsn="338">
+                  <FieldID val="24"/>
+                  <WithValue val="21"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="N"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="414">
+                  <FieldID val="26"/>
+                  <WithValue val="18"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="N"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
+              <LogicLine>
+                <Update FlowIsn="415">
+                  <FieldID val="27"/>
+                  <WithValue val="19"/>
+                  <Incremental val="N"/>
+                  <ForcedUpdate val="N"/>
+                  <Condition val="Y"/>
+                  <Modifier val="B"/>
+                  <Direction val="C"/>
+                </Update>
+              </LogicLine>
             </LogicLines>
           </LogicUnit>
         </TaskLogic>
         <TaskForms>
-          <FormEntry _last_isn="24" _last_test_id="24" id="1">
+          <FormEntry _last_isn="43" _last_test_id="43" id="1">
             <PropertyList model="FORM_GUI0">
-              <Width id="23" val="607"/>
+              <Width id="23" val="765"/>
               <Height id="24" val="512"/>
               <_Comment id="218"/>
               <FormName id="311" valUnicode="mysql_testing"/>
               <_TabbingOrder id="318" val="1"/>
             </PropertyList>
+            <Control _test_id="41" id="41">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text Exp="24" id="19" valUnicode="Busy?"/>
+                <X id="21" val="10"/>
+                <Y id="22" val="9"/>
+                <Width id="23" val="42"/>
+                <Height id="24" val="11"/>
+                <EnableRTF id="69"/>
+                <_Orientation id="143"/>
+              </PropertyList>
+            </Control>
             <Control _test_id="7" id="7">
               <PropertyList model="CTRL_GUI0_STATIC">
                 <Text id="19" valUnicode="v_write_successfull"/>
@@ -766,8 +1049,8 @@
             <Control _test_id="9" id="9">
               <PropertyList model="CTRL_GUI0_STATIC">
                 <Text id="19" valUnicode="v_productId"/>
-                <X id="21" val="396"/>
-                <Y id="22" val="26"/>
+                <X id="21" val="549"/>
+                <Y id="22" val="24"/>
                 <Width id="23" val="45"/>
                 <Height id="24" val="9"/>
                 <Font id="50" val="1"/>
@@ -781,21 +1064,21 @@
                 <Model ID="MODEL_GUI_INT" id="1">
                   <Var FieldID="1"/>
                 </Model>
-                <X id="21" val="396"/>
-                <Y id="22" val="37"/>
+                <X id="21" val="549"/>
+                <Y id="22" val="35"/>
                 <Width id="23" val="43"/>
                 <Height id="24" val="11"/>
                 <Data FieldID="1" id="43"/>
                 <ControlName id="46" val="v_productId_0001"/>
                 <_Orientation id="143"/>
-                <TabOrder id="314" val="5"/>
+                <TabOrder id="314" val="2"/>
               </PropertyList>
             </Control>
             <Control _test_id="11" id="11">
               <PropertyList model="CTRL_GUI0_STATIC">
                 <Text id="19" valUnicode="v_productName"/>
-                <X id="21" val="396"/>
-                <Y id="22" val="60"/>
+                <X id="21" val="549"/>
+                <Y id="22" val="58"/>
                 <Width id="23" val="53"/>
                 <Height id="24" val="9"/>
                 <Font id="50" val="1"/>
@@ -809,21 +1092,21 @@
                 <Model ID="MODEL_GUI_INT" id="1">
                   <Var FieldID="2"/>
                 </Model>
-                <X id="21" val="396"/>
-                <Y id="22" val="71"/>
+                <X id="21" val="549"/>
+                <Y id="22" val="69"/>
                 <Width id="23" val="159"/>
                 <Height id="24" val="12"/>
                 <Data FieldID="2" id="43"/>
                 <ControlName id="46" val="v_productName_0001"/>
                 <_Orientation id="143"/>
-                <TabOrder id="314" val="6"/>
+                <TabOrder id="314" val="7"/>
               </PropertyList>
             </Control>
             <Control _test_id="12" id="12">
               <PropertyList model="CTRL_GUI0_STATIC">
                 <Text Exp="3" id="19" valUnicode="Text"/>
-                <X id="21" val="396"/>
-                <Y id="22" val="92"/>
+                <X id="21" val="549"/>
+                <Y id="22" val="83"/>
                 <Width id="23" val="199"/>
                 <Height id="24" val="225"/>
                 <EnableRTF id="69"/>
@@ -836,8 +1119,8 @@
             <Control _test_id="22" id="22">
               <PropertyList model="CTRL_GUI0_STATIC">
                 <Text id="19" valUnicode="v_dummyJSON"/>
-                <X id="21" val="400"/>
-                <Y id="22" val="337"/>
+                <X id="21" val="553"/>
+                <Y id="22" val="335"/>
                 <Width id="23" val="104"/>
                 <Height id="24" val="25"/>
                 <Font id="50" val="1"/>
@@ -851,21 +1134,21 @@
                 <Model ID="MODEL_GUI_INT" id="1">
                   <Var FieldID="15"/>
                 </Model>
-                <X id="21" val="449"/>
-                <Y id="22" val="337"/>
+                <X id="21" val="602"/>
+                <Y id="22" val="335"/>
                 <Width id="23" val="61"/>
                 <Height id="24" val="19"/>
                 <Data FieldID="15" id="43"/>
                 <ControlName id="46" val="v_dummyJSON"/>
                 <_Orientation id="143"/>
-                <TabOrder id="314" val="7"/>
+                <TabOrder id="314" val="8"/>
               </PropertyList>
             </Control>
             <Control _test_id="14" id="14">
               <PropertyList model="CTRL_GUI0_STATIC">
                 <Text id="19" valUnicode="v_dotnetReturnString"/>
-                <X id="21" val="400"/>
-                <Y id="22" val="368"/>
+                <X id="21" val="553"/>
+                <Y id="22" val="366"/>
                 <Width id="23" val="81"/>
                 <Height id="24" val="9"/>
                 <Font id="50" val="1"/>
@@ -879,21 +1162,21 @@
                 <Model ID="MODEL_GUI_INT" id="1">
                   <Var FieldID="6"/>
                 </Model>
-                <X id="21" val="400"/>
-                <Y id="22" val="379"/>
+                <X id="21" val="553"/>
+                <Y id="22" val="377"/>
                 <Width id="23" val="162"/>
                 <Height id="24" val="21"/>
                 <Data FieldID="6" id="43"/>
                 <ControlName id="46" val="v_dotnetReturnString"/>
                 <_Orientation id="143"/>
-                <TabOrder id="314" val="8"/>
+                <TabOrder id="314" val="9"/>
               </PropertyList>
             </Control>
             <Control _test_id="18" id="18">
               <PropertyList model="CTRL_GUI0_STATIC">
                 <Text id="19" valUnicode="v_recordCount"/>
-                <X id="21" val="416"/>
-                <Y id="22" val="427"/>
+                <X id="21" val="569"/>
+                <Y id="22" val="425"/>
                 <Width id="23" val="82"/>
                 <Height id="24" val="31"/>
                 <Font id="50" val="1"/>
@@ -907,14 +1190,14 @@
                 <Model ID="MODEL_GUI_INT" id="1">
                   <Var FieldID="10"/>
                 </Model>
-                <X id="21" val="473"/>
-                <Y id="22" val="427"/>
+                <X id="21" val="626"/>
+                <Y id="22" val="425"/>
                 <Width id="23" val="31"/>
                 <Height id="24" val="25"/>
                 <Data FieldID="10" id="43"/>
                 <ControlName id="46" val="v_recordCount"/>
                 <_Orientation id="143"/>
-                <TabOrder id="314" val="9"/>
+                <TabOrder id="314" val="10"/>
               </PropertyList>
             </Control>
             <Control _test_id="20" id="20">
@@ -942,31 +1225,31 @@
                 <Data FieldID="14" id="43"/>
                 <ControlName id="46" val="v_JSONSingleGet"/>
                 <_Orientation id="143"/>
-                <TabOrder id="314" val="10"/>
+                <TabOrder id="314" val="11"/>
               </PropertyList>
             </Control>
             <Control _test_id="1" id="1">
               <PropertyList model="CTRL_GUI0_TABLE">
-                <X id="21" val="35"/>
+                <X id="21" val="8"/>
                 <Y id="22" val="37"/>
-                <Width id="23" val="351"/>
+                <Width id="23" val="521"/>
                 <Height id="24" val="411"/>
                 <TitleHeight id="79" val="12"/>
                 <RowHeight id="80" val="22"/>
-                <Elements id="81" val="3"/>
-                <_WindowWidth id="241" val="351"/>
+                <Elements id="81" val="5"/>
+                <_WindowWidth id="241" val="521"/>
               </PropertyList>
             </Control>
             <Control ISN_FATHER="1" PDOD="128" _test_id="2" id="2">
               <PropertyList model="CTRL_GUI0_COLUMN">
-                <Width id="23" val="98"/>
+                <Width id="23" val="61"/>
                 <ControlLayer id="25" val="1"/>
                 <ColumnTitle id="139" valUnicode="v_productId"/>
               </PropertyList>
             </Control>
             <Control ISN_FATHER="1" PDOD="128" _test_id="4" id="4">
               <PropertyList model="CTRL_GUI0_COLUMN">
-                <Width id="23" val="143"/>
+                <Width id="23" val="95"/>
                 <ControlLayer id="25" val="2"/>
                 <ColumnTitle id="139" valUnicode="v_productName"/>
               </PropertyList>
@@ -978,22 +1261,38 @@
                 <ColumnTitle id="139" valUnicode="v_standardCost"/>
               </PropertyList>
             </Control>
+            <Control ISN_FATHER="1" PDOD="128" _test_id="29" id="29">
+              <PropertyList model="CTRL_GUI0_COLUMN">
+                <Width id="23" val="39"/>
+                <ControlLayer id="25" val="4"/>
+                <ColumnTitle id="139" valUnicode="v_changed"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" PDOD="128" _test_id="42" id="42">
+              <PropertyList model="CTRL_GUI0_COLUMN">
+                <Width id="23" val="22"/>
+                <ControlLayer id="25" val="5"/>
+                <ColumnTitle id="139" valUnicode=""/>
+              </PropertyList>
+            </Control>
             <Control ISN_FATHER="1" PDOD="1" _test_id="3" id="3">
               <PropertyList model="CTRL_GUI0_EDIT">
                 <Model ID="MODEL_GUI_INT_TBL" id="1">
                   <Var FieldID="1"/>
                 </Model>
                 <Placement bottom="100" id="20" right="100"/>
-                <X id="21" val="37"/>
+                <X id="21" val="10"/>
                 <Y id="22" val="52"/>
-                <Width id="23" val="94"/>
+                <Width id="23" val="57"/>
                 <Height id="24" val="19"/>
                 <ControlLayer id="25" val="1"/>
                 <Data FieldID="1" id="43"/>
                 <ControlName id="46" val="v_productId"/>
                 <Style id="63" val="1"/>
                 <_Orientation id="143"/>
-                <TabOrder id="314" val="2"/>
+                <TabInto id="269"/>
+                <TabOrder id="314" val="3"/>
+                <AllowParking id="315"/>
                 <Border id="452"/>
               </PropertyList>
             </Control>
@@ -1003,7 +1302,7 @@
                   <Var FieldID="2"/>
                 </Model>
                 <Placement bottom="100" id="20" right="100"/>
-                <X id="21" val="135"/>
+                <X id="21" val="71"/>
                 <Y id="22" val="52"/>
                 <Width id="23" val="143"/>
                 <Height id="24" val="19"/>
@@ -1012,7 +1311,7 @@
                 <ControlName id="46" val="v_productName"/>
                 <Style id="63" val="1"/>
                 <_Orientation id="143"/>
-                <TabOrder id="314" val="3"/>
+                <TabOrder id="314" val="4"/>
                 <Border id="452"/>
               </PropertyList>
             </Control>
@@ -1022,7 +1321,7 @@
                   <Var FieldID="16"/>
                 </Model>
                 <Placement bottom="100" id="20" right="100"/>
-                <X id="21" val="278"/>
+                <X id="21" val="166"/>
                 <Y id="22" val="52"/>
                 <Width id="23" val="43"/>
                 <Height id="24" val="11"/>
@@ -1031,15 +1330,47 @@
                 <ControlName id="46" val="v_standardCost"/>
                 <Style id="63" val="1"/>
                 <_Orientation id="143"/>
-                <TabOrder id="314" val="4"/>
+                <TabOrder id="314" val="5"/>
                 <Border id="452"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" PDOD="192" _test_id="30" id="30">
+              <PropertyList model="CTRL_GUI0_EDIT">
+                <Model ID="MODEL_GUI_INT_TBL" id="1">
+                  <Var FieldID="24"/>
+                </Model>
+                <Placement bottom="100" id="20" right="100"/>
+                <X id="21" val="225"/>
+                <Y id="22" val="52"/>
+                <Width id="23" val="23"/>
+                <Height id="24" val="11"/>
+                <ControlLayer id="25" val="4"/>
+                <Data FieldID="24" id="43"/>
+                <ControlName id="46" val="v_changed"/>
+                <Style id="63" val="1"/>
+                <_Orientation id="143"/>
+                <TabOrder id="314" val="6"/>
+                <Border id="452"/>
+              </PropertyList>
+            </Control>
+            <Control ISN_FATHER="1" _test_id="43" id="43">
+              <PropertyList model="CTRL_GUI0_STATIC">
+                <Text Exp="20" id="19" valUnicode="Text"/>
+                <Placement bottom="100" id="20" right="100"/>
+                <X id="21" val="264"/>
+                <Y id="22" val="52"/>
+                <Width id="23" val="17"/>
+                <Height id="24" val="9"/>
+                <ControlLayer id="25" val="5"/>
+                <Style id="63" val="7"/>
+                <EnableRTF id="69"/>
               </PropertyList>
             </Control>
           </FormEntry>
         </TaskForms>
         <Expressions>
           <Expression id="1">
-            <ExpSyntax val="'Write finished?'"/>
+            <ExpSyntax val="{0,28}'Write finished?'"/>
             <ExpAttribute val="A"/>
           </Expression>
           <Expression id="4">
@@ -1051,7 +1382,7 @@
             <ExpAttribute val="A"/>
           </Expression>
           <Expression id="2">
-            <ExpSyntax val="DataViewToJSON(0, 'v_productId, v_productName, v_standardCost','@')"/>
+            <ExpSyntax val="DataViewToJSON(0, 'v_id, v_name, v_standard_cost, v_deleted_date, v_deleted_time, v_update_date, v_update_time, v_changed','@')"/>
             <ExpAttribute val="O"/>
           </Expression>
           <Expression id="6">
@@ -1101,6 +1432,34 @@
           <Expression id="17">
             <ExpSyntax val="NOT DNExceptionOccurred()"/>
             <ExpAttribute val="B"/>
+          </Expression>
+          <Expression id="18">
+            <ExpSyntax val="Date()"/>
+            <ExpAttribute val="D"/>
+          </Expression>
+          <Expression id="19">
+            <ExpSyntax val="Time()"/>
+            <ExpAttribute val="T"/>
+          </Expression>
+          <Expression id="20">
+            <ExpSyntax val="IF({0,20} = '00/00/0000'DATE OR {0,21} = '00:00:00'TIME, '', 'X')"/>
+            <ExpAttribute val="A"/>
+          </Expression>
+          <Expression id="21">
+            <ExpSyntax val="'TRUE'LOG"/>
+            <ExpAttribute val="B"/>
+          </Expression>
+          <Expression id="24">
+            <ExpSyntax val="{0,28}"/>
+            <ExpAttribute val="A"/>
+          </Expression>
+          <Expression id="22">
+            <ExpSyntax val="'Ready'"/>
+            <ExpAttribute val="A"/>
+          </Expression>
+          <Expression id="23">
+            <ExpSyntax val="'Busy'"/>
+            <ExpAttribute val="A"/>
           </Expression>
         </Expressions>
         <EVNT DESC="test" FORCE_EXIT="P" id="1">
