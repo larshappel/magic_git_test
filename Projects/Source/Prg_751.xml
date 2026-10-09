@@ -27,7 +27,7 @@
           <Offline val="N"/>
           <FormType val="N"/>
           <DotNetObjectExists val="Y"/>
-          <LastModified _date="739898" _time="42285" date="2026/10/09" time="11:44:45"/>
+          <LastModified _date="739898" _time="45225" date="2026/10/09" time="12:33:45"/>
         </Header>
         <ItemIsn val="28"/>
         <Resource>
@@ -673,28 +673,6 @@
                   <Incremental val="N"/>
                   <ForcedUpdate val="Y"/>
                   <Condition val="Y"/>
-                  <Modifier val="B"/>
-                  <Direction val="C"/>
-                </Update>
-              </LogicLine>
-              <LogicLine>
-                <Update FlowIsn="119">
-                  <FieldID val="13"/>
-                  <WithValue val="13"/>
-                  <Incremental val="N"/>
-                  <ForcedUpdate val="Y"/>
-                  <Condition val="N"/>
-                  <Modifier val="B"/>
-                  <Direction val="C"/>
-                </Update>
-              </LogicLine>
-              <LogicLine>
-                <Update FlowIsn="97">
-                  <FieldID val="14"/>
-                  <WithValue val="12"/>
-                  <Incremental val="N"/>
-                  <ForcedUpdate val="Y"/>
-                  <Condition val="N"/>
                   <Modifier val="B"/>
                   <Direction val="C"/>
                 </Update>
@@ -1364,13 +1342,14 @@
                 <ControlLayer id="25" val="5"/>
                 <Style id="63" val="7"/>
                 <EnableRTF id="69"/>
+                <_Orientation id="143"/>
               </PropertyList>
             </Control>
           </FormEntry>
         </TaskForms>
         <Expressions>
           <Expression id="1">
-            <ExpSyntax val="{0,28}'Write finished?'"/>
+            <ExpSyntax val="'Write finished?'"/>
             <ExpAttribute val="A"/>
           </Expression>
           <Expression id="4">
