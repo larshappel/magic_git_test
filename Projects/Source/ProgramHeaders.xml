@@ -3627,7 +3627,7 @@
       <SourceFileTimeStamp _date="739821" _time="50926" date="2026/07/24" time="14:08:46"/>
     </Program>
     <Program>
-      <Header Description="仕入先ﾒﾝﾃﾅﾝｽ(ｽｸﾘｰﾝ) 　　　画面" ISN_2="1" LastIsn="1" id="118">
+      <Header Description="仕入先ﾒﾝﾃﾅﾝｽ(ｽｸﾘｰﾝ) 　　　画面" ISN_2="1" LastIsn="5" id="118">
         <Public val="仕入先ﾒﾝﾃﾅﾝｽ(ｽｸﾘｰﾝ)画面"/>
         <ExecutionRight comp="-1"/>
         <Resident val="N"/>
@@ -3654,20 +3654,20 @@
         <Public val="商品ﾒﾝﾃﾅﾝｽ(ﾗｲﾝ)画面"/>
         <ExecutionRight comp="-1"/>
         <Resident val="N"/>
-        <SQL val="N"/>
+        <SQL val="Y"/>
         <ReturnValue>
           <ReturnValueAttr/>
           <ParametersAttributes/>
         </ReturnValue>
-        <SqlWhereExist val="Y"/>
+        <SqlWhereExist val="N"/>
         <TaskType val="O"/>
         <External val="Y"/>
         <Offline val="N"/>
         <FormType val="N"/>
         <DotNetObjectExists val="N"/>
-        <LastModified _date="739799" _time="53409" date="2026/07/02" time="14:50:09"/>
+        <LastModified _date="739902" _time="33064" date="2026/10/13" time="09:11:04"/>
       </Header>
-      <SourceFileTimeStamp _date="739799" _time="21008" date="2026/07/02" time="05:50:08"/>
+      <SourceFileTimeStamp _date="739902" _time="664" date="2026/10/13" time="00:11:04"/>
     </Program>
     <Program>
       <Header Description="商品ﾒﾝﾃﾅﾝｽ(ｽｸﾘｰﾝ)　 　　　画面" ISN_2="1" LastIsn="5" id="121">
